@@ -4,7 +4,6 @@ $show_thumbs = FLTheme::get_setting('fl-posts-show-thumbs');
 
 if (has_post_thumbnail( $post->ID ) ) {
 	$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-
 }
 
 ?>
@@ -14,6 +13,9 @@ if (has_post_thumbnail( $post->ID ) ) {
 		<h1 class="fl-post-title" itemprop="headline">
 			<?php the_title(); ?>
 		</h1>
+
+		<?php FLTheme::post_top_meta(); ?>
+		
 	</header><!-- .fl-post-header -->
 
 	<div class="fl-post-content clearfix" itemprop="text">
