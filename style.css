@@ -1,0 +1,433 @@
+/*
+Theme Name: Beaver Builder Child Theme
+Theme URI: http://www.wpbeaverbuilder.com
+Version: 1.0
+Description: An example child theme that can be used as a starting point for custom development.
+Author: The Beaver Builder Team
+Author URI: http://www.fastlinemedia.com
+template: bb-theme
+*/
+
+
+/*  General Styles
+-------------------------------------------------------------- */
+
+html {
+    font-size: 16px;
+}
+body {
+    color: #2d2d2d;
+    font-family: "ff-tisa-web-pro", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+}
+hr {
+    border-color: #cccccc;
+}
+sup {
+    top: -.2em;
+    letter-spacing: 0px;
+    right: 0.05em;
+    font-weight: 900;
+}
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=time],
+input[type=number],
+input[type=search],
+.form-control,
+textarea {
+    color: #2d2d2d;
+    display: block;
+    font-size: 18px;
+    padding: 25px 15px 28px;
+    margin-bottom: 7px;
+}
+/*Typography*/
+a,
+a:active {
+    color: #7a9661;
+    -webkit-transition: all 0.2s;
+       -moz-transition: all 0.2s;
+            transition: all 0.2s;
+}
+a:hover {
+    color: #14414f;
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.fl-logo-text {
+    font-family: 'brandon-grotesque', sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #12323E;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 35px;
+}
+h3 {
+    font-size: 27px;
+}
+h4 {
+    font-size: 21px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+p {
+    margin: 0 0 30px;
+}
+mark {
+    background: transparent !important;
+}
+ul, ol {
+    margin-bottom: 45px;
+}
+b,
+strong,
+label {
+    font-weight: 700;
+}
+label {
+    color: #6C7375;
+    font-size: 15px;
+    font-family: 'brandon-grotesque', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+/*Containers*/
+body,
+.fl-page-content,
+.fl-page-footer {
+    background-color: #D4D6DA;
+}
+.fl-page-header {
+    margin-bottom: 80px;
+}
+.fl-page-header .col-md-6 {
+    padding: 0;
+}
+.fl-full-width .container {
+    max-width: 870px;
+}
+.fl-content {
+    background: #EFECEC;
+    margin-top: 60px;
+    padding: 50px;
+    box-shadow: 0 1px 8px rgba(60,72,89,0.1);
+    border-radius: 2px;
+}
+
+
+
+/*  Header
+-------------------------------------------------------------- */
+.fl-page-header {
+    box-shadow: 0 0px 6px rgba(0,0,0,0.6);
+}
+.fl-page-header-wrap {
+    background-image: url('images/dark-mosaic.png');
+}
+.fl-page-nav-right .fl-page-nav-wrap .navbar-nav > li > a,
+.fl-subheader-text {
+    color: #e0e0e0;
+}
+.fl-page-nav-right .fl-page-nav-wrap .navbar-nav > li > a {
+    font-family: "ff-tisa-web-pro", serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+.fl-page-header a:hover,
+.fl-page-header a:hover * {
+    color: #e0e0e0;
+}
+.fl-page-nav-right .fl-page-nav-wrap .navbar-nav > li > a:hover {
+    color: #62A572;
+}
+.fl-headshot,
+.fl-logo-text,
+.fl-subheader-text {
+    -webkit-transition: all 0.5s;
+    -moztransition: all 0.5s;
+    transition: all 0.5s;
+}
+.fl-headshot {
+    max-width: 65px;
+    float: left;
+    margin-top: 0px;
+    margin-right: 20px;
+}
+.fl-shrink-header .fl-headshot {
+    max-width: 50px;
+}
+.fl-logo-text {
+    text-transform: none;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+.fl-shrink-header .fl-logo-text {
+    font-size: 25px;
+}
+.fl-subheader-text {
+    font-size: 17px;
+    color: #85A2A2;
+    font-style: italic;
+}
+.fl-shrink-header .fl-subheader-text {
+    font-size: 14px;
+    position: relative;
+    bottom: 3px;
+}
+
+
+/*  Homepage
+-------------------------------------------------------------- */
+.home.fl-full-width .fl-content-full.container {
+    max-width: none;
+    margin: 0;
+}
+.home .fl-content {
+    box-shadow: none;
+    border-radius: 0;
+    background: #D4D6DA;
+}
+.home .fl-post-grid-post {
+    box-shadow: 0 1px 8px rgba(60,72,89,0.1);
+    border-radius: 2px;
+}
+.fl-post-grid-text {
+    padding: 30px 25px 25px;
+}
+body .home .fl-post-grid-text,
+body .fl-post-grid-content p {
+    color: #2d2d2d;
+    font-family: "ff-tisa-web-pro", serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+body h2.fl-post-grid-title {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+body .fl-post-grid-text a.fl-post-grid-more {
+    display: inline-block;
+    font-size: 19px;
+    margin-top: 20px;
+    font-weight: 700;
+
+    text-decoration: underline;
+}
+
+/*Remove Borders*/
+.fl-comments-list .comment-content,
+.fl-page-nav-right .fl-page-header-wrap,
+.fl-page-footer,
+.fl-page-content,
+.fl-page-header,
+.fl-page-nav-wrap,
+.fl-page-header {
+    border: none;
+}
+
+
+
+
+
+/*  Blog Post Stuff
+-------------------------------------------------------------- */
+
+.single-post .fl-post-header {
+    height: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+.single-post .fl-post-title {
+    color: #F8FFFA;
+    font-size: 50px;
+    margin-right: 50px;
+    line-height: 1.1;
+    margin: 15px 50px 0 50px;;
+    text-align: center;
+
+    text-shadow: -2px 2px 6px rgba(0,0,0,0.5);
+}
+.single-post .fl-post-content p:first-child {
+    margin-top: 20px;
+}
+.single .fl-post-content a {
+    background-image: linear-gradient(to bottom,rgba(125,179,79,0) 50%,rgba(125,179,79,.6) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 28px;
+}
+.single .fl-post-content a:hover {
+    background-image: linear-gradient(to bottom,rgba(20,65,79,0) 50%,rgba(20,65,79,.6) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 28px;
+}
+.fl-post-content strong {
+    font-size:19px
+}
+
+.single .fl-post-meta {
+    font-size: 16px;
+}
+
+.fl-post-meta-bottom {
+    border-top: 1px solid #D0D0D0;
+    padding: 15px 0 20px;
+    margin-top: 20px;
+}
+.single .fl-post-meta a {
+    text-decoration: underline;
+}
+
+// Comments
+.fl-comments {
+    margin-top: 0;
+}
+.fl-comments .fl-comments-respond-title,
+.fl-comments .fl-comments-list-title {
+    font-size: 18px;
+}
+.fl-comments .fl-comments-respond-title{
+    margin-top: 30px;
+}
+.fl-comments .fl-comments-list-title {
+    margin-top: 20px;
+}
+.fl-comments .comment-author-link,
+.fl-comments .comment-author-link a {
+    color: #12323E;
+    font-style: italic;
+}
+.fl-comments .comment-date {
+    font-size: 16px;
+    font-style: italic;
+}
+.fl-comments .comment {
+    background: #F6F7F9;
+    padding: 0 20px 20px;
+}
+.fl-comments .comment-content {
+    padding: 5px 20px 0;
+}
+.fl-comments-list ol li {
+    line-height: 1.5;
+}
+.fl-comments p {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.fl-comments .comment-edit-link,
+.fl-comments .comment-reply-link {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+}
+.fl-comments .comment-edit-link {
+    display: none;
+}
+.fl-comments-list .comment-reply-link {
+    padding: 5px 0 0;
+}
+.fl-comments .comment.depth-1 {
+    box-shadow:  -1px 1px 1px rgba(0,0,0,0.05);
+    border-radius: 2px;
+    margin: 15px 0;
+}
+.fl-comments .comment.depth-2,
+.fl-comments .comment.depth-3 {
+    margin-top: 15px;
+}
+.fl-comments .comment.depth-2 {
+    background: #FFFFFF;
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.05);
+}
+.fl-comments .comment.depth-3 {
+    box-shadow:  -1px 1px 1px rgba(0,0,0,0.1);
+}
+
+// Comment form
+.fl-comment-form label {
+    color: #4B5F65;
+}
+.fl-comment-form input[type=submit] {
+    background: #14414f;
+    border: 0;
+    color: #BFD3DA;
+    font-family: 'brandon-grotesque', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    padding: 17px 33px;
+    text-transform: uppercase;
+
+    -webkit-transition: 0.3s background;
+       -moz-transition: 0.3s background;
+            transition: 0.3s background;
+}
+.fl-comment-form input[type=submit]:hover {
+    background: #12323E;
+}
+/*  Footer
+-------------------------------------------------------------- */
+
+.fl-page-footer .fl-social-icons .fl-icon {
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+    margin: 0 30px 30px;
+    text-align: center;
+}
+
+
+.fl-copyright {
+    color: #8c8d8e;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-style: italic;
+}
