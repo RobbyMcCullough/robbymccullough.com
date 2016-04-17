@@ -53,16 +53,16 @@ textarea {
     padding: 25px 15px 28px;
     margin-bottom: 7px;
 }
+
 /*Typography*/
+
 a,
 a:active,
 a:visited,
 a:hover {
     color: #7a9661;
     text-decoration: none !important;
-    -webkit-transition: all 0.2s;
-       -moz-transition: all 0.2s;
-            transition: all 0.2s;
+    transition: all 0.2s;
 }
 a:hover {
     color: #456F1F;
@@ -125,6 +125,7 @@ label {
 }
 
 /*Containers*/
+
 body,
 .fl-page-content,
 .fl-page-footer {
@@ -146,9 +147,9 @@ body,
 }
 
 
-
 /*  Header
 -------------------------------------------------------------- */
+
 .fl-page-header {
     box-shadow: 0 0px 6px rgba(0,0,0,0.6);
 }
@@ -174,8 +175,6 @@ body,
 .fl-headshot,
 .fl-logo-text,
 .fl-subheader-text {
-    -webkit-transition: all 0.5s;
-    -moztransition: all 0.5s;
     transition: all 0.5s;
 }
 .fl-headshot {
@@ -211,6 +210,7 @@ body,
 
 /*  Homepage
 -------------------------------------------------------------- */
+
 .home.fl-full-width .fl-content-full.container {
     max-width: none;
     margin: 0;
@@ -250,6 +250,7 @@ body .fl-post-grid-text a.fl-post-grid-more {
 }
 
 /*Remove Borders*/
+
 .fl-comments-list .comment-content,
 .fl-page-nav-right .fl-page-header-wrap,
 .fl-page-footer,
@@ -273,7 +274,7 @@ body .fl-post-grid-text a.fl-post-grid-more {
     border-radius: 2px;
 
     display: -webkit-flex;
-            display: flex;
+    display: flex;
 
     -webkit-flex-direction: column; /* Safari */
             flex-direction: column;
@@ -301,12 +302,31 @@ body .fl-post-grid-text a.fl-post-grid-more {
     font-size:19px
 }
 
+/*Attachments*/
+
+.aligncenter.wp-caption {
+    background: none;
+    border: none;
+    margin: 1.2rem auto;
+}
+.wp-caption p.wp-caption-text {
+    color: #6F6F6F;
+    font-style: italic;
+    font-size: 16px;
+    line-height: inherit;
+}
+.fl-post img.aligncenter {
+    margin: 2.8rem auto 2.4rem;
+}
+.fl-post .wp-caption img[class*="wp-image-"] {
+    margin: 0.3rem auto 0.3rem;
+}
+
 /*Meta*/
+
 .fl-post-meta-top {
     color: #848C8E;
-    /*font-family: 'brandon-grotesque', sans-serif;*/
-    font-size: 18px;
-    /*text-transform: uppercase;*/
+    font-size: 21px;
     margin-top: 10px;
 }
 .fl-post-meta-bottom {
@@ -322,6 +342,7 @@ body .fl-post-grid-text a.fl-post-grid-more {
 }
 
 /*Comments*/
+
 .fl-comments {
     margin-top: 0;
 }
@@ -374,9 +395,9 @@ body .fl-post-grid-text a.fl-post-grid-more {
     padding: 5px 0 0;
 }
 .fl-comments .comment.depth-1 {
-    box-shadow:  -1px 1px 1px rgba(0,0,0,0.05);
-    border-radius: 2px;
     margin: 15px 0;
+    border-radius: 2px;
+    box-shadow:  -1px 1px 1px rgba(0,0,0,0.05);
 }
 .fl-comments .comment.depth-2,
 .fl-comments .comment.depth-3 {
@@ -403,10 +424,7 @@ body .fl-post-grid-text a.fl-post-grid-more {
     font-style: italic;
     padding: 17px 33px;
     text-transform: uppercase;
-
-    -webkit-transition: 0.3s background;
-       -moz-transition: 0.3s background;
-            transition: 0.3s background;
+    transition: 0.3s background;
 }
 .fl-comment-form input[type=submit]:hover {
     background: #12323E;
@@ -416,9 +434,11 @@ body .fl-post-grid-text a.fl-post-grid-more {
 /*  Pages
 -------------------------------------------------------------- */
 
+.page .fl-post-header {
+    margin: 30px 0 80px;
+}
 .page .fl-post-title {
     text-align: center;
-    margin: 30px 0 80px;
     font-size: 45px;
 }
 .fl-about-headshot {
