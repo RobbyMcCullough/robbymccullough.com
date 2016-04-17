@@ -14,7 +14,7 @@ final class FLChildTheme {
     {
         require_once(FL_CHILD_THEME_DIR . '/js/typekit.js');
 
-        echo '<link rel="stylesheet" href="' . FL_CHILD_THEME_URL . '/my-style.css" />';
+        echo '<link rel="stylesheet" href="' . FL_CHILD_THEME_URL . '/style.css" />';
     }
 
 }
