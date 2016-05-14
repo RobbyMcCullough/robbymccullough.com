@@ -25,7 +25,7 @@
 		do_action('fl_footer_wrap_close');
 
 		?>
-		<div class="fl-copyright">&copy; 2016 Robby McCullough</div>
+		<div class="fl-copyright">&copy; 2016 Robby McCullough | Powered by <a href="https://www.wpbeaverbuilder.com" title="WordPress Website Builder">Beaver Builder</a></div>
 	</footer>
 	<?php endif; ?>
 	<?php do_action('fl_page_close'); ?>

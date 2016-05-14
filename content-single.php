@@ -19,17 +19,7 @@ if (has_post_thumbnail( $post->ID ) ) {
 	</header><!-- .fl-post-header -->
 
 	<div class="fl-post-content clearfix" itemprop="text">
-		<?php
-
-		the_content();
-
-		wp_link_pages( array(
-			'before'         => '<div class="fl-post-page-nav">' . _x( 'Pages:', 'Text before page links on paginated post.', 'fl-automator' ),
-			'after'          => '</div>',
-			'next_or_number' => 'number'
-		) );
-
-		?>
+		<?php the_content(); ?>
 	</div><!-- .fl-post-content -->
 
 	<?php if(has_post_thumbnail() && $show_thumbs == 'beside') : ?>
@@ -38,7 +28,9 @@ if (has_post_thumbnail( $post->ID ) ) {
 	<?php endif; ?>
 
 	<?php FLTheme::post_bottom_meta(); ?>
-	<?php FLTheme::post_navigation(); ?>
+	
+	<?php echo do_shortcode( '[jetpack_subscription_form title="Never Miss a Post" subscribe_text="Get all of my new blog posts delivered straight to your inbox." subscribe_button="Sign Me Up"]' ); ?>
+
 	<?php comments_template(); ?>
 
 </article>
