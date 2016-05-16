@@ -102,7 +102,7 @@ h4 {
     font-size: 1.1rem;;
 }
 p {
-    margin: 0 0 25px;
+    margin: 0 0 1.6rem;
 }
 mark {
     background: transparent !important;
@@ -269,7 +269,6 @@ body .fl-post-grid-text a.fl-post-grid-more {
 }
 
 /*Remove Borders*/
-
 .fl-comments-list .comment-content,
 .fl-page-nav-right .fl-page-header-wrap,
 .fl-page-footer,
@@ -322,11 +321,16 @@ body .fl-post-grid-text a.fl-post-grid-more {
 }
 
 /*Attachments*/
-
-.aligncenter.wp-caption {
+.wp-caption {
     background: none;
     border: none;
-    margin: 1.2rem auto;
+    padding: 0.3rem 0;
+}
+.aligncenter.wp-caption {
+	margin: 1.2rem auto;
+}
+.alignleft.wp-caption {
+	margin: 0 2.6rem 0 0;
 }
 .wp-caption p.wp-caption-text {
     color: #666869;
@@ -342,7 +346,6 @@ body .fl-post-grid-text a.fl-post-grid-more {
 }
 
 /*Meta*/
-
 .fl-post-meta-top {
     color: #D9DDDE;
     font-size: 1.2rem;
@@ -368,7 +371,7 @@ body .fl-post-grid-text a.fl-post-grid-more {
 
 /*Sharing Buttons*/
 .et_social_inline:before {
-    content: "Impress your friends and colleagues by giving this a share. It's much appreciated...";
+    content: "Just like your Netflix account, it's okay to share...";
     color: #666869;
     display: inline-block;
     font-style: italic;
@@ -377,7 +380,6 @@ body .fl-post-grid-text a.fl-post-grid-more {
 }
 
 /*Subscribe */
-
 .jetpack_subscription_widget {
     background: #184150;
     color: #D2CDCD;
@@ -411,7 +413,6 @@ body .fl-post-grid-text a.fl-post-grid-more {
 
 
 /*Comments*/
-
 .fl-comments {
     margin-top: 0;
 }
@@ -485,6 +486,54 @@ body .fl-post-grid-text a.fl-post-grid-more {
     color: #4B5F65;
 }
 
+/*Better Click to Tweet*/
+.bctt-click-to-tweet,
+blockquote {
+	border: 0;
+	background: none;
+	color: #8D8E8E;
+	font-style: italic;
+	font-size: 23px;
+	font-weight: 300;
+	padding: 0;
+}
+.bctt-click-to-tweet {
+    margin: 4.2rem 4.2rem 5.2rem;
+}
+.bctt-ctt-text a {
+    font-family: "ff-tisa-web-pro", serif !important;
+    color: #8D8E8E !important;
+    font-size: 23px;
+    font-weight: 200;
+    line-height: 1.3;
+}
+a.bctt-ctt-btn {
+    display: inline-block;
+    position: relative;
+    top: 31px;
+}
+
+/*Blockquotes*/
+blockquote:before {
+    color: #EFECEC;
+    background: #9ABDA3;
+    content: '\f10d';
+    font-family: 'FontAwesome';
+    font-size: 15px;
+    position: relative;
+    left: -45px;
+    top: 30px;
+    padding: 7px 10px 8px 8px;
+
+    border-radius: 50%;
+}
+blockquote {
+    margin: 2rem 4.2rem 3.5rem;
+}
+blockquote p {
+	margin-top: 0 !important;
+}
+
 
 /*  Pages
 -------------------------------------------------------------- */
@@ -548,7 +597,7 @@ body .fl-post-grid-text a.fl-post-grid-more {
 
 @media (max-width: 767px) {
     html {
-        font-size: 13px;
+        font-size: 11px;
     }
     .fl-headshot {
         display: none;
