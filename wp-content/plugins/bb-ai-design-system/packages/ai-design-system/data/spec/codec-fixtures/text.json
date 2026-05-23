@@ -1,0 +1,74 @@
+[
+	{
+		"name": "heading: round-trip",
+		"annotated_html": "<h1 data-field=\"heading\">Hello</h1>",
+		"template": "<h1>{{{settings.heading}}}</h1>",
+		"settings": { "heading": "Hello" }
+	},
+	{
+		"name": "heading: preserves auxiliary attributes (class, id, aria-label)",
+		"annotated_html": "<h2 aria-label=\"Greeting\" class=\"title\" data-field=\"heading\" id=\"hero\">Welcome</h2>",
+		"template": "<h2 aria-label=\"Greeting\" class=\"title\" id=\"hero\">{{{settings.heading}}}</h2>",
+		"settings": { "heading": "Welcome" }
+	},
+	{
+		"name": "editor: rich inner HTML (strong, em, a) round-trips via type inference",
+		"annotated_html": "<p data-field=\"body\" data-field-type=\"editor\">Hello <strong>world</strong> with <em>emphasis</em> and a <a href=\"https://example.com\">link</a>.</p>",
+		"template": "<p>{{{settings.body}}}</p>",
+		"settings": {
+			"body": "Hello <strong>world</strong> with <em>emphasis</em> and a <a href=\"https://example.com\">link</a>."
+		}
+	},
+	{
+		"name": "textarea: multi-line text round-trips with data-field-type preserved",
+		"annotated_html": "<p data-field=\"bio\" data-field-type=\"textarea\">First line\nSecond line</p>",
+		"template": "<p data-field-type=\"textarea\">{{{settings.bio}}}</p>",
+		"settings": { "bio": "First line\nSecond line" }
+	},
+	{
+		"name": "svg: standalone <svg data-field> round-trip",
+		"annotated_html": "<svg data-field=\"icon\" height=\"24\" width=\"24\"><title>Icon</title></svg>",
+		"template": "{{{settings.icon}}}",
+		"settings": {
+			"icon": "<svg data-field=\"icon\" height=\"24\" width=\"24\"><title>Icon</title></svg>"
+		}
+	},
+	{
+		"name": "svg: wrapper element with data-field-type=svg holds inner <svg>",
+		"annotated_html": "<div data-field=\"icon\" data-field-type=\"svg\"><svg viewBox=\"0 0 24 24\"><title>Icon</title></svg></div>",
+		"template": "<div data-field-type=\"svg\">{{{settings.icon}}}</div>",
+		"settings": {
+			"icon": "<svg viewBox=\"0 0 24 24\"><title>Icon</title></svg>"
+		}
+	},
+	{
+		"name": "mixed SVG + text: <svg> and text in same data-field element split into icon + text",
+		"annotated_html": "<span data-field=\"contact\"><svg viewBox=\"0 0 24 24\"><title>Mail</title></svg>contact@example.com</span>",
+		"template": "<span data-field=\"contact\">{{{settings.contact_icon}}}{{{settings.contact}}}</span>",
+		"settings": {
+			"contact": "contact@example.com",
+			"contact_icon": "<svg viewBox=\"0 0 24 24\"><title>Mail</title></svg>"
+		}
+	},
+	{
+		"name": "legacy two-key link form: data-field + data-field-href on <a>",
+		"annotated_html": "<a data-field=\"cta_text\" data-field-href=\"cta_url\" href=\"https://example.com\">Click</a>",
+		"template": "<a href=\"{{settings.cta_url}}\">{{{settings.cta_text}}}</a>",
+		"settings": {
+			"cta_text": "Click",
+			"cta_url": "https://example.com"
+		}
+	},
+	{
+		"name": "empty text value",
+		"annotated_html": "<h2 data-field=\"title\"></h2>",
+		"template": "<h2>{{{settings.title}}}</h2>",
+		"settings": { "title": "" }
+	},
+	{
+		"name": "HTML entity in text value: ampersand round-trips as &amp;",
+		"annotated_html": "<h2 data-field=\"title\">Tom &amp; Jerry</h2>",
+		"template": "<h2>{{{settings.title}}}</h2>",
+		"settings": { "title": "Tom &amp; Jerry" }
+	}
+]

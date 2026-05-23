@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Market — Site Header</title>
+  <meta name="post-type" content="page">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../design-system/styles.css">
+  <style>
+    /* @section Site Header */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(13, 14, 16, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--ds-color-border);
+      transition: background var(--ds-transition-base), border-color var(--ds-transition-base);
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(13, 14, 16, 0.97);
+      border-bottom-color: var(--ds-color-steel-mid);
+    }
+
+    .site-header::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--ds-color-neon-pink) 0px,
+        var(--ds-color-neon-pink) 6px,
+        transparent 6px,
+        transparent 14px
+      );
+      opacity: 0;
+      transition: opacity var(--ds-transition-base);
+    }
+
+    .site-header.is-scrolled::after {
+      opacity: 0.45;
+    }
+
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: var(--ds-space-xl);
+    }
+
+    /* Wordmark */
+    .site-header__wordmark {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35em;
+      flex-shrink: 0;
+      text-decoration: none;
+    }
+
+    .site-header__wordmark-main {
+      font-family: var(--ds-font-heading);
+      font-weight: var(--ds-weight-bold);
+      font-size: var(--ds-text-xl);
+      letter-spacing: var(--ds-letter-tight);
+      text-transform: uppercase;
+      color: var(--ds-color-bone);
+      line-height: 1;
+      transition: color var(--ds-transition-fast);
+    }
+
+    .site-header__wordmark:hover .site-header__wordmark-main {
+      color: var(--ds-color-rice);
+    }
+
+    .site-header__wordmark-accent {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      letter-spacing: var(--ds-letter-widest);
+      text-transform: uppercase;
+      color: var(--ds-color-neon-pink);
+      text-shadow: var(--ds-shadow-neon-pink);
+      line-height: 1;
+    }
+
+    /* Nav */
+    .site-header__nav {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .site-header__nav-list {
+      display: flex;
+      align-items: center;
+      gap: var(--ds-space-xl);
+    }
+
+    .site-header__nav-link {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-sm);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: var(--ds-letter-wider);
+      text-transform: uppercase;
+      color: var(--ds-color-muted);
+      transition: color var(--ds-transition-fast);
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .site-header__nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--ds-color-neon-pink);
+      box-shadow: var(--ds-shadow-neon-pink);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--ds-transition-fast);
+    }
+
+    .site-header__nav-link:hover {
+      color: var(--ds-color-bone);
+    }
+
+    .site-header__nav-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* CTA */
+    .site-header__actions {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: var(--ds-space-md);
+    }
+
+    /* Stall number badge next to CTA — decorative, matches landing vocabulary */
+    .site-header__stall-tag {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      letter-spacing: var(--ds-letter-wide);
+      text-transform: uppercase;
+      color: var(--ds-color-muted);
+      white-space: nowrap;
+    }
+
+    /* Mobile toggle */
+    .site-header__menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 28px;
+      cursor: pointer;
+      padding: 4px 0;
+      background: none;
+      border: none;
+    }
+
+    .site-header__menu-toggle span {
+      display: block;
+      height: 2px;
+      background: var(--ds-color-bone);
+      border-radius: 1px;
+      transition: transform var(--ds-transition-base), opacity var(--ds-transition-base);
+    }
+
+    .site-header.menu-open .site-header__menu-toggle span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .site-header.menu-open .site-header__menu-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .site-header.menu-open .site-header__menu-toggle span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile drawer */
+    .site-header__mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid var(--ds-color-border);
+      padding: var(--ds-space-md) 0;
+    }
+
+    .site-header__mobile-nav-link {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-xl);
+      font-weight: var(--ds-weight-bold);
+      letter-spacing: var(--ds-letter-tight);
+      text-transform: uppercase;
+      color: var(--ds-color-muted);
+      padding: var(--ds-space-md) 0;
+      border-bottom: 1px solid var(--ds-color-border);
+      transition: color var(--ds-transition-fast);
+      display: block;
+    }
+
+    .site-header__mobile-nav-link:hover {
+      color: var(--ds-color-bone);
+    }
+
+    .site-header__mobile-cta {
+      margin-top: var(--ds-space-lg);
+    }
+
+    @media (max-width: 768px) {
+      .site-header__nav,
+      .site-header__stall-tag {
+        display: none;
+      }
+
+      .site-header__actions .bb-btn {
+        display: none;
+      }
+
+      .site-header__menu-toggle {
+        display: flex;
+      }
+
+      .site-header.menu-open .site-header__mobile-nav {
+        display: flex;
+      }
+    }
+  </style>
+  <script>
+    /* @section Site Header */
+    onReady(() => {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+
+      // Scroll state
+      const onScroll = () => {
+        if (window.scrollY > 20) {
+          header.classList.add('is-scrolled');
+        } else {
+          header.classList.remove('is-scrolled');
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Mobile menu toggle
+      const toggle = header.querySelector('.site-header__menu-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          header.classList.toggle('menu-open');
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+
+  <header id="site-header" class="site-header" data-label="Site Header">
+    <div class="bb-container">
+      <div class="site-header__inner">
+
+        <!-- Wordmark -->
+        <a class="site-header__wordmark" href="#" data-field-href="logo_url">
+          <span class="site-header__wordmark-main" data-field="logo_text">Night Market</span>
+          <span class="site-header__wordmark-accent" data-field="logo_tagline">Food Tours</span>
+        </a>
+
+        <!-- Primary nav -->
+        <nav class="site-header__nav" aria-label="Primary navigation">
+          <ul class="site-header__nav-list" data-repeater="nav_items">
+            <li data-repeater-item>
+              <a class="site-header__nav-link" href="#" data-field="label" data-field-href="url">Tours</a>
+            </li>
+            <li data-repeater-item>
+              <a class="site-header__nav-link" href="#" data-field="label" data-field-href="url">Markets</a>
+            </li>
+            <li data-repeater-item>
+              <a class="site-header__nav-link" href="#" data-field="label" data-field-href="url">The Zine</a>
+            </li>
+            <li data-repeater-item>
+              <a class="site-header__nav-link" href="#" data-field="label" data-field-href="url">About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- CTA -->
+        <div class="site-header__actions">
+          <span class="site-header__stall-tag" data-field="stall_tag">8 spots left tonight</span>
+          <a class="bb-btn bb-btn--primary" href="#" data-field="cta_label" data-field-href="cta_url">Book a Tour</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <button class="site-header__menu-toggle" aria-label="Open menu" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <!-- Mobile nav drawer -->
+      <nav class="site-header__mobile-nav" aria-label="Mobile navigation">
+        <a class="site-header__mobile-nav-link" href="#" data-field-href="tours_url">Tours</a>
+        <a class="site-header__mobile-nav-link" href="#" data-field-href="markets_url">Markets</a>
+        <a class="site-header__mobile-nav-link" href="#" data-field-href="zine_url">The Zine</a>
+        <a class="site-header__mobile-nav-link" href="#" data-field-href="about_url">About</a>
+        <div class="site-header__mobile-cta">
+          <a class="bb-btn bb-btn--primary" href="#" data-field-href="cta_url">Book a Tour</a>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+</body>
+</html>

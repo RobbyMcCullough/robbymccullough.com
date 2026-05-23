@@ -1,0 +1,770 @@
+/*
+Theme Name: Robby McCullough
+Description: Lightweight editorial theme with Georgia serif, warm paper tones, and a full-width template for Beaver Builder.
+Version: 1.0.2
+Author: Robby McCullough
+Text Domain: robbymccullough
+*/
+
+/* ---------------------------------------------------------------------------
+   Design tokens
+--------------------------------------------------------------------------- */
+
+:root {
+    --paper:        #efecec;
+    --paper-soft:   #f8f6f5;
+    --ink:          #3b3838;
+    --muted:        #767171;
+    --line:         rgba(59, 56, 56, 0.18);
+    --line-strong:  rgba(59, 56, 56, 0.42);
+    --accent:       #8a3f2d;
+    --accent-soft:  #e5d7d1;
+    --white:        #fff;
+
+    --sans:         -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --serif:        Georgia, "Times New Roman", serif;
+
+    --site-width:   1180px;
+    --content-width: 720px;
+    --gutter:       20px;
+}
+
+/* ---------------------------------------------------------------------------
+   Reset & base
+--------------------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
+
+/* ---------------------------------------------------------------------------
+   Typography
+--------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--serif);
+    line-height: 1.1;
+    margin: 0 0 0.65em;
+    color: var(--ink);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+h4 { font-size: 1.2rem; }
+
+p { margin: 0 0 1.4em; }
+
+a {
+    color: inherit;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+    transition: color 160ms ease;
+}
+
+a:hover { color: var(--accent); }
+
+blockquote {
+    margin: 2em 0;
+    padding: 4px 0 4px 24px;
+    border-left: 4px solid var(--ink);
+    font-style: italic;
+    color: #4e4949;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+code, pre {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.88em;
+    background: rgba(59, 56, 56, 0.07);
+    border-radius: 2px;
+}
+
+code { padding: 1px 5px; }
+
+pre {
+    padding: 1.2em 1.4em;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+pre code { background: none; padding: 0; }
+
+ul, ol { padding-left: 1.5em; margin: 0 0 1.4em; }
+li { margin-bottom: 0.35em; }
+
+hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 2.5em 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Layout
+--------------------------------------------------------------------------- */
+
+.site-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-main { flex: 1; }
+
+/* Centered reading column */
+.content-column {
+    width: calc(100% - var(--gutter) * 2);
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------------------------------------------------------------------
+   Site header
+--------------------------------------------------------------------------- */
+
+.site-header {
+    background: var(--paper);
+}
+
+.site-header-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+    width: calc(100% - var(--gutter) * 2);
+    max-width: var(--site-width);
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+/* Avatar / custom logo */
+.site-logo { display: flex; align-items: center; }
+
+.site-logo .custom-logo-link,
+.site-avatar-link { display: block; }
+
+.site-logo .custom-logo,
+.site-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    display: block;
+}
+
+/* Brand */
+.site-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.site-brand-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.site-name {
+    font-family: var(--serif);
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    line-height: 1.15;
+    font-weight: bold;
+}
+
+.site-tagline {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.4;
+    margin-top: 2px;
+}
+
+/* Primary nav */
+.site-nav { margin: 0; }
+
+.site-nav .primary-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.site-nav .primary-nav a {
+    font-family: var(--sans);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: border-color 160ms ease, color 160ms ease;
+}
+
+.site-nav .primary-nav a:hover {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+}
+
+/* Drop sub-menus for now */
+.site-nav .primary-nav .sub-menu { display: none; }
+
+/* ---------------------------------------------------------------------------
+   Social links — sit below brand name inside the brand column
+--------------------------------------------------------------------------- */
+
+.site-social { margin: 0; }
+
+.site-social .social-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-social .social-item a {
+    display: flex;
+    align-items: center;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 160ms ease;
+}
+
+.site-social .social-item a:hover { color: var(--accent); }
+
+/* ---------------------------------------------------------------------------
+   Post hero — featured image with title overlay
+--------------------------------------------------------------------------- */
+
+.post-hero {
+    position: relative;
+    width: 100%;
+    max-height: 620px;
+    overflow: hidden;
+    background: var(--ink);
+}
+
+.post-hero-img {
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    opacity: 0.88;
+    display: block;
+}
+
+/* Dark gradient over image so white text reads cleanly */
+.post-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 20%,
+        rgba(20, 18, 18, 0.25) 55%,
+        rgba(20, 18, 18, 0.78) 100%
+    );
+    pointer-events: none;
+}
+
+.post-hero-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: clamp(28px, 5vw, 56px) clamp(20px, 5vw, 56px);
+}
+
+.post-hero-header .entry-title {
+    color: var(--white);
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.05;
+    margin-bottom: 12px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.post-hero-header .entry-meta {
+    color: rgba(255, 255, 255, 0.78);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Post title when there's no featured image */
+.entry-header-no-image {
+    padding: 48px 0 0;
+}
+
+.entry-header-no-image .entry-title {
+    margin-bottom: 8px;
+}
+
+.entry-header-no-image .entry-meta {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Post / page content
+--------------------------------------------------------------------------- */
+
+.entry-content {
+    padding: 48px 0 64px;
+}
+
+.entry-content > * { max-width: 100%; }
+
+/* Figures inside content */
+.entry-content figure {
+    margin: 2em 0;
+}
+
+.entry-content figure figcaption {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 8px;
+    line-height: 1.45;
+}
+
+/* Image alignment within the content column */
+.entry-content .alignleft {
+    float: left;
+    margin: 0.4em 1.6em 1em 0;
+    max-width: 50%;
+}
+
+.entry-content .alignright {
+    float: right;
+    margin: 0.4em 0 1em 1.6em;
+    max-width: 50%;
+}
+
+.entry-content .aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Break out of the content column for wide/full aligned blocks */
+.entry-content .alignwide {
+    margin-left:  max(calc(50% - var(--site-width) / 2 + var(--gutter)), calc(-1 * (var(--site-width) - var(--content-width)) / 2));
+    margin-right: max(calc(50% - var(--site-width) / 2 + var(--gutter)), calc(-1 * (var(--site-width) - var(--content-width)) / 2));
+    max-width: var(--site-width);
+    width: auto;
+}
+
+.entry-content .alignfull {
+    margin-left:  calc(50% - 50vw + var(--gutter));
+    margin-right: calc(50% - 50vw + var(--gutter));
+    max-width: calc(100vw - var(--gutter) * 2);
+    width: auto;
+}
+
+/* Gallery blocks */
+.entry-content .wp-block-gallery {
+    margin: 2em 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Archive / blog index — full-width card layout
+--------------------------------------------------------------------------- */
+
+.archive-header {
+    padding: 48px 0 8px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 0;
+}
+
+.archive-title {
+    margin-bottom: 0;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.archive-list-wrap { padding-bottom: 64px; }
+
+.post-card-list { padding-top: 16px; }
+
+.post-card {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.post-card:last-child { border-bottom: none; }
+
+/* Featured image — full column width */
+.post-card .post-thumbnail {
+    margin: 0 0 22px;
+    line-height: 0;
+}
+
+.post-card .post-thumbnail img {
+    width: 100%;
+    height: clamp(240px, 48vw, 480px);
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: opacity 180ms ease;
+}
+
+.post-card .post-thumbnail:hover img { opacity: 0.9; }
+
+/* Title */
+.post-card .entry-header { margin-bottom: 10px; }
+
+.post-card .entry-title {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.15;
+    margin-bottom: 8px;
+}
+
+.post-card .entry-title a {
+    text-decoration: none;
+    color: var(--ink);
+    transition: color 160ms ease;
+}
+
+.post-card .entry-title a:hover { color: var(--accent); }
+
+/* Meta row */
+.post-card .entry-meta {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.post-card .meta-sep { opacity: 0.5; }
+
+/* Excerpt */
+.post-card .entry-summary {
+    margin-top: 12px;
+    color: #4c4848;
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+    line-height: 1.6;
+}
+
+.post-card .entry-summary p { margin: 0; }
+
+/* Pagination */
+.pagination {
+    padding: 32px 0 64px;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.pagination .nav-links { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+.pagination .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 160ms, color 160ms;
+}
+
+.pagination .page-numbers.current,
+.pagination .page-numbers:hover {
+    background: var(--ink);
+    color: var(--white);
+    border-color: var(--ink);
+}
+
+/* ---------------------------------------------------------------------------
+   Standard page layout
+--------------------------------------------------------------------------- */
+
+.page-content {
+    padding: 48px 0 80px;
+}
+
+.page-content .entry-title {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+}
+
+.page-content .entry-content { padding: 0; }
+
+/* ---------------------------------------------------------------------------
+   Full-width template (Beaver Builder)
+--------------------------------------------------------------------------- */
+
+.full-width-main {
+    width: 100%;
+}
+
+.full-width-main .entry-content {
+    padding: 0;
+    max-width: none;
+}
+
+.full-width-title {
+    width: calc(100% - var(--gutter) * 2);
+    max-width: var(--content-width);
+    margin: 48px auto 32px;
+}
+
+/* ---------------------------------------------------------------------------
+   Post navigation
+--------------------------------------------------------------------------- */
+
+.post-navigation {
+    padding: 48px 0;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+}
+
+.post-navigation .nav-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.post-navigation .nav-previous { text-align: left; }
+.post-navigation .nav-next     { text-align: right; }
+
+.post-navigation .nav-subtitle {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+}
+
+.post-navigation a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--ink);
+}
+
+.post-navigation a:hover { color: var(--accent); }
+
+/* ---------------------------------------------------------------------------
+   Comments
+--------------------------------------------------------------------------- */
+
+.comments-area {
+    padding: 48px 0 64px;
+    border-top: 1px solid var(--line);
+}
+
+.comments-title {
+    font-size: 1.3rem;
+    margin-bottom: 32px;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 48px;
+}
+
+.comment-list .comment {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.comment-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+
+.comment-meta .avatar { border-radius: 50%; }
+
+.comment-author .fn { font-weight: 700; color: var(--ink); }
+
+.comment-content p:last-child { margin-bottom: 0; }
+
+.comment-reply-link {
+    font-family: var(--sans);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--muted);
+}
+
+.comment-reply-link:hover { color: var(--accent); }
+
+/* Comment form */
+.comment-form label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--muted);
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid var(--line-strong);
+    background: var(--paper-soft);
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 160ms;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus { border-color: var(--ink); }
+
+.comment-form textarea { min-height: 140px; resize: vertical; }
+
+.comment-form .form-submit input {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--white);
+    border: 1px solid var(--ink);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 160ms, border-color 160ms;
+    width: auto;
+}
+
+.comment-form .form-submit input:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ---------------------------------------------------------------------------
+   Site footer
+--------------------------------------------------------------------------- */
+
+.site-footer {
+    border-top: 1px solid var(--line);
+    margin-top: auto;
+}
+
+.site-footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    width: calc(100% - var(--gutter) * 2);
+    max-width: var(--site-width);
+    margin: 0 auto;
+    padding: 22px 0;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--accent); }
+
+/* ---------------------------------------------------------------------------
+   Responsive
+--------------------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+    .site-header-inner {
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
+    }
+
+    .site-nav {
+        grid-column: 1 / -1;
+    }
+
+    .site-nav .primary-nav {
+        justify-content: flex-start;
+    }
+
+    .site-social { display: none; }
+
+    .post-hero, .post-hero-img { max-height: 460px; height: 460px; }
+}
+
+@media (max-width: 560px) {
+    :root { --gutter: 16px; }
+
+    body { font-size: 17px; }
+
+    .site-header-inner {
+        grid-template-columns: auto 1fr;
+    }
+
+    .site-logo { display: none; }
+
+    .site-header-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .site-nav .primary-nav { justify-content: flex-start; }
+
+    .post-hero, .post-hero-img { max-height: 320px; height: 320px; }
+
+    .writing-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .writing-item .meta { display: none; }
+
+    .writing-item .arrow { display: none; }
+
+    .post-navigation .nav-links { grid-template-columns: 1fr; }
+
+    .site-footer-inner { flex-direction: column; gap: 6px; }
+}

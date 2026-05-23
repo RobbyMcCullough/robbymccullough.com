@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — Ridgeline Estate Winery</title>
+  <meta name="post-type" content="page">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../design-system/styles.css">
+  <script src="../design-system/script.js"></script>
+  <style>
+/* @page */
+.page-rule {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  margin-bottom: var(--ds-space-lg);
+}
+.page-rule::before {
+  content: '';
+  width: 48px;
+  height: 1px;
+  background: var(--ds-color-gold);
+  flex-shrink: 0;
+}
+.page-rule-text {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+
+/* @section Page Intro */
+.page-intro {
+  position: relative;
+  overflow: hidden;
+  min-height: 640px;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--ds-space-section) 0 var(--ds-space-xl);
+}
+.page-intro-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.page-intro-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+.page-intro-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,14,26,0.95) 0%, rgba(11,14,26,0.65) 45%, rgba(11,14,26,0.25) 100%);
+}
+.page-intro-ghost {
+  position: absolute;
+  left: -0.04em;
+  top: 3.5rem;
+  font-family: var(--ds-font-heading);
+  font-size: clamp(7rem, 16vw, 16rem);
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(201,168,76,0.07);
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.04em;
+}
+.page-intro-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--ds-space-xl);
+  align-items: end;
+}
+.page-intro-left h1 {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(3rem, 5.5vw, var(--ds-text-6xl));
+  font-weight: 300;
+  line-height: 1.0;
+  color: var(--ds-color-white);
+  letter-spacing: -0.01em;
+}
+.page-intro-left h1 em { font-style: italic; color: var(--ds-color-gold-light); }
+.page-intro-lede {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-xl);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ds-color-white-80);
+  line-height: 1.55;
+  border-left: 2px solid var(--ds-color-gold);
+  padding-left: var(--ds-space-md);
+}
+.page-intro-ledger {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: var(--ds-space-xl);
+  border-top: 1px solid var(--ds-color-white-10);
+  padding-top: var(--ds-space-md);
+}
+.page-intro-ledger-item {
+  border-right: 1px solid var(--ds-color-white-10);
+  padding: var(--ds-space-sm) var(--ds-space-md) var(--ds-space-sm) 0;
+}
+.page-intro-ledger-item:last-child { border-right: none; }
+.page-intro-ledger-key {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  margin-bottom: 0.4rem;
+}
+.page-intro-ledger-val {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.2;
+  display: block;
+}
+@media (max-width: 768px) {
+  .page-intro-inner { grid-template-columns: 1fr; }
+  .page-intro-ghost { display: none; }
+  .page-intro-ledger { grid-template-columns: 1fr; }
+  .page-intro-ledger-item { border-right: none; border-bottom: 1px solid var(--ds-color-white-10); padding: var(--ds-space-sm) 0; }
+  .page-intro-ledger-item:last-child { border-bottom: none; }
+}
+
+/* @section The Founders */
+.the-founders {
+  background: var(--ds-color-navy);
+  overflow: hidden;
+}
+.founders-split {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  min-height: 720px;
+}
+.founders-panel {
+  background: var(--ds-color-navy);
+  padding: var(--ds-space-section) var(--ds-space-xl) var(--ds-space-section) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.founders-panel-inner {
+  max-width: 560px;
+  margin-left: auto;
+  padding-right: var(--ds-space-lg);
+}
+.founders-panel h2 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.1;
+  margin-bottom: var(--ds-space-lg);
+}
+.founders-panel h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.founders-body {
+  color: var(--ds-color-white-80);
+  font-size: var(--ds-text-lg);
+  line-height: 1.85;
+}
+.founders-body p + p { margin-top: var(--ds-space-md); }
+.founders-sig {
+  margin-top: var(--ds-space-xl);
+  padding-top: var(--ds-space-md);
+  border-top: 1px solid var(--ds-color-white-10);
+  display: flex;
+  align-items: baseline;
+  gap: var(--ds-space-md);
+}
+.founders-sig-name {
+  font-family: var(--ds-font-heading);
+  font-style: italic;
+  font-size: var(--ds-text-xl);
+  color: var(--ds-color-gold-light);
+  font-weight: 400;
+}
+.founders-sig-role {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-white-50);
+}
+.founders-photo {
+  position: relative;
+  overflow: hidden;
+}
+.founders-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.founders-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, transparent 65%, var(--ds-color-navy));
+}
+.founders-roman {
+  position: absolute;
+  top: var(--ds-space-lg);
+  left: var(--ds-space-lg);
+  font-family: var(--ds-font-heading);
+  font-size: 9rem;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(201,168,76,0.18);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+.founders-year-badge {
+  position: absolute;
+  bottom: var(--ds-space-xl);
+  right: var(--ds-space-xl);
+  background: var(--ds-color-gold);
+  color: var(--ds-color-navy);
+  padding: var(--ds-space-md) var(--ds-space-lg);
+  z-index: 2;
+}
+.founders-year-num {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 600;
+  line-height: 1;
+  display: block;
+}
+.founders-year-sub {
+  font-family: var(--ds-font-body);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .founders-split { grid-template-columns: 1fr; }
+  .founders-panel { order: 2; padding: var(--ds-space-xl) var(--ds-space-md); }
+  .founders-panel-inner { margin-left: 0; padding-right: 0; max-width: none; }
+  .founders-photo { order: 1; height: 380px; }
+  .founders-photo-overlay { display: none; }
+}
+
+/* @section The Land */
+.the-land {
+  position: relative;
+  overflow: hidden;
+}
+.land-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.land-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+.land-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(11,14,26,0.96) 0%, rgba(11,14,26,0.78) 52%, rgba(11,14,26,0.42) 100%);
+}
+.land-inner {
+  position: relative;
+  z-index: 1;
+  padding: var(--ds-space-section) 0;
+}
+.land-layout {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: var(--ds-space-xl);
+  align-items: start;
+}
+.land-left {
+  max-width: 540px;
+}
+.land-section-num {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: rgba(201,168,76,0.3);
+  display: block;
+  margin-bottom: 0.4rem;
+  line-height: 1;
+}
+.land-left h2 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-5xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.02;
+  margin-bottom: var(--ds-space-lg);
+  letter-spacing: -0.01em;
+}
+.land-left h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.land-body {
+  color: var(--ds-color-white-80);
+  font-size: var(--ds-text-lg);
+  line-height: 1.85;
+}
+.land-body p + p { margin-top: var(--ds-space-md); }
+.land-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-space-sm);
+  align-self: stretch;
+}
+.land-fact {
+  background: rgba(11,14,26,0.55);
+  border: 1px solid var(--ds-color-white-10);
+  padding: var(--ds-space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color var(--ds-transition-base), background var(--ds-transition-base);
+}
+.land-fact:hover {
+  border-color: rgba(201,168,76,0.4);
+  background: rgba(11,14,26,0.72);
+}
+.land-fact.feature {
+  grid-column: 1 / 3;
+  border-color: rgba(201,168,76,0.28);
+  background: rgba(201,168,76,0.06);
+}
+.land-fact-key {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.land-fact-val {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-3xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.1;
+}
+.land-fact-note {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-50);
+  line-height: 1.55;
+}
+@media (max-width: 768px) {
+  .land-layout { grid-template-columns: 1fr; }
+  .land-right { grid-template-columns: 1fr; }
+  .land-fact.feature { grid-column: auto; }
+}
+
+/* @section Three Generations */
+.three-generations {
+  background: var(--ds-color-navy-mid);
+  overflow: hidden;
+}
+.gen-inner {
+  padding: var(--ds-space-section) 0;
+}
+.gen-header {
+  max-width: 760px;
+  margin-bottom: var(--ds-space-xl);
+}
+.gen-header h2 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-5xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.02;
+  margin-bottom: var(--ds-space-md);
+  letter-spacing: -0.01em;
+}
+.gen-header h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.gen-header-lede {
+  color: var(--ds-color-white-80);
+  font-size: var(--ds-text-lg);
+  line-height: 1.75;
+}
+.gen-ledger {
+  border-top: 1px solid rgba(201,168,76,0.3);
+  display: flex;
+  flex-direction: column;
+}
+.gen-entry {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  gap: var(--ds-space-xl);
+  padding: var(--ds-space-xl) 0;
+  border-bottom: 1px solid var(--ds-color-white-10);
+  align-items: start;
+  transition: border-color var(--ds-transition-base);
+}
+.gen-entry:hover {
+  border-bottom-color: rgba(201,168,76,0.4);
+}
+.gen-years {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: var(--ds-color-gold);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.gen-years-sub {
+  display: block;
+  font-family: var(--ds-font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-white-50);
+  margin-top: 0.8rem;
+}
+.gen-title {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-3xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.15;
+  margin-bottom: var(--ds-space-xs);
+}
+.gen-title em { font-style: italic; color: var(--ds-color-gold-light); }
+.gen-who {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.gen-note {
+  color: var(--ds-color-white-80);
+  font-size: var(--ds-text-base);
+  line-height: 1.75;
+}
+@media (max-width: 768px) {
+  .gen-entry { grid-template-columns: 1fr; gap: var(--ds-space-md); }
+}
+
+/* @section How We Make Wine */
+.how-we-make {
+  background: var(--ds-color-navy);
+  overflow: hidden;
+}
+.how-inner {
+  padding: var(--ds-space-section) 0;
+}
+.how-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-space-xl);
+  align-items: end;
+  border-bottom: 1px solid var(--ds-color-white-10);
+  padding-bottom: var(--ds-space-xl);
+  margin-bottom: var(--ds-space-xl);
+}
+.how-top h2 {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(2.75rem, 5.5vw, var(--ds-text-5xl));
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+.how-top h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.how-top-right {
+  max-width: 440px;
+  margin-left: auto;
+}
+.how-top-eyebrow {
+  display: block;
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  margin-bottom: var(--ds-space-sm);
+}
+.how-top-desc {
+  color: var(--ds-color-white-80);
+  font-size: var(--ds-text-lg);
+  line-height: 1.75;
+}
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.how-step {
+  padding: var(--ds-space-lg) var(--ds-space-lg) var(--ds-space-lg) 0;
+  border-right: 1px solid var(--ds-color-white-10);
+  position: relative;
+}
+.how-step:last-child { border-right: none; padding-right: 0; }
+.how-step:not(:first-child) {
+  padding-left: var(--ds-space-lg);
+}
+.how-step-num {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-5xl);
+  font-weight: 300;
+  color: rgba(201,168,76,0.3);
+  line-height: 1;
+  display: block;
+  margin-bottom: var(--ds-space-md);
+  letter-spacing: -0.02em;
+}
+.how-step-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.how-step-title {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.2;
+  margin-bottom: var(--ds-space-sm);
+}
+.how-step-body {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-80);
+  line-height: 1.7;
+}
+@media (max-width: 900px) {
+  .how-top { grid-template-columns: 1fr; }
+  .how-top-right { margin-left: 0; }
+  .how-steps { grid-template-columns: 1fr 1fr; }
+  .how-step { border-right: none; border-bottom: 1px solid var(--ds-color-white-10); padding: var(--ds-space-lg) 0; }
+  .how-step:nth-child(odd) { padding-right: var(--ds-space-md); border-right: 1px solid var(--ds-color-white-10); }
+  .how-step:nth-child(even) { padding-left: var(--ds-space-md); }
+}
+@media (max-width: 560px) {
+  .how-steps { grid-template-columns: 1fr; }
+  .how-step, .how-step:nth-child(odd), .how-step:nth-child(even) {
+    border-right: none;
+    padding: var(--ds-space-lg) 0;
+  }
+}
+
+/* @section The Family Today */
+.family-today {
+  background: var(--ds-color-navy);
+  overflow: hidden;
+}
+.today-split {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  min-height: 720px;
+}
+.today-photo {
+  position: relative;
+  overflow: hidden;
+}
+.today-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.today-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 60%, var(--ds-color-navy));
+}
+.today-mark {
+  position: absolute;
+  top: var(--ds-space-lg);
+  right: var(--ds-space-lg);
+  font-family: var(--ds-font-heading);
+  font-size: 9rem;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(226,201,126,0.4);
+  line-height: 0.55;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+.today-panel {
+  background: var(--ds-color-navy);
+  padding: var(--ds-space-section) var(--ds-space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.today-panel h2 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.1;
+  margin-bottom: var(--ds-space-lg);
+}
+.today-panel h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.today-quote {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ds-color-white);
+  line-height: 1.5;
+  margin-bottom: var(--ds-space-lg);
+  border-left: 2px solid var(--ds-color-gold);
+  padding-left: var(--ds-space-md);
+}
+.today-attr {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  margin-bottom: var(--ds-space-xl);
+}
+.today-attr-line { width: 36px; height: 1px; background: var(--ds-color-gold); }
+.today-attr span {
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.today-roster {
+  border-top: 1px solid var(--ds-color-white-10);
+  display: flex;
+  flex-direction: column;
+}
+.today-roster-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--ds-space-md);
+  padding: var(--ds-space-md) 0;
+  border-bottom: 1px solid var(--ds-color-white-10);
+  align-items: baseline;
+  transition: border-color var(--ds-transition-base);
+}
+.today-roster-row:hover {
+  border-bottom-color: rgba(201,168,76,0.35);
+}
+.today-roster-name {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.2;
+}
+.today-roster-role {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .today-split { grid-template-columns: 1fr; }
+  .today-photo { height: 420px; }
+  .today-photo-overlay { display: none; }
+  .today-panel { padding: var(--ds-space-xl) var(--ds-space-md); }
+}
+
+/* @section Visit CTA */
+.visit-cta {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.visit-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.visit-cta-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+}
+.visit-cta-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(11,14,26,0.94) 0%, rgba(11,14,26,0.78) 55%, rgba(11,14,26,0.55) 100%);
+}
+.visit-cta-inner {
+  position: relative;
+  z-index: 1;
+  padding: var(--ds-space-section) 0;
+  width: 100%;
+}
+.visit-cta-layout {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--ds-space-xl);
+  align-items: center;
+}
+.visit-cta-left h2 {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(2.5rem, 5vw, var(--ds-text-5xl));
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.02;
+  margin-bottom: var(--ds-space-md);
+  letter-spacing: -0.01em;
+}
+.visit-cta-left h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.visit-cta-lede {
+  color: var(--ds-color-white-80);
+  font-size: var(--ds-text-lg);
+  line-height: 1.75;
+  max-width: 520px;
+}
+.visit-cta-actions {
+  display: flex;
+  gap: var(--ds-space-md);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .visit-cta-layout { grid-template-columns: 1fr; }
+  .visit-cta-actions { justify-content: flex-start; }
+}
+
+  </style>
+</head>
+<body>
+<section data-label="Page Intro" id="page-intro" class="page-intro">
+  <div class="page-intro-bg">
+    <img data-field="intro_image" src="https://images.unsplash.com/photo-1543418219-44e30b057fea?w=2000&h=1200&fit=crop" alt="Vineyard rows stretching toward rolling hills at golden-hour sunset, warm amber light across the vines">
+  </div>
+  <div class="page-intro-ghost" aria-hidden="true">1978</div>
+  <div class="bb-container">
+    <div class="page-intro-inner">
+      <div class="page-intro-left">
+        <div class="page-rule bb-reveal"><span class="page-rule-text" data-field="intro_eyebrow">Our Story · Est. 1978</span></div>
+        <h1 class="bb-reveal bb-reveal-delay-1" data-field="intro_title" data-field-type="editor">Three Generations<br>on the <em>Same Hillside</em></h1>
+        <div class="page-intro-ledger bb-reveal bb-reveal-delay-3" data-repeater="intro_ledger">
+          <div class="page-intro-ledger-item" data-repeater-item>
+            <span class="page-intro-ledger-key" data-field="key">Founded</span>
+            <span class="page-intro-ledger-val" data-field="value">1978</span>
+          </div>
+          <div class="page-intro-ledger-item" data-repeater-item>
+            <span class="page-intro-ledger-key" data-field="key">Under Vine</span>
+            <span class="page-intro-ledger-val" data-field="value">46 Acres</span>
+          </div>
+          <div class="page-intro-ledger-item" data-repeater-item>
+            <span class="page-intro-ledger-key" data-field="key">Family Hands</span>
+            <span class="page-intro-ledger-val" data-field="value">3 Generations</span>
+          </div>
+        </div>
+      </div>
+      <div class="page-intro-right bb-reveal bb-reveal-delay-2">
+        <p class="page-intro-lede" data-field="intro_lede">We are a family winery on the eastern ridge of Napa Valley. Forty-six acres, eight varietals, and a single idea that has outlasted three generations — make the wine the way the land wants it made, and the rest takes care of itself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="The Founders" id="the-founders" class="the-founders">
+  <div class="founders-split">
+    <div class="founders-panel bb-reveal">
+      <div class="founders-panel-inner">
+        <div class="page-rule"><span class="page-rule-text" data-field="founders_eyebrow">Chapter One · 1978</span></div>
+        <h2 data-field="founders_heading" data-field-type="editor">Harold and June<br>and a <em>Hillside</em></h2>
+        <div class="founders-body" data-field="founders_body" data-field-type="editor">
+          <p>Harold Callahan was a high school geology teacher in Sacramento. June was a nurse. In the spring of 1977 they drove up Highway 29 on a long weekend, took a wrong turn off the Silverado Trail, and found themselves on a washboard road climbing the eastern ridge of the valley.</p>
+          <p>The property at the top had been a walnut orchard, abandoned for a decade. The trees were gone. What was left was forty-six acres of rocky, south-facing hillside and a stone barn that had been standing since before Prohibition. They bought it in the fall for $88,000.</p>
+          <p>The first Cabernet vines went in the ground in October of '78 — eleven rows, planted by hand with a neighbor's tractor and a borrowed auger. June kept the books on a legal pad in the kitchen. Harold taught through the first three vintages to keep the lights on. They did not take a salary from the winery until 1986.</p>
+        </div>
+        <div class="founders-sig">
+          <span class="founders-sig-name" data-field="founders_sig_name">Harold &amp; June Callahan</span>
+          <span class="founders-sig-role" data-field="founders_sig_role">Founders · First Generation</span>
+        </div>
+      </div>
+    </div>
+    <div class="founders-photo bb-reveal bb-reveal-delay-1">
+      <img data-field="founders_image" src="https://images.unsplash.com/photo-1596142332133-327e2a0ff006?w=1200&h=1400&fit=crop" alt="Hand-tended vineyard rows climbing a sunlit hillside toward a distant stone estate, late-afternoon warmth">
+      <div class="founders-photo-overlay"></div>
+      <div class="founders-roman" aria-hidden="true">I</div>
+      <div class="founders-year-badge">
+        <span class="founders-year-num" data-field="founders_year">1978</span>
+        <span class="founders-year-sub" data-field="founders_year_sub">First Planting</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="The Land" id="the-land" class="the-land">
+  <div class="land-bg">
+    <img data-field="land_image" src="https://images.unsplash.com/photo-1743309411498-a0f4f4b96b65?w=2000&h=1200&fit=crop" alt="Golden morning fog settling between ridgelines, warm sunrise light spilling across wooded hills">
+  </div>
+  <div class="land-inner">
+    <div class="bb-container">
+      <div class="land-layout">
+        <div class="land-left bb-reveal">
+          <span class="land-section-num" aria-hidden="true">II.</span>
+          <div class="page-rule"><span class="page-rule-text" data-field="land_eyebrow">The Site</span></div>
+          <h2 data-field="land_heading" data-field-type="editor">A Hillside<br>That <em>Earns Its Fruit</em></h2>
+          <div class="land-body" data-field="land_body" data-field-type="editor">
+            <p>We sit 840 feet above the valley floor, on a south-southwest-facing slope of volcanic soil — reddish, rocky, thin enough that the vines have to work for their water. That stress is the whole point. Hillside fruit ripens slower and concentrates deeper than anything grown on the flats.</p>
+            <p>Fog rolls up from the bay most summer mornings and holds the vines cool past ten. By two in the afternoon the sun is direct and hard. The day ends slow, the way a Cabernet wants — a long warm evening instead of a sudden drop.</p>
+            <p>We dry-farm the oldest eighteen acres. The younger blocks take water twice a season. That's it.</p>
+          </div>
+        </div>
+        <div class="land-right bb-reveal bb-reveal-delay-1" data-repeater="land_facts">
+          <div class="land-fact feature" data-repeater-item>
+            <span class="land-fact-key" data-field="key">Elevation</span>
+            <span class="land-fact-val" data-field="value">840 ft</span>
+            <span class="land-fact-note" data-field="note">Above the valley floor, on the eastern ridge of Napa.</span>
+          </div>
+          <div class="land-fact" data-repeater-item>
+            <span class="land-fact-key" data-field="key">Aspect</span>
+            <span class="land-fact-val" data-field="value">SSW</span>
+            <span class="land-fact-note" data-field="note">Long afternoon sun, slow evening cool-down.</span>
+          </div>
+          <div class="land-fact" data-repeater-item>
+            <span class="land-fact-key" data-field="key">Soil</span>
+            <span class="land-fact-val" data-field="value">Volcanic</span>
+            <span class="land-fact-note" data-field="note">Thin, rocky, red. The vines work for it.</span>
+          </div>
+          <div class="land-fact" data-repeater-item>
+            <span class="land-fact-key" data-field="key">Fog Line</span>
+            <span class="land-fact-val" data-field="value">~10 AM</span>
+            <span class="land-fact-note" data-field="note">Holds the vines cool through the morning.</span>
+          </div>
+          <div class="land-fact" data-repeater-item>
+            <span class="land-fact-key" data-field="key">Dry-Farmed</span>
+            <span class="land-fact-val" data-field="value">18 Acres</span>
+            <span class="land-fact-note" data-field="note">The original plantings. No irrigation, ever.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="Three Generations" id="three-generations" class="three-generations">
+  <div class="gen-inner">
+    <div class="bb-container">
+      <div class="gen-header bb-reveal">
+        <div class="page-rule"><span class="page-rule-text" data-field="gen_eyebrow">The Continuity</span></div>
+        <h2 data-field="gen_heading" data-field-type="editor">Three Generations<br>of <em>Honest Wine</em></h2>
+        <p class="gen-header-lede" data-field="gen_lede">The estate has changed hands twice in forty-seven years — both times across a kitchen table. The second generation inherited the books. The third inherited the dirt under their fingernails. Nothing has been sold to outside ownership. Nothing will be.</p>
+      </div>
+      <div class="gen-ledger" data-repeater="gen_entries">
+        <div class="gen-entry bb-reveal" data-repeater-item>
+          <div>
+            <span class="gen-years" data-field="years">1978 – 2002</span>
+            <span class="gen-years-sub" data-field="years_sub">First Generation</span>
+          </div>
+          <div>
+            <h3 class="gen-title" data-field="title" data-field-type="editor">Planting the <em>Hillside</em></h3>
+            <span class="gen-who" data-field="who">Harold &amp; June Callahan</span>
+          </div>
+          <p class="gen-note" data-field="note">Built the stone winery from the walls up. Planted the first eighteen acres, bottled the first vintage in 1981, and kept the books by hand until the day they handed over the keys.</p>
+        </div>
+        <div class="gen-entry bb-reveal" data-repeater-item>
+          <div>
+            <span class="gen-years" data-field="years">2002 – 2019</span>
+            <span class="gen-years-sub" data-field="years_sub">Second Generation</span>
+          </div>
+          <div>
+            <h3 class="gen-title" data-field="title" data-field-type="editor">Steadying the <em>Work</em></h3>
+            <span class="gen-who" data-field="who">Tom &amp; Clara Callahan</span>
+          </div>
+          <p class="gen-note" data-field="note">Doubled acreage to forty-six. Replanted the original Cabernet blocks on phylloxera-resistant rootstock. Converted the barrel program to French oak and held the line on estate-grown only.</p>
+        </div>
+        <div class="gen-entry bb-reveal" data-repeater-item>
+          <div>
+            <span class="gen-years" data-field="years">2019 – Today</span>
+            <span class="gen-years-sub" data-field="years_sub">Third Generation</span>
+          </div>
+          <div>
+            <h3 class="gen-title" data-field="title" data-field-type="editor">Carrying <em>Forward</em></h3>
+            <span class="gen-who" data-field="who">James &amp; Eleanor Callahan</span>
+          </div>
+          <p class="gen-note" data-field="note">James makes the wine. Eleanor runs the estate and hospitality. The rows are still picked by hand. The wines still bottle when they are ready — not when the calendar says so.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="How We Make Wine" id="how-we-make-wine" class="how-we-make">
+  <div class="how-inner">
+    <div class="bb-container">
+      <div class="how-top bb-reveal">
+        <div class="how-top-left">
+          <h2 data-field="how_heading" data-field-type="editor">The Way We've<br><em>Always Done It</em></h2>
+        </div>
+        <div class="how-top-right">
+          <span class="how-top-eyebrow" data-field="how_eyebrow">From Vine to Bottle</span>
+          <p class="how-top-desc" data-field="how_description">Four steps. The same four steps we have followed since the first vintage. There is no secret here, and there is nothing new. There is only the patience to do it the way it deserves.</p>
+        </div>
+      </div>
+      <div class="how-steps" data-repeater="how_steps">
+        <div class="how-step bb-reveal" data-repeater-item>
+          <span class="how-step-num" data-field="number">01</span>
+          <span class="how-step-label" data-field="label">In the Rows</span>
+          <h3 class="how-step-title" data-field="title">Picked by Hand</h3>
+          <p class="how-step-body" data-field="body">Every cluster is cut by hand into a ten-pound bin, sorted once in the row and again on the crush pad. No mechanical harvesters have ever run this hillside.</p>
+        </div>
+        <div class="how-step bb-reveal bb-reveal-delay-1" data-repeater-item>
+          <span class="how-step-num" data-field="number">02</span>
+          <span class="how-step-label" data-field="label">In the Cellar</span>
+          <h3 class="how-step-title" data-field="title">Native Ferments</h3>
+          <p class="how-step-body" data-field="body">We let the fruit start on its own. Wild yeast, open tops, punched down by hand twice a day for about three weeks. No enzymes, no color additions, no shortcuts.</p>
+        </div>
+        <div class="how-step bb-reveal bb-reveal-delay-2" data-repeater-item>
+          <span class="how-step-num" data-field="number">03</span>
+          <span class="how-step-label" data-field="label">In the Cave</span>
+          <h3 class="how-step-title" data-field="title">French Oak, Unhurried</h3>
+          <p class="how-step-body" data-field="body">Twenty-two months in French oak, roughly a third of the barrels new. The cave stays at fifty-eight degrees year-round, so the wine takes its time and we take ours.</p>
+        </div>
+        <div class="how-step bb-reveal bb-reveal-delay-3" data-repeater-item>
+          <span class="how-step-num" data-field="number">04</span>
+          <span class="how-step-label" data-field="label">At the Line</span>
+          <h3 class="how-step-title" data-field="title">Bottled When Ready</h3>
+          <p class="how-step-body" data-field="body">The winemaker calls it. If the wine needs another six months, it gets another six months. We have never released a bottle we didn't pour for ourselves first.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="The Family Today" id="the-family-today" class="family-today">
+  <div class="today-split">
+    <div class="today-photo bb-reveal">
+      <img data-field="today_image" src="https://images.unsplash.com/photo-1605673349837-1d83a7740e30?w=1200&h=1400&fit=crop" alt="Gloved hands harvesting dark wine grapes from the vine, close and working, green leaves surrounding the cluster">
+      <div class="today-photo-overlay"></div>
+      <span class="today-mark" aria-hidden="true">&ldquo;</span>
+    </div>
+    <div class="today-panel bb-reveal bb-reveal-delay-1">
+      <div class="page-rule"><span class="page-rule-text" data-field="today_eyebrow">The Family Today</span></div>
+      <h2 data-field="today_heading" data-field-type="editor">The Same Table,<br><em>Still Set</em></h2>
+      <p class="today-quote" data-field="today_quote">My grandparents planted the first rows because they wanted to make a wine they would be proud to open for a neighbor. That's still the whole job. Nothing has been added, and nothing has been lost.</p>
+      <div class="today-attr">
+        <div class="today-attr-line"></div>
+        <span data-field="today_attr">— James Callahan, Third-Generation Winemaker</span>
+      </div>
+      <div class="today-roster" data-repeater="today_roster">
+        <div class="today-roster-row" data-repeater-item>
+          <span class="today-roster-name" data-field="name">James Callahan</span>
+          <span class="today-roster-role" data-field="role">Winemaker</span>
+        </div>
+        <div class="today-roster-row" data-repeater-item>
+          <span class="today-roster-name" data-field="name">Eleanor Callahan</span>
+          <span class="today-roster-role" data-field="role">Estate &amp; Hospitality</span>
+        </div>
+        <div class="today-roster-row" data-repeater-item>
+          <span class="today-roster-name" data-field="name">Tom Callahan</span>
+          <span class="today-roster-role" data-field="role">Viticulture</span>
+        </div>
+        <div class="today-roster-row" data-repeater-item>
+          <span class="today-roster-name" data-field="name">Clara Callahan</span>
+          <span class="today-roster-role" data-field="role">Founder Emerita</span>
+        </div>
+        <div class="today-roster-row" data-repeater-item>
+          <span class="today-roster-name" data-field="name">Miguel Reyes</span>
+          <span class="today-roster-role" data-field="role">Vineyard Manager · 22 Years</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="Visit CTA" id="visit-cta" class="visit-cta">
+  <div class="visit-cta-bg">
+    <img data-field="cta_image" src="https://images.unsplash.com/photo-1598284444079-ab715eed2b88?w=2000&h=1200&fit=crop" alt="Long candlelit dinner table at a winery, wine being poured into glasses, guests gathered in warm evening light">
+  </div>
+  <div class="visit-cta-inner">
+    <div class="bb-container">
+      <div class="visit-cta-layout">
+        <div class="visit-cta-left bb-reveal">
+          <div class="page-rule"><span class="page-rule-text" data-field="cta_eyebrow">Come See the Hillside</span></div>
+          <h2 data-field="cta_heading" data-field-type="editor">Read the Rest<br><em>Over a Glass</em></h2>
+          <p class="visit-cta-lede" data-field="cta_lede">The story keeps going in the cave and on the terrace. Book a tasting, walk the rows, meet the family who still works them.</p>
+        </div>
+        <div class="visit-cta-actions bb-reveal bb-reveal-delay-1" data-repeater="cta_buttons">
+          <a class="bb-btn bb-btn-primary" data-repeater-item data-field="label" data-field-href="url" href="#">Book a Tasting</a>
+          <a class="bb-btn bb-btn-outline" data-repeater-item data-field="label" data-field-href="url" href="#">Plan a Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

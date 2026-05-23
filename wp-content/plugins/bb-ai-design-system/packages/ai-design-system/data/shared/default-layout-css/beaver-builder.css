@@ -1,0 +1,10 @@
+/* Default environment CSS for Beaver Builder -- applied to all design systems
+   unless overridden. Resets BB infrastructure that conflicts with DS blocks. */
+
+/* Remove BB's default module margins from top-level DS sections so they
+   sit flush against each other and the page edges. */
+.fl-builder-content > header.fl-ds-block,
+.fl-builder-content > footer.fl-ds-block,
+.fl-builder-content > section.fl-ds-block {
+	margin: 0;
+}

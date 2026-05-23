@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Header</title>
+  <link rel="stylesheet" href="../design-system/styles.css">
+  <script src="../design-system/script.js"></script>
+  <style>
+    /* @section Site Header */
+    .site-header {
+      background: var(--ds-color-cream-mid);
+      padding: 14px 0;
+      position: relative;
+      clip-path: polygon(
+        0% 0%, 100% 0%,
+        100% 100%, 92% 99.6%, 78% 100%, 60% 99.7%, 40% 100%, 22% 99.6%, 8% 100%, 0% 99.7%
+      );
+      z-index: 100;
+      transition: box-shadow var(--ds-transition-base);
+    }
+    .site-header.is-scrolled { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); }
+
+    .site-header__inner {
+      width: 100%;
+      max-width: var(--ds-width-wide);
+      margin: 0 auto;
+      padding: 0 var(--ds-space-px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--ds-space-md);
+    }
+
+    .site-header__logo {
+      font-family: var(--ds-font-display);
+      font-size: 1.35rem;
+      color: var(--ds-color-teal);
+      font-weight: var(--ds-weight-bold);
+      letter-spacing: var(--ds-letter-tight);
+      transform: rotate(-0.5deg);
+      white-space: nowrap;
+    }
+    .site-header__logo-accent { color: var(--ds-color-amber-dark); }
+
+    .site-header__nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .site-header__link {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      color: var(--ds-color-text-light);
+      text-transform: uppercase;
+      letter-spacing: var(--ds-letter-wider);
+      padding: 8px 14px;
+      transition: color var(--ds-transition-base);
+    }
+    .site-header__link:hover { color: var(--ds-color-teal); }
+
+    .site-header__cta {
+      display: inline-block;
+      background: var(--ds-color-teal);
+      color: var(--ds-color-white);
+      padding: 8px 22px;
+      font-size: var(--ds-text-sm);
+      font-family: var(--ds-font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transform: rotate(0.8deg);
+      clip-path: polygon(
+        0% 0.4%, 10% 0%, 30% 0.5%, 55% 0%, 80% 0.4%, 95% 0%, 100% 0.3%,
+        100% 99.6%, 90% 100%, 65% 99.5%, 40% 100%, 15% 99.6%, 0% 100%
+      );
+      transition: background var(--ds-transition-base);
+    }
+    .site-header__cta:hover { background: var(--ds-color-teal-mid); color: var(--ds-color-white); }
+
+    @media (max-width: 600px) {
+      .site-header__link { display: none; }
+      .site-header__logo { font-size: 1.1rem; }
+      .site-header__cta { font-size: 0.75rem; padding: 6px 14px; }
+    }
+  </style>
+  <script>
+    /* @section Site Header */
+    onReady(() => {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const onScroll = () => {
+        if (window.scrollY > 20) {
+          header.classList.add('is-scrolled');
+        } else {
+          header.classList.remove('is-scrolled');
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+  </script>
+</head>
+<body>
+
+  <header id="site-header" class="site-header" data-label="Site Header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="#" data-field-href="logo_url">
+        <span data-field="logo_name">Beaver Builder</span> <span class="site-header__logo-accent" data-field="logo_accent">AI</span>
+      </a>
+      <nav class="site-header__nav" aria-label="Primary">
+        <div data-repeater="nav_links">
+          <a class="site-header__link" href="#" data-repeater-item data-field="label" data-field-href="url">Showcase</a>
+          <a class="site-header__link" href="#" data-repeater-item data-field="label" data-field-href="url">Docs</a>
+        </div>
+        <a class="site-header__cta" href="#" data-field="cta_label" data-field-href="cta_url">Try the Demo</a>
+      </nav>
+    </div>
+  </header>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+# WordPress credentials & sensitive config
+wp-config.php
+
+# Generated/uploaded content
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/debug.log
+wp-content/backup-db/
+wp-content/backups/
+*.log
+
+# Commercial plugins (licensed, not for public distribution)
+wp-content/plugins/bb-plugin/
+wp-content/plugins/gravityforms/
+wp-content/plugins/gravityformsmailchimp/
+
+# System files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
+*.swp
+*.swo

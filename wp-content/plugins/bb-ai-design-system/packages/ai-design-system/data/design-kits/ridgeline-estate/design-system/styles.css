@@ -1,0 +1,155 @@
+/* @tokens */
+:root {
+  --ds-color-navy: #0b0e1a;
+  --ds-color-navy-mid: #111627;
+  --ds-color-navy-light: #1a2035;
+  --ds-color-gold: #c9a84c;
+  --ds-color-gold-light: #e2c97e;
+  --ds-color-gold-pale: #f5edd8;
+  --ds-color-cream: #faf6ef;
+  --ds-color-white: #ffffff;
+  --ds-color-white-80: rgba(255,255,255,0.80);
+  --ds-color-white-50: rgba(255,255,255,0.50);
+  --ds-color-white-20: rgba(255,255,255,0.20);
+  --ds-color-white-10: rgba(255,255,255,0.10);
+  --ds-color-text-dark: #1a1a2e;
+  --ds-color-text-muted: #8a8fa8;
+  --ds-font-heading: 'Cormorant Garamond', Georgia, serif;
+  --ds-font-body: 'DM Sans', system-ui, sans-serif;
+  --ds-space-xs: 0.5rem;
+  --ds-space-sm: 1rem;
+  --ds-space-md: 1.5rem;
+  --ds-space-lg: 2.5rem;
+  --ds-space-xl: 4rem;
+  --ds-space-section: 7rem;
+  --ds-text-xs: 0.75rem;
+  --ds-text-sm: 0.875rem;
+  --ds-text-base: 1rem;
+  --ds-text-lg: 1.125rem;
+  --ds-text-xl: 1.25rem;
+  --ds-text-2xl: 1.5rem;
+  --ds-text-3xl: 2rem;
+  --ds-text-4xl: 2.75rem;
+  --ds-text-5xl: 3.75rem;
+  --ds-text-6xl: 5.5rem;
+  --ds-radius-sm: 4px;
+  --ds-radius-md: 8px;
+  --ds-radius-lg: 16px;
+  --ds-shadow-gold: 0 0 40px rgba(201,168,76,0.18);
+  --ds-shadow-card: 0 8px 48px rgba(0,0,0,0.22);
+  --ds-transition-base: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ds-transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ds-width-container: 1200px;
+  --ds-system-root-font-size: 16px;
+}
+
+html { font-size: var(--ds-system-root-font-size); }
+
+/* @reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+
+/* @base */
+body {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-base);
+  color: var(--ds-color-white);
+  background: var(--ds-color-navy);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bb-container {
+  width: 100%;
+  max-width: var(--ds-width-container);
+  margin-inline: auto;
+  padding-inline: var(--ds-space-lg);
+}
+
+.bb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1rem 2.25rem;
+  border-radius: var(--ds-radius-sm);
+  transition: all var(--ds-transition-base);
+  cursor: pointer;
+}
+
+.bb-btn-primary {
+  background: var(--ds-color-gold);
+  color: var(--ds-color-navy);
+}
+.bb-btn-primary:hover {
+  background: var(--ds-color-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(201,168,76,0.35);
+}
+
+.bb-btn-outline {
+  background: transparent;
+  color: var(--ds-color-white);
+  border: 1.5px solid var(--ds-color-white-50);
+}
+.bb-btn-outline:hover {
+  border-color: var(--ds-color-gold);
+  color: var(--ds-color-gold);
+  transform: translateY(-2px);
+}
+
+.bb-badge {
+  display: inline-block;
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 0.4rem 1.1rem;
+  border-radius: 100px;
+  margin-bottom: var(--ds-space-md);
+}
+
+.bb-section-label {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  margin-bottom: var(--ds-space-sm);
+}
+
+/* Reveal animation base */
+.bb-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.bb-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.bb-reveal-delay-1 { transition-delay: 0.1s; }
+.bb-reveal-delay-2 { transition-delay: 0.2s; }
+.bb-reveal-delay-3 { transition-delay: 0.3s; }
+.bb-reveal-delay-4 { transition-delay: 0.4s; }
+
+@media (max-width: 768px) {
+  .bb-container { padding-inline: var(--ds-space-sm); }
+  :root {
+    --ds-space-section: 4.5rem;
+    --ds-text-5xl: 2.75rem;
+    --ds-text-6xl: 3.25rem;
+  }
+}

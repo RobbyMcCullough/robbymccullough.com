@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ridgeline Estate — Site Header</title>
+  <meta name="post-type" content="page">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../design-system/styles.css">
+  <script src="../design-system/script.js"></script>
+  <style>
+    /* @section Nav */
+    .site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: var(--ds-space-md) 0;
+      transition: background var(--ds-transition-base), padding var(--ds-transition-base);
+    }
+    .site-nav.scrolled {
+      background: rgba(11,14,26,0.96);
+      backdrop-filter: blur(14px);
+      padding: 0.75rem 0;
+      box-shadow: 0 1px 0 rgba(201,168,76,0.12);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; flex-direction: column; gap: 0; }
+    .nav-logo-name {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-xl);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--ds-color-white);
+      line-height: 1;
+    }
+    .nav-logo-sub {
+      font-family: var(--ds-font-body);
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--ds-color-gold);
+    }
+    .nav-links { display: flex; align-items: center; gap: var(--ds-space-lg); }
+    .nav-links a {
+      font-family: var(--ds-font-body);
+      font-size: var(--ds-text-sm);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ds-color-white-80);
+      transition: color var(--ds-transition-base);
+    }
+    .nav-links a:hover { color: var(--ds-color-gold); }
+    .nav-cta {
+      font-weight: 600 !important;
+      color: var(--ds-color-gold) !important;
+      border: 1px solid rgba(201,168,76,0.45);
+      padding: 0.5rem 1.25rem;
+      transition: all var(--ds-transition-base) !important;
+    }
+    .nav-cta:hover { background: var(--ds-color-gold) !important; color: var(--ds-color-navy) !important; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+  </style>
+  <script>
+    /* @section Nav */
+    onReady(function() {
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      function tick() {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+      }
+      window.addEventListener('scroll', tick, { passive: true });
+      tick();
+    });
+  </script>
+</head>
+<body>
+<header data-label="Nav" id="site-nav" class="site-nav">
+  <div class="bb-container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" data-field-href="logo_url">
+        <span class="nav-logo-name" data-field="logo_name">Ridgeline Estate</span>
+        <span class="nav-logo-sub" data-field="logo_sub">Winery · Napa Valley</span>
+      </a>
+      <nav data-repeater="nav_links" class="nav-links">
+        <a data-repeater-item data-field-href="url" href="#our-story" data-field="label">Our Story</a>
+        <a data-repeater-item data-field-href="url" href="#tasting-room" data-field="label">Tastings</a>
+        <a data-repeater-item data-field-href="url" href="#wine-collection" data-field="label">Wines</a>
+        <a data-repeater-item data-field-href="url" href="#events" data-field="label">Events</a>
+        <a data-repeater-item data-field-href="url" href="#visit-us" data-field="label">Visit</a>
+        <a data-repeater-item data-field-href="url" href="#" data-field="label">Book a Tasting</a>
+      </nav>
+    </div>
+  </div>
+</header>
+</body>
+</html>

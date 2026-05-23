@@ -1,0 +1,27 @@
+[
+	{
+		"name": "top-level: hero with CSS background promoted to image field",
+		"annotated_html": "<section class=\"hero\"></section>",
+		"css": ".hero { background-image: url('https://example.com/hero.jpg'); }",
+		"rewritten_css": ".hero { background-image: var(--settings-hero-background); }",
+		"template": "<section class=\"hero\" style=\"--settings-hero-background: url({{{settings.hero_background.url}}})\"></section>",
+		"settings": {
+			"hero_background": { "url": "https://example.com/hero.jpg", "alt": "", "id": null, "size": null }
+		},
+		"reconstructed_html": "<section class=\"hero\" style=\"--settings-hero-background: url('https://example.com/hero.jpg')\"></section>"
+	},
+	{
+		"name": "repeater: per-item URLs preserved when each item carries its own inline-style declaration",
+		"annotated_html": "<div class=\"cards\" data-repeater=\"cards\"><div class=\"card\" data-repeater-item style=\"--settings-card-background: url('https://example.com/card-a.jpg')\"><h3 data-field=\"title\">A</h3></div><div class=\"card\" data-repeater-item style=\"--settings-card-background: url('https://example.com/card-b.jpg')\"><h3 data-field=\"title\">B</h3></div></div>",
+		"css": ".card { background-image: var(--settings-card-background); }",
+		"rewritten_css": ".card { background-image: var(--settings-card-background); }",
+		"template": "<div class=\"cards\">{{#settings.cards}}<div class=\"card\" style=\"--settings-card-background: url({{{card_background.url}}})\"><h3>{{{title}}}</h3></div>{{/settings.cards}}</div>",
+		"settings": {
+			"cards": [
+				{ "title": "A", "card_background": { "url": "https://example.com/card-a.jpg", "alt": "", "id": null, "size": null } },
+				{ "title": "B", "card_background": { "url": "https://example.com/card-b.jpg", "alt": "", "id": null, "size": null } }
+			]
+		},
+		"reconstructed_html": "<div class=\"cards\" data-repeater=\"cards\"><div class=\"card\" data-repeater-item style=\"--settings-card-background: url('https://example.com/card-a.jpg')\"><h3 data-field=\"title\">A</h3></div><div class=\"card\" data-repeater-item style=\"--settings-card-background: url('https://example.com/card-b.jpg')\"><h3 data-field=\"title\">B</h3></div></div>"
+	}
+]

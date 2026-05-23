@@ -1,0 +1,47 @@
+[
+	{
+		"name": "top-level: img with non-empty alt",
+		"annotated_html": "<img alt=\"Hero\" data-field=\"hero\" src=\"https://example.com/hero.jpg\" />",
+		"template": "<img src=\"{{settings.hero}}\" alt=\"{{settings.hero.alt}}\" />",
+		"settings": {
+			"hero": { "url": "https://example.com/hero.jpg", "alt": "Hero", "id": null, "size": null }
+		}
+	},
+	{
+		"name": "top-level: img with empty alt round-trips with no leftover token",
+		"annotated_html": "<img alt=\"\" data-field=\"hero\" src=\"https://example.com/hero.jpg\" />",
+		"template": "<img src=\"{{settings.hero}}\" alt=\"{{settings.hero.alt}}\" />",
+		"settings": {
+			"hero": { "url": "https://example.com/hero.jpg", "alt": "", "id": null, "size": null }
+		}
+	},
+	{
+		"name": "top-level: img with auxiliary attributes (class, loading) preserved",
+		"annotated_html": "<img alt=\"Hero\" class=\"hero-image\" data-field=\"hero\" loading=\"lazy\" src=\"https://example.com/hero.jpg\" />",
+		"template": "<img class=\"hero-image\" src=\"{{settings.hero}}\" alt=\"{{settings.hero.alt}}\" loading=\"lazy\" />",
+		"settings": {
+			"hero": { "url": "https://example.com/hero.jpg", "alt": "Hero", "id": null, "size": null }
+		}
+	},
+	{
+		"name": "repeater: single image item",
+		"annotated_html": "<div data-repeater=\"gallery\"><img alt=\"A\" data-field=\"photo\" data-repeater-item src=\"https://example.com/a.jpg\" /></div>",
+		"template": "<div>{{#settings.gallery}}<img src=\"{{photo}}\" alt=\"{{photo.alt}}\" />{{/settings.gallery}}</div>",
+		"settings": {
+			"gallery": [
+				{ "photo": { "url": "https://example.com/a.jpg", "alt": "A", "id": null, "size": null } }
+			]
+		}
+	},
+	{
+		"name": "repeater: two image items vary in url and alt",
+		"annotated_html": "<div data-repeater=\"gallery\"><img alt=\"Alpha\" data-field=\"photo\" data-repeater-item src=\"https://example.com/a.jpg\" /><img alt=\"Beta\" data-field=\"photo\" data-repeater-item src=\"https://example.com/b.jpg\" /></div>",
+		"template": "<div>{{#settings.gallery}}<img src=\"{{photo}}\" alt=\"{{photo.alt}}\" />{{/settings.gallery}}</div>",
+		"settings": {
+			"gallery": [
+				{ "photo": { "url": "https://example.com/a.jpg", "alt": "Alpha", "id": null, "size": null } },
+				{ "photo": { "url": "https://example.com/b.jpg", "alt": "Beta", "id": null, "size": null } }
+			]
+		}
+	}
+]

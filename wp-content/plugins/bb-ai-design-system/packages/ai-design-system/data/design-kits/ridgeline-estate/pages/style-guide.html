@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Guide — Ridgeline Estate</title>
+  <meta name="post-type" content="page">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../design-system/styles.css">
+  <script src="../design-system/script.js"></script>
+  <style>
+/* @page */
+.sg-rule {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  margin-bottom: var(--ds-space-lg);
+}
+.sg-rule::before {
+  content: '';
+  width: 48px;
+  height: 1px;
+  background: var(--ds-color-gold);
+  flex-shrink: 0;
+}
+.sg-rule-text {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.sg-section-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-space-xl);
+  align-items: end;
+  border-bottom: 1px solid var(--ds-color-white-10);
+  padding-bottom: var(--ds-space-lg);
+  margin-bottom: var(--ds-space-xl);
+}
+.sg-section-head h2 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.sg-section-head h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.sg-section-head p {
+  color: var(--ds-color-white-50);
+  font-size: var(--ds-text-base);
+  line-height: 1.75;
+}
+.sg-inner { padding: var(--ds-space-section) 0; }
+@media (max-width: 768px) {
+  .sg-section-head { grid-template-columns: 1fr; gap: var(--ds-space-md); }
+}
+
+/* @section Identity Card */
+.identity-card {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ds-color-white-10);
+}
+.identity-ghost {
+  position: absolute;
+  right: -0.05em;
+  top: 3.5rem;
+  font-family: var(--ds-font-heading);
+  font-size: clamp(8rem, 18vw, 18rem);
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(201,168,76,0.07);
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.04em;
+}
+.identity-inner {
+  position: relative;
+  z-index: 1;
+  padding: var(--ds-space-section) 0 var(--ds-space-xl);
+}
+.identity-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  margin-bottom: var(--ds-space-lg);
+}
+.identity-eyebrow-line { width: 48px; height: 1px; background: var(--ds-color-gold); }
+.identity-eyebrow-text {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.identity-wordmark {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 0.95;
+  color: var(--ds-color-white);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--ds-space-lg);
+  max-width: 860px;
+}
+.identity-wordmark em { font-style: italic; color: var(--ds-color-gold-light); }
+.identity-philosophy {
+  max-width: 640px;
+  font-size: var(--ds-text-lg);
+  color: var(--ds-color-white-80);
+  line-height: 1.75;
+  margin-bottom: var(--ds-space-md);
+}
+.identity-quote {
+  font-family: var(--ds-font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: var(--ds-text-2xl);
+  color: var(--ds-color-white);
+  line-height: 1.5;
+  max-width: 640px;
+  border-left: 2px solid var(--ds-color-gold);
+  padding-left: var(--ds-space-md);
+  margin-bottom: var(--ds-space-xl);
+}
+.identity-strip {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
+  margin-top: var(--ds-space-xl);
+  border-top: 1px solid var(--ds-color-white-10);
+  padding-top: var(--ds-space-lg);
+}
+.strip-chip {
+  height: 88px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.6rem 0.7rem;
+}
+.strip-chip span {
+  font-family: var(--ds-font-body);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-color-white);
+  mix-blend-mode: difference;
+}
+.strip-chip.strip-navy { background: var(--ds-color-navy); outline: 1px solid var(--ds-color-white-10); outline-offset: -1px; }
+.strip-chip.strip-navy-mid { background: var(--ds-color-navy-mid); }
+.strip-chip.strip-navy-light { background: var(--ds-color-navy-light); }
+.strip-chip.strip-gold { background: var(--ds-color-gold); }
+.strip-chip.strip-gold-light { background: var(--ds-color-gold-light); }
+.strip-chip.strip-gold-pale { background: var(--ds-color-gold-pale); }
+.strip-chip.strip-cream { background: var(--ds-color-cream); }
+.strip-chip.strip-white-10 { background: var(--ds-color-white-10); outline: 1px solid var(--ds-color-white-10); outline-offset: -1px; }
+@media (max-width: 768px) {
+  .identity-strip { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* @section Color Palette */
+.color-palette { background: var(--ds-color-navy); }
+.palette-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--ds-space-xl);
+}
+.palette-group-label {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  margin-bottom: var(--ds-space-md);
+  display: block;
+}
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--ds-space-md);
+}
+.palette-grid.palette-secondary { grid-template-columns: repeat(5, 1fr); }
+.swatch-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-navy-mid);
+  border: 1px solid var(--ds-color-white-10);
+  transition: border-color var(--ds-transition-base);
+}
+.swatch-card:hover { border-color: rgba(201,168,76,0.35); }
+.swatch-face {
+  height: 180px;
+  position: relative;
+}
+.swatch-face::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
+  pointer-events: none;
+}
+.swatch-body {
+  padding: var(--ds-space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-top: 1px solid var(--ds-color-white-10);
+}
+.swatch-name {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.1;
+}
+.swatch-token {
+  font-family: var(--ds-font-body);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.swatch-hex {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-sm);
+  font-weight: 400;
+  color: var(--ds-color-white-50);
+  letter-spacing: 0.04em;
+}
+.swatch-navy .swatch-face { background: var(--ds-color-navy); border-bottom: 1px solid var(--ds-color-white-10); }
+.swatch-navy-mid .swatch-face { background: var(--ds-color-navy-mid); }
+.swatch-navy-light .swatch-face { background: var(--ds-color-navy-light); }
+.swatch-gold .swatch-face { background: var(--ds-color-gold); }
+.swatch-gold-light .swatch-face { background: var(--ds-color-gold-light); }
+.swatch-gold-pale .swatch-face { background: var(--ds-color-gold-pale); }
+.swatch-cream .swatch-face { background: var(--ds-color-cream); }
+.swatch-white-80 .swatch-face { background: var(--ds-color-white-80); }
+.swatch-white-50 .swatch-face { background: var(--ds-color-white-50); }
+.swatch-white-20 .swatch-face { background: var(--ds-color-white-20); }
+.swatch-white-10 .swatch-face { background: var(--ds-color-white-10); }
+@media (max-width: 900px) {
+  .palette-grid,
+  .palette-grid.palette-secondary { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* @section Typography */
+.typography { background: var(--ds-color-navy); border-top: 1px solid var(--ds-color-white-10); }
+.type-rows {
+  display: flex;
+  flex-direction: column;
+}
+.type-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--ds-space-xl);
+  padding: var(--ds-space-lg) 0;
+  border-top: 1px solid var(--ds-color-white-10);
+  align-items: baseline;
+}
+.type-row:last-child { border-bottom: 1px solid var(--ds-color-white-10); }
+.type-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 0.6rem;
+}
+.type-meta-label {
+  font-family: var(--ds-font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.type-meta-spec {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-50);
+  line-height: 1.55;
+}
+.type-sample { color: var(--ds-color-white); }
+.type-h1 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-6xl);
+  font-weight: 300;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+}
+.type-h1 em { font-style: italic; color: var(--ds-color-gold-light); }
+.type-h2 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-5xl);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.type-h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.type-h3 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  line-height: 1.1;
+}
+.type-h3 em { font-style: italic; color: var(--ds-color-gold-light); }
+.type-h4 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-3xl);
+  font-weight: 400;
+  line-height: 1.15;
+}
+.type-h5 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.type-h6 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-xl);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.type-lead {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-lg);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--ds-color-white-80);
+  max-width: 640px;
+}
+.type-body {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-base);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--ds-color-white-80);
+  max-width: 640px;
+}
+.type-caption {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-sm);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--ds-color-white-50);
+}
+.type-eyebrow {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.type-pullword-callout {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  padding: var(--ds-space-lg);
+  margin-top: var(--ds-space-lg);
+  background: rgba(201,168,76,0.05);
+  border-left: 2px solid var(--ds-color-gold);
+}
+.type-pullword-callout em {
+  font-family: var(--ds-font-heading);
+  font-style: italic;
+  color: var(--ds-color-gold-light);
+  font-weight: 300;
+  font-size: var(--ds-text-2xl);
+}
+.type-pullword-callout p {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-50);
+  line-height: 1.65;
+}
+@media (max-width: 768px) {
+  .type-row { grid-template-columns: 1fr; gap: var(--ds-space-sm); }
+  .type-h1 { font-size: 3rem; }
+}
+
+/* @section Buttons and Links */
+.buttons-links { background: var(--ds-color-navy); border-top: 1px solid var(--ds-color-white-10); }
+.buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-space-xl);
+  margin-bottom: var(--ds-space-xl);
+}
+.button-panel {
+  background: var(--ds-color-navy-mid);
+  border: 1px solid var(--ds-color-white-10);
+  padding: var(--ds-space-lg);
+}
+.button-panel-label {
+  font-family: var(--ds-font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  margin-bottom: var(--ds-space-md);
+  display: block;
+}
+.button-panel-title {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.2;
+  margin-bottom: var(--ds-space-md);
+}
+.button-panel-title em { font-style: italic; color: var(--ds-color-gold-light); }
+.button-row {
+  display: flex;
+  gap: var(--ds-space-md);
+  flex-wrap: wrap;
+  padding-top: var(--ds-space-md);
+  border-top: 1px solid var(--ds-color-white-10);
+}
+.button-panel-note {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-50);
+  line-height: 1.65;
+  margin-top: var(--ds-space-md);
+}
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-sm);
+  margin-top: var(--ds-space-sm);
+}
+.link-list a {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-50);
+  transition: color var(--ds-transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--ds-font-body);
+}
+.link-list a::before {
+  content: '';
+  width: 12px;
+  height: 1px;
+  background: rgba(201,168,76,0.35);
+  flex-shrink: 0;
+  transition: width var(--ds-transition-base), background var(--ds-transition-base);
+}
+.link-list a:hover { color: var(--ds-color-gold); }
+.link-list a:hover::before { width: 20px; background: var(--ds-color-gold); }
+@media (max-width: 768px) {
+  .buttons-grid { grid-template-columns: 1fr; }
+}
+
+/* @section Decorative Vocabulary */
+.decorative-vocabulary { background: var(--ds-color-navy); border-top: 1px solid var(--ds-color-white-10); }
+.dec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+}
+.dec-tile {
+  background: var(--ds-color-navy-mid);
+  padding: var(--ds-space-lg);
+  min-height: 340px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.dec-tile-caption {
+  margin-top: auto;
+  padding-top: var(--ds-space-md);
+  border-top: 1px solid var(--ds-color-white-10);
+}
+.dec-tile-caption h4 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+.dec-tile-caption p {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-50);
+  line-height: 1.6;
+}
+.dec-demo { flex: 1; display: flex; align-items: center; justify-content: flex-start; position: relative; min-height: 160px; }
+.dec-tile.dec-hairline-eyebrow .dec-demo { align-items: center; }
+.dec-tile.dec-hairline-eyebrow .sg-rule { margin: 0; }
+.dec-tile.dec-year-watermark {
+  background: var(--ds-color-navy);
+  justify-content: flex-end;
+}
+.dec-tile.dec-year-watermark .dec-demo {
+  position: relative;
+  min-height: 220px;
+  align-items: flex-end;
+}
+.dec-year-ghost {
+  position: absolute;
+  right: -0.05em;
+  top: -1rem;
+  font-family: var(--ds-font-heading);
+  font-size: 11rem;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(201,168,76,0.09);
+  letter-spacing: -0.04em;
+  user-select: none;
+  pointer-events: none;
+}
+.dec-year-overlay-label {
+  position: relative;
+  z-index: 1;
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-3xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.1;
+}
+.dec-year-overlay-label em { font-style: italic; color: var(--ds-color-gold-light); }
+.dec-roman {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-space-md);
+  align-items: center;
+  width: 100%;
+}
+.dec-roman-large {
+  position: relative;
+  height: 160px;
+  background: var(--ds-color-navy);
+  border: 1px solid var(--ds-color-white-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.dec-roman-large span {
+  font-family: var(--ds-font-heading);
+  font-size: 9rem;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(201,168,76,0.18);
+}
+.dec-roman-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: var(--ds-space-md);
+  background: var(--ds-color-navy);
+  border: 1px solid var(--ds-color-white-10);
+  height: 160px;
+  justify-content: center;
+}
+.dec-roman-inline-num {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: rgba(201,168,76,0.3);
+  line-height: 1;
+}
+.dec-roman-inline-title {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.2;
+}
+.dec-badge-frame {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-image: url('https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?w=900&h=600&fit=crop&crop=center');
+  background-size: cover;
+  background-position: center;
+}
+.dec-badge-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,14,26,0.5), rgba(11,14,26,0.1));
+}
+.dec-year-badge {
+  position: absolute;
+  bottom: var(--ds-space-md);
+  left: var(--ds-space-md);
+  background: var(--ds-color-gold);
+  color: var(--ds-color-navy);
+  padding: var(--ds-space-sm) var(--ds-space-md);
+  z-index: 1;
+}
+.dec-year-badge-num {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-3xl);
+  font-weight: 600;
+  line-height: 1;
+  display: block;
+}
+.dec-year-badge-sub {
+  font-family: var(--ds-font-body);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+.dec-quote {
+  position: relative;
+  padding: var(--ds-space-md) 0;
+  width: 100%;
+}
+.dec-quote-mark {
+  font-family: var(--ds-font-heading);
+  font-size: 6rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ds-color-gold-light);
+  opacity: 0.45;
+  line-height: 0.55;
+  display: block;
+  margin-bottom: var(--ds-space-md);
+}
+.dec-quote-text {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-xl);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.5;
+  max-width: 460px;
+}
+.dec-link-reveal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-sm);
+  width: 100%;
+}
+.dec-link-reveal a {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-50);
+  transition: color var(--ds-transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--ds-font-body);
+}
+.dec-link-reveal a::before {
+  content: '';
+  width: 12px;
+  height: 1px;
+  background: rgba(201,168,76,0.35);
+  flex-shrink: 0;
+  transition: width var(--ds-transition-base), background var(--ds-transition-base);
+}
+.dec-link-reveal a:hover { color: var(--ds-color-gold); }
+.dec-link-reveal a:hover::before { width: 20px; background: var(--ds-color-gold); }
+@media (max-width: 768px) {
+  .dec-grid { grid-template-columns: 1fr; }
+  .dec-roman { grid-template-columns: 1fr; }
+  .dec-year-ghost { font-size: 7rem; }
+}
+
+/* @section Card Patterns */
+.card-patterns { background: var(--ds-color-navy); border-top: 1px solid var(--ds-color-white-10); }
+.card-repeater {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+.pattern-card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.pattern-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.pattern-card:hover .pattern-card-img { transform: scale(1.05); }
+.pattern-card-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,14,26,0.96) 0%, rgba(11,14,26,0.35) 55%, transparent 100%);
+}
+.pattern-card-tag {
+  position: absolute;
+  top: var(--ds-space-md);
+  right: 0;
+  background: var(--ds-color-gold);
+  color: var(--ds-color-navy);
+  font-family: var(--ds-font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+}
+.pattern-card-foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--ds-space-lg);
+}
+.pattern-card-eyebrow {
+  font-family: var(--ds-font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.pattern-card-foot h3 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.15;
+  margin-bottom: var(--ds-space-sm);
+}
+.pattern-card-foot p {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-80);
+  line-height: 1.65;
+  margin-bottom: var(--ds-space-md);
+}
+.pattern-card-foot a {
+  font-size: var(--ds-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color var(--ds-transition-base);
+}
+.pattern-card:hover .pattern-card-foot a { color: var(--ds-color-gold-light); }
+@media (max-width: 900px) {
+  .card-repeater { grid-template-columns: 1fr; }
+  .pattern-card { height: 420px; }
+}
+
+/* @section Spacing and Rhythm */
+.spacing-rhythm { background: var(--ds-color-navy); border-top: 1px solid var(--ds-color-white-10); }
+.spacing-rows {
+  display: flex;
+  flex-direction: column;
+}
+.spacing-row {
+  display: grid;
+  grid-template-columns: 200px 120px 1fr;
+  gap: var(--ds-space-xl);
+  align-items: center;
+  padding: var(--ds-space-md) 0;
+  border-top: 1px solid var(--ds-color-white-10);
+}
+.spacing-row:last-child { border-bottom: 1px solid var(--ds-color-white-10); }
+.spacing-token {
+  font-family: var(--ds-font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.spacing-value {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  letter-spacing: 0.02em;
+}
+.spacing-bar {
+  height: 3px;
+  background: var(--ds-color-gold);
+  max-width: 100%;
+}
+.spacing-xs .spacing-bar { width: calc(var(--ds-space-xs) * 4); }
+.spacing-sm .spacing-bar { width: calc(var(--ds-space-sm) * 4); }
+.spacing-md .spacing-bar { width: calc(var(--ds-space-md) * 4); }
+.spacing-lg .spacing-bar { width: calc(var(--ds-space-lg) * 4); }
+.spacing-xl .spacing-bar { width: calc(var(--ds-space-xl) * 4); }
+.spacing-section .spacing-bar { width: calc(var(--ds-space-section) * 4); }
+@media (max-width: 768px) {
+  .spacing-row { grid-template-columns: 1fr; gap: var(--ds-space-xs); }
+}
+
+/* @section Image Treatment */
+.image-treatment { background: var(--ds-color-navy); border-top: 1px solid var(--ds-color-white-10); }
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+.treatment-tile {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.treatment-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.treatment-tile .treatment-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.treatment-tile.treat-bottom-gradient .treatment-overlay {
+  background: linear-gradient(to top, rgba(11,14,26,0.92) 0%, rgba(11,14,26,0.45) 45%, rgba(11,14,26,0.12) 100%);
+}
+.treatment-tile.treat-horizontal .treatment-overlay {
+  background: linear-gradient(to right, transparent 55%, var(--ds-color-navy));
+}
+.treatment-tile.treat-dim-whole .treatment-overlay {
+  background: rgba(11,14,26,0.78);
+}
+.treatment-caption {
+  position: relative;
+  z-index: 1;
+  padding: var(--ds-space-lg);
+}
+.treatment-tile.treat-horizontal .treatment-caption {
+  margin-left: auto;
+  max-width: 55%;
+}
+.treatment-caption-eyebrow {
+  font-family: var(--ds-font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  margin-bottom: var(--ds-space-sm);
+  display: block;
+}
+.treatment-caption h3 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+.treatment-caption h3 em { font-style: italic; color: var(--ds-color-gold-light); }
+.treatment-caption p {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-80);
+  line-height: 1.6;
+  max-width: 340px;
+}
+@media (max-width: 900px) {
+  .treatment-grid { grid-template-columns: 1fr; }
+  .treatment-tile.treat-horizontal .treatment-caption { max-width: 100%; }
+  .treatment-tile.treat-horizontal .treatment-overlay {
+    background: linear-gradient(to top, rgba(11,14,26,0.92) 0%, rgba(11,14,26,0.3) 100%);
+  }
+}
+  </style>
+</head>
+<body>
+<section id="identity-card" class="identity-card" data-label="Identity Card">
+  <div class="identity-ghost" aria-hidden="true">1978</div>
+  <div class="bb-container">
+    <div class="identity-inner">
+      <div class="identity-eyebrow bb-reveal">
+        <div class="identity-eyebrow-line"></div>
+        <span class="identity-eyebrow-text" data-field="identity_eyebrow">Design System · Napa Valley Register</span>
+      </div>
+      <h1 class="identity-wordmark bb-reveal bb-reveal-delay-1" data-field="identity_wordmark" data-field-type="editor">Ridgeline <em>Estate</em></h1>
+      <p class="identity-philosophy bb-reveal bb-reveal-delay-2" data-field="identity_philosophy">A navy-and-gold register for family-run wineries — built on asymmetric splits, unhurried typography, and photography held under dark gradients. Every pour tells a story, and so does every section.</p>
+      <blockquote class="identity-quote bb-reveal bb-reveal-delay-3" data-field="identity_quote">We make it the way we always have: picked by hand, aged in French oak, bottled when it's ready. The design carries the same patience.</blockquote>
+      <div class="identity-strip bb-reveal bb-reveal-delay-4" data-repeater="identity_swatches">
+        <div data-repeater-item class="strip-chip strip-navy"><span data-field="label">Navy</span></div>
+        <div data-repeater-item class="strip-chip strip-navy-mid"><span data-field="label">Navy Mid</span></div>
+        <div data-repeater-item class="strip-chip strip-navy-light"><span data-field="label">Navy Light</span></div>
+        <div data-repeater-item class="strip-chip strip-gold"><span data-field="label">Gold</span></div>
+        <div data-repeater-item class="strip-chip strip-gold-light"><span data-field="label">Gold Light</span></div>
+        <div data-repeater-item class="strip-chip strip-gold-pale"><span data-field="label">Gold Pale</span></div>
+        <div data-repeater-item class="strip-chip strip-cream"><span data-field="label">Cream</span></div>
+        <div data-repeater-item class="strip-chip strip-white-10"><span data-field="label">Hairline</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="color-palette" class="color-palette" data-label="Color Palette">
+  <div class="bb-container">
+    <div class="sg-inner">
+      <div class="sg-rule bb-reveal"><span class="sg-rule-text" data-field="palette_eyebrow">I. Palette</span></div>
+      <div class="sg-section-head bb-reveal">
+        <h2 data-field="palette_heading" data-field-type="editor">A Single <em>Navy</em> Ground,<br>Gold as the Only Accent</h2>
+        <p data-field="palette_description">The entire palette operates in the navy register. Gold does the signal work — hairlines, eyebrows, button fills, and the italic pull-word inside headings. White with alpha handles every tier of quiet-to-loud text.</p>
+      </div>
+
+      <div class="palette-groups">
+        <div class="palette-group bb-reveal">
+          <span class="palette-group-label" data-field="palette_group_1_label">Navy Ladder · Surfaces</span>
+          <div class="palette-grid" data-repeater="palette_primary">
+            <div data-repeater-item class="swatch-card swatch-navy">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-navy</span>
+                <span class="swatch-name" data-field="name">Navy</span>
+                <span class="swatch-hex" data-field="hex">#0B0E1A</span>
+              </div>
+            </div>
+            <div data-repeater-item class="swatch-card swatch-navy-mid">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-navy-mid</span>
+                <span class="swatch-name" data-field="name">Navy Mid</span>
+                <span class="swatch-hex" data-field="hex">#111627</span>
+              </div>
+            </div>
+            <div data-repeater-item class="swatch-card swatch-navy-light">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-navy-light</span>
+                <span class="swatch-name" data-field="name">Navy Light</span>
+                <span class="swatch-hex" data-field="hex">#1A2035</span>
+              </div>
+            </div>
+            <div data-repeater-item class="swatch-card swatch-gold">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-gold</span>
+                <span class="swatch-name" data-field="name">Gold</span>
+                <span class="swatch-hex" data-field="hex">#C9A84C</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="palette-group bb-reveal bb-reveal-delay-1">
+          <span class="palette-group-label" data-field="palette_group_2_label">Warm Accents · Italic Pull &amp; Highlights</span>
+          <div class="palette-grid" data-repeater="palette_accents">
+            <div data-repeater-item class="swatch-card swatch-gold-light">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-gold-light</span>
+                <span class="swatch-name" data-field="name">Gold Light</span>
+                <span class="swatch-hex" data-field="hex">#E2C97E</span>
+              </div>
+            </div>
+            <div data-repeater-item class="swatch-card swatch-gold-pale">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-gold-pale</span>
+                <span class="swatch-name" data-field="name">Gold Pale</span>
+                <span class="swatch-hex" data-field="hex">#F5EDD8</span>
+              </div>
+            </div>
+            <div data-repeater-item class="swatch-card swatch-cream">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-cream</span>
+                <span class="swatch-name" data-field="name">Cream</span>
+                <span class="swatch-hex" data-field="hex">#FAF6EF</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="palette-group bb-reveal bb-reveal-delay-2">
+          <span class="palette-group-label" data-field="palette_group_3_label">Alpha Whites · Text, Hairlines, Dividers</span>
+          <div class="palette-grid palette-secondary" data-repeater="palette_alphas">
+            <div data-repeater-item class="swatch-card swatch-white-80">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-white</span>
+                <span class="swatch-name" data-field="name">White</span>
+                <span class="swatch-hex" data-field="hex">#FFFFFF</span>
+              </div>
+            </div>
+            <div data-repeater-item class="swatch-card swatch-white-80">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-white-80</span>
+                <span class="swatch-name" data-field="name">White 80</span>
+                <span class="swatch-hex" data-field="hex">rgba(255,255,255,0.80)</span>
+              </div>
+            </div>
+            <div data-repeater-item class="swatch-card swatch-white-50">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-white-50</span>
+                <span class="swatch-name" data-field="name">White 50</span>
+                <span class="swatch-hex" data-field="hex">rgba(255,255,255,0.50)</span>
+              </div>
+            </div>
+            <div data-repeater-item class="swatch-card swatch-white-20">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-white-20</span>
+                <span class="swatch-name" data-field="name">White 20</span>
+                <span class="swatch-hex" data-field="hex">rgba(255,255,255,0.20)</span>
+              </div>
+            </div>
+            <div data-repeater-item class="swatch-card swatch-white-10">
+              <div class="swatch-face"></div>
+              <div class="swatch-body">
+                <span class="swatch-token" data-field="token">--ds-color-white-10</span>
+                <span class="swatch-name" data-field="name">White 10</span>
+                <span class="swatch-hex" data-field="hex">rgba(255,255,255,0.10)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="typography" class="typography" data-label="Typography">
+  <div class="bb-container">
+    <div class="sg-inner">
+      <div class="sg-rule bb-reveal"><span class="sg-rule-text" data-field="type_eyebrow">II. Typography</span></div>
+      <div class="sg-section-head bb-reveal">
+        <h2 data-field="type_heading" data-field-type="editor">Cormorant Sets the Voice,<br>DM Sans <em>Carries the Rest</em></h2>
+        <p data-field="type_description">Display, stat numbers, and pull quotes live in Cormorant Garamond at light weights. Body, eyebrows, buttons, and metadata live in DM Sans. Italic inside headings is the only emphasis device.</p>
+      </div>
+
+      <div class="type-rows">
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t1_label">Display H1</span>
+            <span class="type-meta-spec" data-field="t1_spec">Cormorant 300 · clamp to 6xl · -0.02em</span>
+          </div>
+          <h1 class="type-sample type-h1" data-field="t1_sample" data-field-type="editor">Where the <em>Vineyard</em> Becomes Your Table</h1>
+        </div>
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t2_label">Section H2</span>
+            <span class="type-meta-spec" data-field="t2_spec">Cormorant 300 · 5xl · 1.05 line</span>
+          </div>
+          <h2 class="type-sample type-h2" data-field="t2_sample" data-field-type="editor">Every Pour <em>Tells a Story</em></h2>
+        </div>
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t3_label">Panel H3</span>
+            <span class="type-meta-spec" data-field="t3_spec">Cormorant 300 · 4xl · for split panels</span>
+          </div>
+          <h3 class="type-sample type-h3" data-field="t3_sample" data-field-type="editor">Three Generations of <em>Honest Wine</em></h3>
+        </div>
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t4_label">Card H4</span>
+            <span class="type-meta-spec" data-field="t4_spec">Cormorant 400 · 3xl</span>
+          </div>
+          <h4 class="type-sample type-h4" data-field="t4_sample">Estate Flight</h4>
+        </div>
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t5_label">Row H5</span>
+            <span class="type-meta-spec" data-field="t5_spec">Cormorant 400 · 2xl · wine rows &amp; menu titles</span>
+          </div>
+          <h5 class="type-sample type-h5" data-field="t5_sample">Estate Reserve Cabernet</h5>
+        </div>
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t6_label">Utility H6</span>
+            <span class="type-meta-spec" data-field="t6_spec">Cormorant 500 · xl · compact headings</span>
+          </div>
+          <h6 class="type-sample type-h6" data-field="t6_sample">Last seating at 4pm</h6>
+        </div>
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t_lead_label">Lead Paragraph</span>
+            <span class="type-meta-spec" data-field="t_lead_spec">DM Sans 400 · lg · 1.75 line · white-80</span>
+          </div>
+          <p class="type-sample type-lead" data-field="t_lead_sample">Estate-grown wines, unhurried tastings, and evenings that linger. Come as a guest. Leave as family. The lead sits one step above body copy and carries the opening paragraph of a section.</p>
+        </div>
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t_body_label">Body Copy</span>
+            <span class="type-meta-spec" data-field="t_body_spec">DM Sans 400 · base · 1.75 line · white-80</span>
+          </div>
+          <p class="type-sample type-body" data-field="t_body_sample">Harold and June Callahan planted the first vines on this hillside in the fall of 1978 — a 40-acre estate carved from Napa Valley's eastern ridge, where the afternoon fog rolls in slow and the days end long.</p>
+        </div>
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t_caption_label">Caption / Meta</span>
+            <span class="type-meta-spec" data-field="t_caption_spec">DM Sans 400 · sm · white-50</span>
+          </div>
+          <p class="type-sample type-caption" data-field="t_caption_sample">Thu – Sun, 10am to 5pm. Last seating at 4pm. Walk-ins welcome when the terrace has space.</p>
+        </div>
+        <div class="type-row bb-reveal">
+          <div class="type-meta">
+            <span class="type-meta-label" data-field="t_eyebrow_label">Eyebrow Label</span>
+            <span class="type-meta-spec" data-field="t_eyebrow_spec">DM Sans 600 · xs · 0.3em tracking · uppercase gold</span>
+          </div>
+          <span class="type-sample type-eyebrow" data-field="t_eyebrow_sample">Est. 1978 · Napa Valley, California</span>
+        </div>
+      </div>
+
+      <div class="type-pullword-callout bb-reveal">
+        <em data-field="t_pullword_em">Vineyard</em>
+        <p data-field="t_pullword_note">The italic pull-word inside a heading is the signature typographic move. It always rides Cormorant italic at gold-light — never the whole heading, never DM Sans italic, never bold.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="buttons-links" class="buttons-links" data-label="Buttons and Links">
+  <div class="bb-container">
+    <div class="sg-inner">
+      <div class="sg-rule bb-reveal"><span class="sg-rule-text" data-field="buttons_eyebrow">III. Buttons &amp; Links</span></div>
+      <div class="sg-section-head bb-reveal">
+        <h2 data-field="buttons_heading" data-field-type="editor">Solid + Outline<br>Is the <em>Button Rhythm</em></h2>
+        <p data-field="buttons_description">A gold fill paired with a hairline outline is the design's primary two-button row — used in the hero, events, and visit sections. Text links elsewhere use a hairline-reveal hover, sized in 8px increments.</p>
+      </div>
+
+      <div class="buttons-grid">
+        <div class="button-panel bb-reveal">
+          <span class="button-panel-label" data-field="b1_label">Primary Button Row</span>
+          <div class="button-panel-title" data-field="b1_title" data-field-type="editor">A <em>Two-Button</em> CTA Row</div>
+          <div class="button-row" data-repeater="primary_buttons">
+            <a data-repeater-item class="bb-btn bb-btn-primary" data-field-href="url" href="#" data-field="label">Reserve a Tasting</a>
+            <a data-repeater-item class="bb-btn bb-btn-outline" data-field-href="url" href="#" data-field="label">Our Story</a>
+          </div>
+          <p class="button-panel-note" data-field="b1_note">Primary is gold fill on navy, outline is transparent with 50% white border. Hover lifts 2px and brightens the border to gold.</p>
+        </div>
+
+        <div class="button-panel bb-reveal bb-reveal-delay-1">
+          <span class="button-panel-label" data-field="b2_label">Text Link · Hairline Reveal</span>
+          <div class="button-panel-title" data-field="b2_title" data-field-type="editor">A <em>Hairline</em> Growing on Hover</div>
+          <div class="link-list" data-repeater="text_links">
+            <a data-repeater-item data-field-href="url" href="#" data-field="label">Our Story</a>
+            <a data-repeater-item data-field-href="url" href="#" data-field="label">Tasting Room</a>
+            <a data-repeater-item data-field-href="url" href="#" data-field="label">Wine Club</a>
+            <a data-repeater-item data-field-href="url" href="#" data-field="label">Book a Tasting</a>
+          </div>
+          <p class="button-panel-note" data-field="b2_note">12px gold hairline grows to 20px on hover while the label shifts from white-50 to full gold. Used in footer nav and any vertical link list.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="decorative-vocabulary" class="decorative-vocabulary" data-label="Decorative Vocabulary">
+  <div class="bb-container">
+    <div class="sg-inner">
+      <div class="sg-rule bb-reveal"><span class="sg-rule-text" data-field="dec_eyebrow">IV. Decorative Vocabulary</span></div>
+      <div class="sg-section-head bb-reveal">
+        <h2 data-field="dec_heading" data-field-type="editor">Six Quiet Moves<br>That Do the <em>Atmospheric</em> Work</h2>
+        <p data-field="dec_description">The design's personality comes from a small set of decorative patterns — each one repeated deliberately across the page. Together they replace hero animations, heavy borders, and background textures.</p>
+      </div>
+
+      <div class="dec-grid">
+        <div class="dec-tile dec-hairline-eyebrow bb-reveal">
+          <div class="dec-demo">
+            <div class="sg-rule"><span class="sg-rule-text" data-field="dec1_demo_label">The Cellar</span></div>
+          </div>
+          <div class="dec-tile-caption">
+            <h4 data-field="dec1_title">Hairline + Eyebrow</h4>
+            <p data-field="dec1_description">A 48px gold hairline preceding an uppercase eyebrow label. Marks every section start — functions as a quiet bookmark.</p>
+          </div>
+        </div>
+
+        <div class="dec-tile dec-year-watermark bb-reveal bb-reveal-delay-1">
+          <div class="dec-year-ghost" aria-hidden="true">1978</div>
+          <div class="dec-demo">
+            <div class="dec-year-overlay-label" data-field="dec2_demo_label" data-field-type="editor">Three Generations<br>of <em>Honest Wine</em></div>
+          </div>
+          <div class="dec-tile-caption">
+            <h4 data-field="dec2_title">Oversized Faded Year</h4>
+            <p data-field="dec2_description">The founding year set in Cormorant at 7% opacity, bleeding slightly past the right edge. Anchors the estate's history without prose.</p>
+          </div>
+        </div>
+
+        <div class="dec-tile bb-reveal">
+          <div class="dec-demo">
+            <div class="dec-roman">
+              <div class="dec-roman-large">
+                <span aria-hidden="true">I</span>
+              </div>
+              <div class="dec-roman-inline">
+                <span class="dec-roman-inline-num" aria-hidden="true">II.</span>
+                <span class="dec-roman-inline-title" data-field="dec3_demo_inline_title">Every Pour</span>
+              </div>
+            </div>
+          </div>
+          <div class="dec-tile-caption">
+            <h4 data-field="dec3_title">Roman Numeral Markers</h4>
+            <p data-field="dec3_description">Large overlay numerals at 18% opacity chapter the page; inline "II." markers at 30% opacity sit above section H2s.</p>
+          </div>
+        </div>
+
+        <div class="dec-tile bb-reveal bb-reveal-delay-1">
+          <div class="dec-demo">
+            <div class="dec-badge-frame" aria-hidden="true">
+              <div class="dec-year-badge">
+                <span class="dec-year-badge-num" data-field="dec4_demo_year">1978</span>
+                <span class="dec-year-badge-sub" data-field="dec4_demo_label">Est.</span>
+              </div>
+            </div>
+          </div>
+          <div class="dec-tile-caption">
+            <h4 data-field="dec4_title">Est. Year Badge</h4>
+            <p data-field="dec4_description">A gold-on-navy block overlapping a photograph — the single place the design brings warm-on-dark contrast directly onto an image.</p>
+          </div>
+        </div>
+
+        <div class="dec-tile bb-reveal">
+          <div class="dec-demo">
+            <div class="dec-quote">
+              <span class="dec-quote-mark" aria-hidden="true">&ldquo;</span>
+              <p class="dec-quote-text" data-field="dec5_demo_quote">The land here has a kind of patience. It doesn't rush the vine. It doesn't rush you.</p>
+            </div>
+          </div>
+          <div class="dec-tile-caption">
+            <h4 data-field="dec5_title">Italic Pull Quote Mark</h4>
+            <p data-field="dec5_description">A 9rem italic quote mark at 45% opacity with a crushed 0.55 line-height — tucks tightly over a single-sentence pull quote.</p>
+          </div>
+        </div>
+
+        <div class="dec-tile bb-reveal bb-reveal-delay-1">
+          <div class="dec-demo">
+            <div class="dec-link-reveal" data-repeater="dec6_links">
+              <a data-repeater-item data-field-href="url" href="#" data-field="label">Directions</a>
+              <a data-repeater-item data-field-href="url" href="#" data-field="label">Private Events</a>
+              <a data-repeater-item data-field-href="url" href="#" data-field="label">Contact Us</a>
+            </div>
+          </div>
+          <div class="dec-tile-caption">
+            <h4 data-field="dec6_title">Hairline Reveal on Hover</h4>
+            <p data-field="dec6_description">A 12px gold hairline before a link label grows to 20px on hover while the text shifts from white-50 to full gold. Measured in 8px increments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="card-patterns" class="card-patterns" data-label="Card Patterns">
+  <div class="bb-container">
+    <div class="sg-inner">
+      <div class="sg-rule bb-reveal"><span class="sg-rule-text" data-field="cards_eyebrow">V. Cards &amp; Panels</span></div>
+      <div class="sg-section-head bb-reveal">
+        <h2 data-field="cards_heading" data-field-type="editor">The Tasting Panel —<br>Photo, Veil, <em>Always Visible</em></h2>
+        <p data-field="cards_description">The signature card pattern: a portrait photograph under a bottom-to-top navy gradient, with a gold price tag pinned top-right and title, description, and CTA always visible at the foot. No hover reveal — content never hides.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-repeater" data-repeater="pattern_cards">
+    <div data-repeater-item class="pattern-card bb-reveal">
+      <img class="pattern-card-img" data-field="image" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=700&h=1000&fit=crop" alt="Three wine glasses on a candlelit oak table inside a historic barrel tasting room">
+      <div class="pattern-card-veil"></div>
+      <div class="pattern-card-tag" data-field="tag">$45 / person</div>
+      <div class="pattern-card-foot">
+        <span class="pattern-card-eyebrow" data-field="eyebrow">The Cellar</span>
+        <h3 data-field="title">Estate Flight</h3>
+        <p data-field="description">Five pours of our current releases, guided by a knowledgeable host in our historic barrel cave.</p>
+        <a data-field-href="url" href="#" data-field="cta">Reserve a Spot →</a>
+      </div>
+    </div>
+    <div data-repeater-item class="pattern-card bb-reveal bb-reveal-delay-1">
+      <img class="pattern-card-img" data-field="image" src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=700&h=1000&fit=crop" alt="Wine flight and charcuterie board on a sun-bleached terrace overlooking vineyard rows at dusk">
+      <div class="pattern-card-veil"></div>
+      <div class="pattern-card-tag" data-field="tag">$70 / person</div>
+      <div class="pattern-card-foot">
+        <span class="pattern-card-eyebrow" data-field="eyebrow">The Terrace</span>
+        <h3 data-field="title">Terrace &amp; Bites</h3>
+        <p data-field="description">A seated pairing on the sun-drenched terrace. Seasonal charcuterie as the vines catch the afternoon light.</p>
+        <a data-field-href="url" href="#" data-field="cta">Reserve a Spot →</a>
+      </div>
+    </div>
+    <div data-repeater-item class="pattern-card bb-reveal bb-reveal-delay-2">
+      <img class="pattern-card-img" data-field="image" src="https://images.unsplash.com/photo-1765192681431-c91428e3cb27?w=700&h=1000&fit=crop" alt="Vineyard rows leading toward rolling green hills on a winery estate at golden hour">
+      <div class="pattern-card-veil"></div>
+      <div class="pattern-card-tag" data-field="tag">$120 / person</div>
+      <div class="pattern-card-foot">
+        <span class="pattern-card-eyebrow" data-field="eyebrow">The Walk</span>
+        <h3 data-field="title">Vineyard Walk &amp; Cave</h3>
+        <p data-field="description">Walk the estate rows with the winemaker, then descend into the cave for a curated library tasting.</p>
+        <a data-field-href="url" href="#" data-field="cta">Reserve a Spot →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="spacing-rhythm" class="spacing-rhythm" data-label="Spacing and Rhythm">
+  <div class="bb-container">
+    <div class="sg-inner">
+      <div class="sg-rule bb-reveal"><span class="sg-rule-text" data-field="spacing_eyebrow">VI. Spacing Scale</span></div>
+      <div class="sg-section-head bb-reveal">
+        <h2 data-field="spacing_heading" data-field-type="editor">A Six-Step Rhythm,<br>Section <em>Space Holds Long</em></h2>
+        <p data-field="spacing_description">Spacing tokens run from a 0.5rem breath to a 7rem section rest. Most layouts lean on lg and xl for inside-panel rhythm; section anchors the vertical space between major regions.</p>
+      </div>
+
+      <div class="spacing-rows" data-repeater="spacing_tokens">
+        <div data-repeater-item class="spacing-row spacing-xs bb-reveal">
+          <span class="spacing-token" data-field="token">--ds-space-xs</span>
+          <span class="spacing-value" data-field="value">0.5 rem</span>
+          <div class="spacing-bar" aria-hidden="true"></div>
+        </div>
+        <div data-repeater-item class="spacing-row spacing-sm bb-reveal">
+          <span class="spacing-token" data-field="token">--ds-space-sm</span>
+          <span class="spacing-value" data-field="value">1 rem</span>
+          <div class="spacing-bar" aria-hidden="true"></div>
+        </div>
+        <div data-repeater-item class="spacing-row spacing-md bb-reveal">
+          <span class="spacing-token" data-field="token">--ds-space-md</span>
+          <span class="spacing-value" data-field="value">1.5 rem</span>
+          <div class="spacing-bar" aria-hidden="true"></div>
+        </div>
+        <div data-repeater-item class="spacing-row spacing-lg bb-reveal">
+          <span class="spacing-token" data-field="token">--ds-space-lg</span>
+          <span class="spacing-value" data-field="value">2.5 rem</span>
+          <div class="spacing-bar" aria-hidden="true"></div>
+        </div>
+        <div data-repeater-item class="spacing-row spacing-xl bb-reveal">
+          <span class="spacing-token" data-field="token">--ds-space-xl</span>
+          <span class="spacing-value" data-field="value">4 rem</span>
+          <div class="spacing-bar" aria-hidden="true"></div>
+        </div>
+        <div data-repeater-item class="spacing-row spacing-section bb-reveal">
+          <span class="spacing-token" data-field="token">--ds-space-section</span>
+          <span class="spacing-value" data-field="value">7 rem</span>
+          <div class="spacing-bar" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="image-treatment" class="image-treatment" data-label="Image Treatment">
+  <div class="bb-container">
+    <div class="sg-inner">
+      <div class="sg-rule bb-reveal"><span class="sg-rule-text" data-field="image_eyebrow">VII. Image Treatment</span></div>
+      <div class="sg-section-head bb-reveal">
+        <h2 data-field="image_heading" data-field-type="editor">Three Ways Photography<br>Meets the <em>Navy Ground</em></h2>
+        <p data-field="image_description">Every image sits under a navy gradient or veil. The bottom-fade carries hero type. The horizontal dissolve marries a photo to an adjacent text panel. The whole-image dim pushes the photograph into mood.</p>
+      </div>
+    </div>
+  </div>
+  <div class="treatment-grid" data-repeater="treatments">
+    <div data-repeater-item class="treatment-tile treat-bottom-gradient bb-reveal">
+      <img data-field="image" src="https://images.unsplash.com/photo-1759221610612-3a3398d5e94d?w=1400&h=1400&fit=crop" alt="Sun streaming through rows of grapevines at golden-hour sunrise in a Napa Valley vineyard">
+      <div class="treatment-overlay" aria-hidden="true"></div>
+      <div class="treatment-caption">
+        <span class="treatment-caption-eyebrow" data-field="eyebrow">Hero · Bottom Fade</span>
+        <h3 data-field="title" data-field-type="editor">Where the <em>Vineyard</em> Becomes Your Table</h3>
+        <p data-field="description">Gradient fades from transparent at the top to navy-92% at the bottom. Lets the image breathe while content sits on a dark base.</p>
+      </div>
+    </div>
+    <div data-repeater-item class="treatment-tile treat-horizontal bb-reveal bb-reveal-delay-1">
+      <img data-field="image" src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?w=1400&h=1400&fit=crop" alt="Stone winery building framed by old-growth grapevines in warm Napa afternoon light">
+      <div class="treatment-overlay" aria-hidden="true"></div>
+      <div class="treatment-caption">
+        <span class="treatment-caption-eyebrow" data-field="eyebrow">Story · Horizontal Dissolve</span>
+        <h3 data-field="title" data-field-type="editor">Three Generations of <em>Honest Wine</em></h3>
+        <p data-field="description">The image dissolves right-to-navy, pulling directly into an adjacent text panel with no hard edge.</p>
+      </div>
+    </div>
+    <div data-repeater-item class="treatment-tile treat-dim-whole bb-reveal bb-reveal-delay-2">
+      <img data-field="image" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1400&h=1400&fit=crop" alt="Sweeping Napa Valley vineyard landscape at golden hour with mist settling between the hills">
+      <div class="treatment-overlay" aria-hidden="true"></div>
+      <div class="treatment-caption">
+        <span class="treatment-caption-eyebrow" data-field="eyebrow">Quote · Whole-Image Dim</span>
+        <h3 data-field="title" data-field-type="editor">The Land Has a <em>Patience</em></h3>
+        <p data-field="description">A flat 78% navy veil dims the photograph into atmosphere rather than subject — reserved for pull quotes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

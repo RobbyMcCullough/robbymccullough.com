@@ -1,0 +1,3142 @@
+# Translation of BB-Plugin in Arabic
+# This file is distributed under the same license as the BB-Plugin package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-07-27 15:07:49+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));\n"
+"X-Generator: GlotPress/3.0.0\n"
+"Language: ar\n"
+"Project-Id-Version: BB-Plugin\n"
+
+#: modules/woocommerce/woocommerce.php:63
+msgid "\"Add to Cart\" Button"
+msgstr "زر \"إضف للسلة \""
+
+#. translators: %s: widget title
+#: modules/widget/includes/frontend.php:45
+#: modules/widget/includes/settings-general.php:36
+msgctxt "%s stands for widget slug."
+msgid "%s no longer exists."
+msgstr "%s لم يعد موجودا ."
+
+#: modules/rich-text/rich-text.php:14
+msgid "A WYSIWYG text editor."
+msgstr "WYSIWYG لتحرير النصوص ."
+
+#: modules/separator/separator.php:15
+msgid "A divider line to separate content."
+msgstr "خط فاصل لفصل المحتوى."
+
+#: modules/pricing-table/pricing-table.php:16
+msgid "A simple pricing table generator."
+msgstr "إنشاء جدول أشعار بسيط . "
+
+#: modules/pricing-table/pricing-table.php:1201
+msgid "Accent Color"
+msgstr "لون سائد "
+
+#: modules/pricing-table/pricing-table.php:1208
+msgid "Accent Text Color"
+msgstr "لون نص سائد "
+
+#: modules/pricing-table/pricing-table.php:823
+msgid "Add Pricing Box"
+msgstr "أضف صندوق أسعار "
+
+#: modules/testimonials/testimonials.php:304
+msgid "Add Testimonial"
+msgstr "إضافة شهادة "
+
+#: modules/testimonials/testimonials.php:251
+msgid "Arrow Color"
+msgstr "لون الأسهم "
+
+#: modules/woocommerce/woocommerce.php:120
+msgid "As you add product categories in the WooCommerce Products area, each will be assigned a unique ID. This ID can be found by hovering on the category in the categories area under Products and looking in the URL that is displayed in your browser. The ID will be the only number value in the URL."
+msgstr "يمكنك إضافة المنتجات فى منطقة المنتجات ، وسيتم إضافة معرف لكل منتج ، ولمعرفة هذا المعرف يمكنك الوقوف بالماوس على رابط عرض المنتج على المتصفح بدون الضغط وستجد داخل الرابط قيمة المعرف وسيكون هو العدد الوحيد داخل الرابط ."
+
+#: modules/woocommerce/woocommerce.php:209
+msgid "As you add product categories in the WooCommerce Products area, each will be assigned a unique slug or you can edit and add your own. These slugs can be found in the Categories area under WooCommerce Products. Several can be added here separated by a comma."
+msgstr "كما يمكنك إضافة المنتجات في منطقة WooCommerce المنتجات ، سيتم تعيين لكل تصنيف وصف . يمكنك العثور على هذا الوصف خلال زيارة منطقة المنتجات و النزول بالاسكرول بار . "
+
+#: modules/woocommerce/woocommerce.php:203
+msgid "As you add products in the WooCommerce Products area, each will be assigned a unique ID. You can find this unique product ID by visiting the Products area and rolling over the product. The unique ID will be the first attribute and you can add several here separated by a comma."
+msgstr "كما يمكنك إضافة المنتجات في منطقة WooCommerce المنتجات ، سيتم تعيين لكل منتج معرف فريد . يمكنك العثور على هذا ID منتج فريد من نوعه من خلال زيارة المنطقة للمنتجات و النزول بالاسكرول بار . سوف يكون المعرف الفريد فى العمود الأول ويمكنك إضافة العديد من هنا مفصولة بفاصلة ."
+
+#: modules/woocommerce/woocommerce.php:113
+msgid "As you add products in the WooCommerce Products area, each will be assigned a unique ID. You can find this unique product ID by visiting the Products area and rolling over the product. The unique ID will be the first attribute."
+msgstr "كما يمكنك إضافة المنتجات في منطقة WooCommerce المنتجات ، سيتم تعيين لكل منتج معرف فريد . يمكنك العثور على هذا ID منتج فريد من نوعه من خلال زيارة المنطقة للمنتجات و النزول بالاسكرول بار . سوف يكون المعرف الفريد فى العمود الأول."
+
+#: modules/woocommerce/woocommerce.php:169
+msgid "Best Selling Products"
+msgstr "أفضل المنتجات مبيعا "
+
+#: modules/pricing-table/pricing-table.php:1214
+msgid "Box Top Margin"
+msgstr "هامش المربع من الأعلي "
+
+#: modules/callout/callout.php:992
+#: modules/content-slider/content-slider.php:955 modules/cta/cta.php:344
+#: modules/cta/cta.php:441 modules/login-form/login-form.php:600
+#: modules/login-form/login-form.php:790 modules/post-grid/post-grid.php:1461
+#: modules/post-grid/post-grid.php:1530
+#: modules/pricing-table/pricing-table.php:939
+#: modules/pricing-table/pricing-table.php:1055 modules/search/search.php:378
+msgid "Button Text"
+msgstr "نص الزر "
+
+#: modules/pricing-table/pricing-table.php:944
+msgid "Button URL"
+msgstr "رابط الزر "
+
+#: modules/button-group/button-group.php:227
+#: modules/slideshow/slideshow.php:565
+msgid "Buttons"
+msgstr "أزرار "
+
+#: modules/slideshow/slideshow.php:640
+msgid "Caption Button"
+msgstr "زر التسمية التوضيحية "
+
+#: modules/menu/menu.php:520 modules/north-commerce/north-commerce.php:84
+#: modules/woocommerce/woocommerce.php:65
+msgid "Cart"
+msgstr "السلة "
+
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-admin-list.php:179
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-admin-list.php:199
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-admin-menu.php:45
+#: modules/woocommerce/woocommerce.php:64
+msgid "Categories"
+msgstr "التصنيفات "
+
+#: modules/woocommerce/woocommerce.php:129
+#: modules/woocommerce/woocommerce.php:207
+msgid "Category Slug"
+msgstr "وصف التصنيف"
+
+#: modules/north-commerce/north-commerce.php:85
+#: modules/woocommerce/woocommerce.php:66
+msgid "Checkout"
+msgstr "الدفع "
+
+#: modules/slideshow/slideshow.php:450
+msgctxt "Click action type."
+msgid "None"
+msgstr "لاشىء "
+
+#: modules/slideshow/slideshow.php:414
+msgctxt "Color."
+msgid "Dark"
+msgstr "غامق "
+
+#: modules/slideshow/slideshow.php:413
+msgctxt "Color."
+msgid "Light"
+msgstr "فاتح "
+
+#: classes/class-fl-builder-ui-content-panel.php:190
+#: extensions/fl-builder-template-data-exporter/includes/template-data-exporter.php:60
+#: modules/box/fields/ui-field-grid-tracklist.php:3
+#: modules/post-grid/post-grid.php:676 modules/post-grid/post-grid.php:727
+#: modules/woocommerce/woocommerce.php:144
+#: modules/woocommerce/woocommerce.php:225
+msgid "Columns"
+msgstr "الأعمدة "
+
+#: extensions/fl-theme-builder-core/classes/class-fl-page-data.php:91
+#: modules/post-grid/post-grid.php:1002 modules/post-grid/post-grid.php:1011
+#: modules/post-slider/post-slider.php:724
+msgid "Comments"
+msgstr "التعليقات "
+
+#: modules/testimonials/testimonials.php:163
+msgid "Compact"
+msgstr "ميثاق "
+
+#: modules/slideshow/slideshow.php:557
+msgid "Control Bar"
+msgstr "شريط التحكم "
+
+#: modules/slideshow/slideshow.php:591
+msgid "Control Bar Buttons"
+msgstr "أزرار شريط التحكم "
+
+#: modules/slideshow/slideshow.php:659
+msgid "Control Bar Overlay"
+msgstr "غطاء شريط التحكم "
+
+#: modules/slideshow/slideshow.php:539
+msgid "Controls"
+msgstr "تحكم "
+
+#: modules/slideshow/slideshow.php:426
+msgid "Crop set to no will fit the slideshow images to the height you specify and keep the width proportional, whereas crop set to yes will fit the slideshow images to all sides of the content area while cropping the left and right to fit the height you specify."
+msgstr "يتم الإقتصاص من الصور بحيث تظهر بالشكل المناسب من ناحية العرض والإرتفاع ."
+
+#: modules/social-buttons/social-buttons.php:72
+msgid "Current Page"
+msgstr "الصفحة الحالية "
+
+#: modules/social-buttons/social-buttons.php:86
+msgid "Custom URL"
+msgstr "عنوان URL مخصص "
+
+#: modules/slideshow/slideshow.php:430
+msgid "Disable Right-Click"
+msgstr "غلق النقر بالزر الأيمن للماوس ."
+
+#: modules/sidebar/sidebar.php:14
+msgid "Display a WordPress sidebar that has been registered by the current theme."
+msgstr "عرض الشريط الجانبي للووردبريس الخاص بالقالب الأساسي ."
+
+#: modules/widget/widget.php:14
+msgid "Display a WordPress widget."
+msgstr "عرض القطع الجانبية للووردبريس"
+
+#: modules/tabs/tabs.php:14
+msgid "Display a collection of tabbed content."
+msgstr "عرض مجموعة من محتوى التبويبات . "
+
+#: modules/slideshow/slideshow.php:14
+msgid "Display multiple photos in a slideshow view."
+msgstr "عرض صور متعددة لعارض الصور . "
+
+#: modules/woocommerce/woocommerce.php:16
+msgid "Display products or categories from your WooCommerce store."
+msgstr "ظهور المنتجات أو التصنيفات من المتجر الإلكتروني "
+
+#: modules/social-buttons/social-buttons.php:14
+msgid "Displays social buttons."
+msgstr "عرض الأزرار الإجتماعية"
+
+#: modules/testimonials/testimonials.php:283
+msgid "Dot Color"
+msgstr "لون النقاط "
+
+#: includes/ui-field-animation.php:138
+#: modules/pricing-table/pricing-table.php:905 modules/video/video.php:525
+msgid "Duration"
+msgstr "مدة "
+
+#: modules/video/video.php:402
+msgid "Embed"
+msgstr "تضمين "
+
+#: modules/slideshow/slideshow.php:713
+msgid "Facebook Button"
+msgstr "زر الفيس بوك "
+
+#: modules/woocommerce/woocommerce.php:167
+msgid "Featured Products"
+msgstr "منتجات مميزة "
+
+#: modules/pricing-table/pricing-table.php:548
+msgid "Features Min Height"
+msgstr "حد ادنى للطول مميز "
+
+#: modules/slideshow/slideshow.php:613
+msgid "Fullscreen Button"
+msgstr "عرض الشاشة الكاملة للزر "
+
+#: modules/slideshow/slideshow.php:416
+msgid "If your overall theme/images are lighter in color, light will display buttons in a darker color scheme and vice versa for dark."
+msgstr "إذا كان لديك محتوى من مشاركات أو صور يتم ظهور خفة العرض فاتح أو غامق على حسب الإختيار ."
+
+#: modules/woocommerce/woocommerce.php:62
+#: modules/woocommerce/woocommerce.php:156
+msgid "Multiple Products"
+msgstr "منتجات متعددة "
+
+#: modules/woocommerce/woocommerce.php:68
+msgid "My Account"
+msgstr "حسابي "
+
+#: modules/slideshow/slideshow.php:581
+msgid "Nav Position"
+msgstr "تموضع النافبار "
+
+#: modules/slideshow/slideshow.php:561
+msgid "Nav Type"
+msgstr "نوع النافبار "
+
+#: modules/slideshow/slideshow.php:564
+msgctxt "Nav type."
+msgid "None"
+msgstr "لاشىء "
+
+#: modules/slideshow/slideshow.php:546 modules/slideshow/slideshow.php:595
+msgid "Navigation Arrows"
+msgstr "أزرار الإتجاهات "
+
+#: modules/slideshow/slideshow.php:552
+msgid "Navigational arrows allow the visitor to freely move through the images in your slideshow. These are larger arrows that overlay your slideshow images and are separate from the control bar navigational arrows."
+msgstr "تسمح أزرار الإتجاهات بالتنقل بين الشرائح بحرية تامة للصور التى قبل أو الصور التى بعد . "
+
+#: modules/woocommerce/woocommerce.php:219
+msgid "Number of Products"
+msgstr "عدد المنتجات "
+
+#: modules/woocommerce/woocommerce.php:67
+msgid "Order Tracking"
+msgstr "تتبع الطلب "
+
+#: modules/slideshow/slideshow.php:663
+msgid "Overlay Enabled"
+msgstr "تمكين الغطاء "
+
+#: modules/slideshow/slideshow.php:678
+msgid "Overlay Hide"
+msgstr "إخفاء الغطاء "
+
+#: modules/slideshow/slideshow.php:688
+msgid "Overlay Hide Delay"
+msgstr "تأخير غطاء الإخفاء "
+
+#: modules/post-grid/post-grid.php:1406
+msgid "Pagination Style"
+msgstr "أسلوب الترقيم "
+
+#: modules/post-grid/post-grid.php:1412
+msgctxt "Pagination style."
+msgid "None"
+msgstr "لاشىء "
+
+#: modules/woocommerce/woocommerce.php:117
+msgid "Parent Category ID"
+msgstr "التصنيف الأب للمعرف "
+
+#: modules/slideshow/slideshow.php:622
+msgid "Photo Count"
+msgstr "عدد الصور "
+
+#: modules/slideshow/slideshow.php:737
+msgid "Pinterest Button"
+msgstr "زر Pinterest "
+
+#: modules/slideshow/slideshow.php:604
+msgid "Play Button"
+msgstr "زر التشغيل "
+
+#: modules/slideshow/slideshow.php:474
+msgid "Playback"
+msgstr "تشغيل "
+
+#: modules/woocommerce/woocommerce.php:242
+msgid "Popularity"
+msgstr "شعبية "
+
+#: modules/post-grid/post-grid.php:716
+msgid "Post Width"
+msgstr "حجم عرض المشاركة "
+
+#: includes/ui-simple-loop.php:40 modules/post-grid/post-grid.php:1434
+msgid "Posts Per Page"
+msgstr "مشاركات من الصفحة"
+
+#: modules/pricing-table/pricing-table.php:524
+#: modules/pricing-table/pricing-table.php:899
+#: modules/woocommerce/woocommerce.php:245
+msgid "Price"
+msgstr "سعر "
+
+#: modules/pricing-table/pricing-table.php:895
+msgid "Price Box"
+msgstr "صندوق أسعار "
+
+#: modules/pricing-table/pricing-table.php:918
+msgctxt "Price features displayed in pricing box."
+msgid "Features"
+msgstr "مميز "
+
+#: modules/pricing-table/pricing-table.php:453
+msgid "Pricing Box"
+msgstr "صندوق الأسعار "
+
+#: modules/pricing-table/pricing-table.php:446
+msgid "Pricing Boxes"
+msgstr "صندوق الأسعار "
+
+#: modules/pricing-table/pricing-table.php:15
+msgid "Pricing Table"
+msgstr "جدول الأسعار "
+
+#: modules/woocommerce/woocommerce.php:164
+msgid "Product Category"
+msgstr "تصنيف المنتج "
+
+#: modules/woocommerce/woocommerce.php:110
+#: modules/woocommerce/woocommerce.php:246
+msgid "Product ID"
+msgstr "معرف المنتج "
+
+#: modules/woocommerce/woocommerce.php:201
+msgid "Product IDs"
+msgstr "معرف المنتج "
+
+#: modules/woocommerce/woocommerce.php:163
+msgid "Products IDs"
+msgstr "معرف المنتجات "
+
+#: modules/woocommerce/woocommerce.php:160
+msgid "Products Source"
+msgstr "مصدر المنتجات "
+
+#: modules/woocommerce/woocommerce.php:243
+msgid "Rating"
+msgstr "ترتيب "
+
+#: modules/woocommerce/woocommerce.php:166
+msgid "Recent Products"
+msgstr "آخر المنتجات "
+
+#: modules/video/video.php:27
+msgid "Render a WordPress or embedable video."
+msgstr "تقديم الووردبريس او فيديو "
+
+#: modules/woocommerce/woocommerce.php:168
+msgid "Sale Products"
+msgstr "المنتجات التى تم بيعها "
+
+#: modules/social-buttons/social-buttons.php:104
+msgid "Show Facebook"
+msgstr "عرض الفيس بوك "
+
+#: modules/social-buttons/social-buttons.php:122
+msgid "Show Google+"
+msgstr "عرض جوجل بلاس "
+
+#: modules/social-buttons/social-buttons.php:113
+msgid "Show Twitter"
+msgstr "عرض التويتر "
+
+#: modules/sidebar/includes/settings-general.php:5
+#: modules/sidebar/sidebar.php:13
+msgid "Sidebar"
+msgstr "الشريط الجانبي "
+
+#: modules/woocommerce/woocommerce.php:60
+msgid "Single Product"
+msgstr "منتج منفرد "
+
+#: modules/slideshow/slideshow.php:410
+msgid "Skin Color"
+msgstr "لون الجلد "
+
+#: modules/slideshow/slideshow.php:13
+msgid "Slideshow"
+msgstr "عارض الصور "
+
+#: modules/slideshow/slideshow.php:501
+msgctxt "Slideshow transition."
+msgid "None"
+msgstr "لاشىء "
+
+#: modules/slideshow/slideshow.php:709
+msgid "Social"
+msgstr "اجتماعي "
+
+#: modules/slideshow/slideshow.php:649
+msgid "Social Button"
+msgstr "زر التواصل الاجتماعي "
+
+#: modules/social-buttons/social-buttons.php:13
+msgid "Social Buttons"
+msgstr "أزرار الشبكات الإجتماعية "
+
+#: modules/woocommerce/woocommerce.php:238
+msgid "Sort By"
+msgstr "ترتيب حسب "
+
+#: modules/woocommerce/woocommerce.php:241
+msgctxt "Sort by."
+msgid "Default"
+msgstr "افتراضي "
+
+#: modules/tabs/tabs.php:13
+msgid "Tabs"
+msgstr "تبويبات "
+
+#: modules/social-buttons/social-buttons.php:68
+msgid "Target URL"
+msgstr "إتجاه الرابط "
+
+#: modules/testimonials/testimonials.php:72
+msgid "Testimonial"
+msgstr "الشهادات "
+
+#: modules/testimonials/testimonials.php:13
+#: modules/testimonials/testimonials.php:182
+msgid "Testimonials"
+msgstr "الشهادات "
+
+#: modules/social-buttons/social-buttons.php:79
+msgid "The Target URL field correlates to the page you would like your social icons to interface with. For example, if you show Facebook, the user will \"Like\" whatever you put in this field."
+msgstr "يرتبط إتجاه الصفحة بالتفاعل مع المستخدم على سبيل المثال تفاعل الزر \"Like\" طالما وضعته ."
+
+#: modules/separator/separator.php:160
+msgid "The type of border to use. Double borders must have a height of at least 3px to render properly."
+msgstr "نوع من الحدود للاستخدام. يجب أن يكون حدود مزدوجة ارتفاع 3PX على الأقل للتقديم بشكل صحيح."
+
+#: modules/slideshow/slideshow.php:566 modules/slideshow/slideshow.php:696
+msgid "Thumbs"
+msgstr "قلب الصفحات "
+
+#: modules/slideshow/slideshow.php:631
+msgid "Thumbs Button"
+msgstr "زر قلب الصفحات "
+
+#: modules/slideshow/slideshow.php:700
+msgid "Thumbs Size"
+msgstr "حجم الصور المصغرة "
+
+#: modules/woocommerce/woocommerce.php:170
+msgid "Top Rated Products"
+msgstr "الأعلى ترتيب للمنتجات"
+
+#: modules/slideshow/slideshow.php:725
+msgid "Twitter Button"
+msgstr "زر التويتر "
+
+#: modules/pricing-table/pricing-table.php:562
+msgid "Use this to normalize the height of your boxes when they have different numbers of features."
+msgstr "استخدم هذا لتطبيق ارتفاع الصناديق الخاصة بك عندما يكون لديك أرقام مختلفة من الميزات."
+
+#: modules/video/video.php:398
+msgid "Video Type"
+msgstr "نوع الفيديو "
+
+#: modules/video/video.php:452
+msgctxt "Video preview/fallback image."
+msgid "Poster"
+msgstr "الملصق "
+
+#: modules/box/box.php:168 modules/testimonials/testimonials.php:162
+msgid "Wide"
+msgstr "واسع "
+
+#: modules/testimonials/testimonials.php:173
+msgid "Wide is for 1 column rows, compact is for multi-column rows."
+msgstr "بشكل عام هو عمود 1 لصف 1 بالداخل مجموعة صفوف ومجموعة أعمدة ."
+
+#: classes/class-fl-builder-config.php:347
+#: classes/class-fl-builder-config.php:386
+#: modules/widget/includes/settings-general.php:27
+#: modules/widget/includes/settings-general.php:30 modules/widget/widget.php:13
+msgid "Widget"
+msgstr "قطع جانبية "
+
+#: modules/woocommerce/woocommerce.php:15
+#: modules/woocommerce/woocommerce.php:17
+msgid "WooCommerce"
+msgstr "التجارة الإلكترونية "
+
+#: modules/pricing-table/pricing-table.php:906
+msgid "per Year"
+msgstr "سنوي "
+
+#. translators: %s: author name
+#. translators: %s: Author name
+#: modules/post-carousel/includes/post-gallery-loop.php:41
+#: modules/post-carousel/includes/post-grid-loop.php:26
+#: modules/post-grid/includes/post-feed.php:30
+#: modules/post-grid/includes/post-grid.php:29
+#: modules/post-slider/includes/post-loop.php:34
+msgctxt "%s stands for author name."
+msgid "By %s"
+msgstr "الكاتب: %s"
+
+#: classes/class-fl-builder-model.php:4307
+msgid "1 Column"
+msgstr "عمود 1"
+
+#: classes/class-fl-builder-model.php:4312
+msgid "2 Columns"
+msgstr "2 أعمدة"
+
+#: classes/class-fl-builder-model.php:4317
+msgid "3 Columns"
+msgstr "3 أعمدة "
+
+#: classes/class-fl-builder-model.php:4322
+msgid "4 Columns"
+msgstr "4 أعمدة "
+
+#: classes/class-fl-builder-model.php:4327
+msgid "5 Columns"
+msgstr "5 أعمدة "
+
+#: classes/class-fl-builder-model.php:4332
+msgid "6 Columns"
+msgstr "6 أعمدة "
+
+#: modules/callout/callout.php:14
+msgid "A heading and snippet of text with an optional link, icon and image."
+msgstr "العنوان و جزء من النص مع رابط اختياري، أيقونه  و الصورة."
+
+#: modules/content-slider/content-slider.php:607
+msgid "A label to identify this slide on the Slides tab of the Content Slider settings."
+msgstr "تسمية لتحديد هذه الشريحة في علامة التبويب من إعدادات عارض الشرائح . "
+
+#: modules/button/button.php:14
+msgid "A simple call to action button."
+msgstr "دعوة بسيطة ل عمل زر ."
+
+#: modules/contact-form/contact-form.php:23
+msgid "A very simple contact form."
+msgstr "نموذج اتصال بسيط جداً . "
+
+#: modules/callout/callout.php:594 modules/callout/callout.php:682
+msgid "Above Heading"
+msgstr "فوق العنوان "
+
+#: modules/post-carousel/post-carousel.php:486
+#: modules/post-grid/post-grid.php:1367
+msgid "Above Text"
+msgstr "فوق النص "
+
+#: modules/accordion/accordion.php:13 modules/menu/menu.php:637
+msgid "Accordion"
+msgstr "أكورديون"
+
+#: includes/updater/includes/form.php:36
+msgid "Active!"
+msgstr "مفعل! "
+
+#: modules/icon-group/icon-group.php:194
+msgid "Add Icon"
+msgstr "إضافة أيقونة "
+
+#: modules/accordion/accordion.php:518 modules/tabs/tabs.php:435
+msgid "Add Item"
+msgstr "إضافة بند "
+
+#: modules/map/map.php:36
+msgid "Address"
+msgstr "العنوان "
+
+#: modules/box/box.php:797 modules/callout/callout.php:472
+#: modules/countdown/countdown.php:302 modules/cta/cta.php:250
+#: modules/icon/icon.php:133 modules/icon-group/icon-group.php:123
+#: modules/search/search.php:544 modules/search/search.php:704
+#: modules/social-buttons/social-buttons.php:94
+msgid "Alignment"
+msgstr "محاذاة "
+
+#: classes/class-fl-builder-config.php:312
+msgid "Append New Layout"
+msgstr "إدراج تخطيط جديد"
+
+#: modules/audio/audio.php:119 modules/content-slider/content-slider.php:389
+#: modules/post-carousel/post-carousel.php:277
+#: modules/post-slider/post-slider.php:531 modules/slideshow/slideshow.php:481
+#: modules/testimonials/testimonials.php:89 modules/video/video.php:457
+msgid "Auto Play"
+msgstr "تشغيل تلقائي "
+
+#: modules/content-slider/content-slider.php:757
+#: modules/post-slider/post-slider.php:865
+msgid "Auto will allow the overlay to fit however long the text content is. 100% will fit the overlay to the top and bottom of the slide."
+msgstr "الخيار التلقائي يسمح للمحتوى بالتناسق فى الإرتفاع بنسبة 100% من أعلي وأسفل الشريحة . "
+
+#: modules/button/button.php:586 modules/button-group/button-group.php:406
+#: modules/button-group/button-group.php:705 modules/callout/callout.php:756
+#: modules/contact-form/contact-form.php:729
+#: modules/contact-form/contact-form.php:910 modules/icon/icon.php:211
+#: modules/icon-group/icon-group.php:168 modules/login-form/login-form.php:509
+#: modules/north-commerce/north-commerce.php:184 modules/search/search.php:567
+#: modules/search/search.php:648 modules/subscribe-form/subscribe-form.php:737
+#: modules/subscribe-form/subscribe-form.php:896
+msgid "Background Hover Color"
+msgstr "لون الخلفية عند مرور الماوس "
+
+#: modules/content-slider/content-slider.php:612
+msgid "Background Layout"
+msgstr "تخطيط الخلفية "
+
+#: includes/row-settings.php:700
+msgid "Background Parallax"
+msgstr "خلفية المنظر "
+
+#: modules/content-slider/content-slider.php:663
+msgid "Background Video Code"
+msgstr "كود خلفية الفيديو "
+
+#: modules/content-slider/content-slider.php:759
+#: modules/post-slider/post-slider.php:867
+msgctxt "Background height."
+msgid "Auto"
+msgstr "تلقائي "
+
+#: includes/row-settings.php:663 modules/slideshow/slideshow.php:507
+msgid "Bars"
+msgstr "الأشرطة "
+
+#: modules/callout/callout.php:595 modules/callout/callout.php:683
+msgid "Below Heading"
+msgstr "تحت العنوان "
+
+#: modules/gallery/gallery.php:308 modules/photo/photo.php:675
+msgid "Below Photo"
+msgstr "صور أدناه"
+
+#: includes/row-settings.php:662 modules/slideshow/slideshow.php:506
+msgid "Blinds"
+msgstr "الستائر "
+
+#: modules/tabs/tabs.php:257
+msgid "Border Color"
+msgstr "لون الإطار "
+
+#: modules/pricing-table/pricing-table.php:609
+msgid "Border Size"
+msgstr "حجم الإطار "
+
+#: includes/row-settings.php:665 modules/slideshow/slideshow.php:509
+msgid "Boxes"
+msgstr "صناديق "
+
+#: includes/row-settings.php:667 modules/slideshow/slideshow.php:511
+msgid "Boxes Grow"
+msgstr "صناديق تنمو "
+
+#: extensions/fl-builder-global-styles/includes/controls.php:191
+#: modules/button/button.php:13 modules/button/button.php:307
+#: modules/button-group/button-group.php:241
+#: modules/button-group/button-group.php:535 modules/callout/callout.php:822
+#: modules/contact-form/contact-form.php:757
+#: modules/content-slider/content-slider.php:859 modules/cta/cta.php:337
+#: modules/pricing-table/pricing-table.php:932
+#: modules/subscribe-form/subscribe-form.php:768
+msgid "Button"
+msgstr "زر "
+
+#: modules/callout/callout.php:891 modules/callout/callout.php:895
+#: modules/content-slider/content-slider.php:879
+#: modules/content-slider/content-slider.php:883 modules/cta/cta.php:365
+#: modules/cta/cta.php:369 modules/login-form/login-form.php:651
+#: modules/login-form/login-form.php:655 modules/login-form/login-form.php:808
+#: modules/login-form/login-form.php:812 modules/post-grid/post-grid.php:1473
+#: modules/post-grid/post-grid.php:1477
+#: modules/pricing-table/pricing-table.php:952
+#: modules/pricing-table/pricing-table.php:957 modules/search/search.php:424
+msgid "Button Icon"
+msgstr "أيقونة الزر"
+
+#: modules/cta/cta.php:354
+msgid "Button Link"
+msgstr "رابط الزر "
+
+#: modules/callout/callout.php:954 modules/login-form/login-form.php:686
+#: modules/login-form/login-form.php:843 modules/post-grid/post-grid.php:1508
+#: modules/pricing-table/pricing-table.php:1017
+msgid "Button Width"
+msgstr "عرض الزر "
+
+#: modules/callout/callout.php:813
+#: modules/content-slider/content-slider.php:850 modules/cta/cta.php:13
+msgid "Call to Action"
+msgstr "إستدعاء التحريك "
+
+#: modules/callout/callout.php:820
+#: modules/content-slider/content-slider.php:857
+msgctxt "Call to action."
+msgid "None"
+msgstr "لاشىء "
+
+#: modules/callout/callout.php:13
+msgid "Callout"
+msgstr "ترويج "
+
+#: modules/photo/photo.php:666 modules/photo/photo.php:694
+msgid "Caption"
+msgstr "تسمية توضيحية "
+
+#: classes/class-fl-builder-config.php:203
+msgid "Change Template"
+msgstr "تغيير القالب "
+
+#: modules/content-slider/content-slider.php:1113
+msgid "Choose Another Photo"
+msgstr "إختيار صورة أخري "
+
+#: modules/accordion/accordion.php:276 modules/menu/menu.php:681
+msgid "Choosing yes will keep only one item open at a time. Choosing no will allow multiple items to be open at the same time."
+msgstr "اختر نعم لتفعيل فتح بند واحد فى نفس الوقت ، اختر لا اذا كنت تريد فتح أكثر من بند فى نفس الوقت . "
+
+#: classes/class-fl-builder-art.php:81 modules/callout/callout.php:615
+#: modules/content-slider/content-slider.php:570 modules/photo/photo.php:767
+#: modules/post-carousel/post-carousel.php:454
+#: modules/post-carousel/post-carousel.php:863
+#: modules/post-slider/post-slider.php:675
+#: modules/post-slider/post-slider.php:1105 modules/search/search.php:1016
+msgid "Circle"
+msgstr "دائرة "
+
+#: modules/button/button.php:303 modules/button-group/button-group.php:531
+#: modules/gallery/gallery.php:314 modules/slideshow/slideshow.php:443
+msgid "Click Action"
+msgstr "انقر فوق إجراء "
+
+#: modules/button/button.php:259 modules/button-group/button-group.php:488
+#: modules/cta/cta.php:345
+msgid "Click Here"
+msgstr "إضغط هنا "
+
+#: modules/gallery/gallery.php:317
+msgctxt "Click action."
+msgid "None"
+msgstr "لاشىء "
+
+#: modules/gallery/gallery.php:254
+msgid "Collage"
+msgstr "ملصقة "
+
+#: modules/accordion/accordion.php:270 modules/menu/menu.php:675
+msgid "Collapse Inactive"
+msgstr "طي غير فعال "
+
+#: classes/class-fl-builder-config.php:214 classes/class-fl-builder.php:1735
+#: includes/column-settings.php:4 modules/box/box.php:362
+#: modules/box/box.php:379 modules/box/box.php:529
+msgid "Column"
+msgstr "عمود "
+
+#: modules/contact-form/contact-form.php:22
+msgid "Contact Form"
+msgstr "نموذج الإتصال "
+
+#: modules/contact-form/contact-form.php:174
+msgid "Contact Form Submission"
+msgstr "تقديم إستمارة الإتصال "
+
+#: blocks/test-block/test-block.php:12 blocks/test-block/test-block.php:19
+#: extensions/fl-builder-dynamic-global/classes/class-fl-builder-dynamic-global.php:112
+#: extensions/fl-builder-user-templates/includes/admin-add-new-form.php:22
+#: modules/accordion/accordion.php:456 modules/accordion/accordion.php:589
+#: modules/bigcommerce/bigcommerce.php:46
+#: modules/content-slider/content-slider.php:725 modules/list/list.php:656
+#: modules/post-carousel/post-carousel.php:544
+#: modules/post-carousel/post-carousel.php:548
+#: modules/post-carousel/post-carousel.php:884
+#: modules/post-grid/post-grid.php:1075 modules/post-grid/post-grid.php:1395
+#: modules/post-slider/post-slider.php:790
+#: modules/post-slider/post-slider.php:1127 modules/search/search.php:923
+#: modules/search/search.php:1033 modules/tabs/tabs.php:385
+#: modules/tabs/tabs.php:506
+msgid "Content"
+msgstr "محتوى "
+
+#: modules/content-slider/content-slider.php:669
+msgid "Content Layout"
+msgstr "تخطيط المحتوي "
+
+#: modules/content-slider/content-slider.php:13
+msgid "Content Slider"
+msgstr "محتوي الشرائح"
+
+#: modules/content-slider/content-slider.php:680
+msgctxt "Content type."
+msgid "None"
+msgstr "لاشىء "
+
+#: modules/callout/callout.php:607 modules/photo/photo.php:759
+#: modules/post-carousel/post-carousel.php:446
+#: modules/post-slider/post-slider.php:667 modules/search/search.php:1011
+#: modules/slideshow/slideshow.php:420
+msgid "Crop"
+msgstr "قص "
+
+#: modules/button/button.php:422 modules/button-group/button-group.php:281
+#: modules/search/search.php:503 modules/search/search.php:730
+#: modules/search/search.php:970
+msgid "Custom Width"
+msgstr "عرض مخصص "
+
+#: modules/post-carousel/post-carousel.php:527
+#: modules/post-grid/post-grid.php:986 modules/post-slider/post-slider.php:708
+msgid "Date Format"
+msgstr "تنسيق التاريخ "
+
+#: modules/map/map.php:14
+msgid "Display a Google map."
+msgstr "عرض خريطة جوجل . "
+
+#: modules/accordion/accordion.php:14
+msgid "Display a collapsible accordion of items."
+msgstr "عرض الأكورديون لطي البنود."
+
+#: modules/post-grid/post-grid.php:14 modules/search/search.php:16
+msgid "Display a grid of your WordPress posts."
+msgstr "عرض شبكة من المشاركات للوردبريس الخاص بك . "
+
+#: modules/icon-group/icon-group.php:14
+msgid "Display a group of linked Font Awesome icons."
+msgstr "ظهور الخطوط من مكتبة الخطوط Awesome  ."
+
+#: modules/cta/cta.php:14
+msgid "Display a heading, subheading and a button."
+msgstr "ظهور العنوان ، العنوان الفرعى و الزر . "
+
+#: modules/heading/heading.php:15
+msgid "Display a title/page heading."
+msgstr "ظهور رابط الصفحة / عنوان الصفحة . "
+
+#: modules/icon/icon.php:14
+msgid "Display an icon and optional title."
+msgstr "عرض رمز و عنوان اختياري."
+
+#: modules/gallery/gallery.php:14
+msgid "Display multiple photos in a gallery view."
+msgstr "عرض صور متعددة فى معرض الصور . "
+
+#: modules/html/html.php:14
+msgid "Display raw HTML code."
+msgstr "ظهور كود صف HTML . "
+
+#: modules/content-slider/content-slider.php:14
+msgid "Displays multiple slides with an optional heading and call to action."
+msgstr "يتم عرض عدة شرائح مع عنوان إختيارى ويتم إستدعاء الحركة . "
+
+#: classes/class-fl-builder-config.php:225
+msgid "Do you really want to delete this item?"
+msgstr "هل حقا تريد حذف هذا البند ؟"
+
+#: classes/class-fl-builder-config.php:241
+msgid "Drop a row layout or module to get started!"
+msgstr "إسقاط تخطيط صف واحد أو وحدة نمطية لتبدأ!"
+
+#: modules/cta/cta.php:192
+msgid "Drop us a line today for a free quote!"
+msgstr "أترك لنا رابط اليوم لعرض الأسعار المجاني! "
+
+#: includes/row-settings.php:717
+msgid "Fast"
+msgstr "بسرعة "
+
+#: modules/post-carousel/post-carousel.php:423
+#: modules/post-grid/post-grid.php:827 modules/post-slider/post-slider.php:627
+#: modules/search/search.php:986
+msgid "Featured Image"
+msgstr "صورة مميزة "
+
+#: classes/class-fl-builder-config.php:249
+#: classes/class-fl-builder-ui-settings-forms.php:639
+#: includes/ui-field-photo-sizes.php:8
+msgid "Full Size"
+msgstr "الحجم الكامل "
+
+#: modules/gallery/gallery.php:13 modules/post-carousel/post-carousel.php:262
+#: modules/post-grid/post-grid.php:678
+msgid "Gallery"
+msgstr "المعرض "
+
+#: modules/gallery/gallery.php:255
+msgctxt "Gallery layout: thumbnails."
+msgid "Thumbs"
+msgstr "قلب الصفحات "
+
+#: classes/class-fl-builder-art.php:541 classes/class-fl-builder-config.php:428
+#: includes/column-settings.php:343 includes/column-settings.php:398
+#: includes/row-settings.php:752 includes/row-settings.php:807
+#: modules/callout/callout.php:765 modules/contact-form/contact-form.php:924
+#: modules/icon/icon.php:220 modules/icon-group/icon-group.php:177
+#: modules/post-grid/post-grid.php:1602
+#: modules/pricing-table/pricing-table.php:1129 modules/search/search.php:825
+#: modules/subscribe-form/subscribe-form.php:910
+msgid "Gradient"
+msgstr "تدرج لوني "
+
+#: classes/class-fl-builder-config.php:407 includes/module-settings.php:204
+#: modules/box/box.php:213 modules/post-carousel/post-carousel.php:261
+msgid "Grid"
+msgstr "شبكة "
+
+#: modules/button/button.php:357 modules/button-group/button-group.php:586
+#: modules/html/html.php:13
+msgid "HTML"
+msgstr "HTML"
+
+#: modules/heading/heading.php:164
+msgid "HTML Tag"
+msgstr "وسوم HTML "
+
+#: extensions/fl-builder-global-styles/includes/controls.php:29
+#: modules/callout/callout.php:401 modules/callout/callout.php:500
+#: modules/content-slider/content-slider.php:709 modules/cta/cta.php:160
+#: modules/cta/cta.php:279 modules/heading/heading.php:14
+#: modules/heading/heading.php:154 modules/testimonials/testimonials.php:178
+#: modules/testimonials/testimonials.php:183
+msgid "Heading"
+msgstr "عنوان "
+
+#: modules/testimonials/testimonials.php:191
+msgid "Heading Size"
+msgstr "حجم العنوان "
+
+#: modules/callout/callout.php:410
+#: modules/content-slider/content-slider.php:780 modules/cta/cta.php:170
+msgid "Heading Tag"
+msgstr "الكلمات الدلالية للهيد "
+
+#: modules/accordion/accordion.php:242
+#: modules/contact-form/contact-form.php:458
+#: modules/contact-form/contact-form.php:477
+#: modules/contact-form/contact-form.php:506
+#: modules/contact-form/contact-form.php:525
+#: modules/contact-form/contact-form.php:567
+#: modules/contact-form/contact-form.php:976 modules/menu/menu.php:723
+#: modules/menu/menu.php:876 modules/post-carousel/post-carousel.php:431
+#: modules/post-carousel/post-carousel.php:508
+#: modules/post-carousel/post-carousel.php:517
+#: modules/post-carousel/post-carousel.php:552
+#: modules/post-carousel/post-carousel.php:578
+#: modules/post-grid/post-grid.php:835 modules/post-grid/post-grid.php:953
+#: modules/post-grid/post-grid.php:976 modules/post-grid/post-grid.php:1006
+#: modules/post-grid/post-grid.php:1015 modules/post-grid/post-grid.php:1040
+#: modules/post-grid/post-grid.php:1079 modules/post-grid/post-grid.php:1113
+#: modules/post-grid/post-grid.php:1450 modules/post-slider/post-slider.php:635
+#: modules/post-slider/post-slider.php:689
+#: modules/post-slider/post-slider.php:698
+#: modules/post-slider/post-slider.php:728
+#: modules/post-slider/post-slider.php:742
+#: modules/post-slider/post-slider.php:768 modules/search/search.php:911
+#: modules/search/search.php:990 modules/search/search.php:1037
+#: modules/subscribe-form/subscribe-form.php:506
+#: modules/subscribe-form/subscribe-form.php:520
+#: modules/subscribe-form/subscribe-form.php:544
+#: modules/subscribe-form/subscribe-form.php:962 modules/tabs/tabs.php:195
+#: modules/video/video.php:502 modules/video/video.php:511
+#: modules/video/video.php:520 modules/video/video.php:529
+#: modules/video/video.php:538 modules/video/video.php:547
+msgid "Hide"
+msgstr "إخفاء "
+
+#: modules/button-group/button-group.php:261 modules/menu/menu.php:635
+#: modules/tabs/tabs.php:235
+msgid "Horizontal"
+msgstr "أفقي "
+
+#: extensions/fl-builder-global-styles/includes/controls.php:177
+#: extensions/fl-builder-global-styles/includes/controls.php:204
+#: modules/callout/callout.php:739 modules/icon/icon.php:163
+#: modules/icon-group/icon-group.php:148 modules/menu/menu.php:1318
+#: modules/menu/menu.php:1503 modules/post-carousel/post-carousel.php:669
+#: modules/post-carousel/post-carousel.php:829
+#: modules/post-slider/post-slider.php:910
+#: modules/post-slider/post-slider.php:1071 modules/search/search.php:624
+#: modules/subscribe-form/subscribe-form.php:704
+msgid "Hover Color"
+msgstr "اللون عند مرور الماوس "
+
+#: modules/accordion/accordion.php:406 modules/accordion/accordion.php:419
+#: modules/button/button.php:268 modules/button/button.php:513
+#: modules/button-group/button-group.php:496 modules/callout/callout.php:566
+#: modules/callout/callout.php:665 modules/callout/callout.php:669
+#: modules/contact-form/contact-form.php:770 modules/icon/icon.php:13
+#: modules/icon/icon.php:73 modules/icon/icon.php:117
+#: modules/icon-group/icon-group.php:80 modules/icon-group/icon-group.php:93
+#: modules/icon-group/icon-group.php:204 modules/list/list.php:635
+#: modules/login-form/login-form.php:332 modules/login-form/login-form.php:364
+#: modules/login-form/login-form.php:386 modules/menu/menu.php:735
+#: modules/search/search.php:428 modules/subscribe-form/subscribe-form.php:781
+msgid "Icon"
+msgstr "أيكون "
+
+#: modules/callout/callout.php:693 modules/icon/icon.php:145
+#: modules/icon-group/icon-group.php:133
+msgid "Icon Colors"
+msgstr "لون الأيقونة "
+
+#: modules/icon-group/icon-group.php:13
+msgid "Icon Group"
+msgstr "رمز المجموعة "
+
+#: modules/callout/callout.php:775
+msgid "Icon Structure"
+msgstr "هيكلة الأيقونة "
+
+#: modules/callout/callout.php:561
+msgid "Image Type"
+msgstr "نوع الصورة "
+
+#: modules/callout/callout.php:564
+msgctxt "Image type."
+msgid "None"
+msgstr "لاشىء "
+
+#: modules/cta/cta.php:214 modules/login-form/login-form.php:256
+#: modules/menu/menu.php:779 modules/search/search.php:336
+#: modules/subscribe-form/subscribe-form.php:487
+msgid "Inline"
+msgstr "فى سطر "
+
+#: classes/class-fl-builder-config.php:256
+#: extensions/fl-theme-builder-core/includes/field-connection-js-templates.php:16
+msgid "Insert"
+msgstr "إدراج"
+
+#: modules/accordion/accordion.php:176 modules/tabs/tabs.php:215
+msgid "Item"
+msgstr "بند "
+
+#: modules/accordion/accordion.php:317
+msgid "Item Spacing"
+msgstr "تباعد البند "
+
+#: modules/accordion/accordion.php:141 modules/tabs/tabs.php:127
+#: modules/testimonials/testimonials.php:65
+msgid "Items"
+msgstr "بنود "
+
+#: includes/column-settings.php:625 includes/loop-settings-filter.php:15
+#: includes/module-settings.php:145 includes/row-settings.php:1023
+#: modules/accordion/accordion.php:351 modules/accordion/accordion.php:528
+#: modules/tabs/tabs.php:305 modules/tabs/tabs.php:445
+msgid "Label"
+msgstr "ملصق "
+
+#: modules/accordion/accordion.php:309
+msgctxt "Label size."
+msgid "Large"
+msgstr "كبير "
+
+#: modules/accordion/accordion.php:308
+msgctxt "Label size."
+msgid "Medium"
+msgstr "متوسط "
+
+#: modules/accordion/accordion.php:307
+msgctxt "Label size."
+msgid "Small"
+msgstr "صغير "
+
+#: modules/callout/callout.php:611 modules/photo/photo.php:763
+#: modules/post-carousel/post-carousel.php:450
+#: modules/post-slider/post-slider.php:671
+msgid "Landscape"
+msgstr "صور الطبيعة "
+
+#: classes/class-fl-builder-config.php:257
+#: classes/class-fl-builder-model.php:1818
+#: classes/class-fl-builder-ui-settings-forms.php:638 includes/ui-iframe.php:24
+msgid "Large"
+msgstr "الحجم الكبير"
+
+#: classes/class-fl-builder-model.php:3589 includes/module-settings.php:195
+#: modules/accordion/accordion.php:15 modules/button-group/button-group.php:258
+#: modules/countdown/countdown.php:283 modules/cta/cta.php:211
+#: modules/gallery/gallery.php:251 modules/list/list.php:320
+#: modules/login-form/login-form.php:244 modules/menu/menu.php:632
+#: modules/north-commerce/north-commerce.php:77 modules/numbers/numbers.php:165
+#: modules/post-carousel/post-carousel.php:258
+#: modules/post-carousel/post-carousel.php:365
+#: modules/post-grid/post-grid.php:666 modules/post-grid/post-grid.php:673
+#: modules/post-slider/post-slider.php:624
+#: modules/pricing-table/pricing-table.php:17 modules/search/search.php:325
+#: modules/search/search.php:332 modules/sidebar/sidebar.php:15
+#: modules/subscribe-form/subscribe-form.php:483 modules/tabs/tabs.php:15
+#: modules/tabs/tabs.php:232 modules/testimonials/testimonials.php:159
+#: modules/woocommerce/woocommerce.php:56
+msgid "Layout"
+msgstr "تخطيط "
+
+#: extensions/fl-builder-template-data-exporter/includes/template-data-exporter.php:28
+msgid "Layout Templates"
+msgstr "تخطيط القوالب "
+
+#: classes/class-fl-builder-model.php:4337
+msgid "Left Sidebar"
+msgstr "الشريط الجانبي يساراً"
+
+#: modules/callout/callout.php:684 modules/list/list.php:273
+msgid "Left of Heading"
+msgstr "يسار العنوان "
+
+#: modules/callout/callout.php:596 modules/callout/callout.php:686
+msgid "Left of Text and Heading"
+msgstr "يسار النص والعنوان "
+
+#: modules/button/button.php:308 modules/button-group/button-group.php:536
+#: modules/gallery/gallery.php:318 modules/photo/photo.php:711
+msgid "Lightbox"
+msgstr "صندوق الصور"
+
+#: extensions/fl-builder-global-styles/includes/controls.php:164
+#: modules/audio/audio.php:85 modules/audio/audio.php:110
+#: modules/box/box.php:833 modules/button/button.php:306
+#: modules/button/button.php:327 modules/button-group/button-group.php:534
+#: modules/button-group/button-group.php:555 modules/callout/callout.php:793
+#: modules/callout/callout.php:800 modules/callout/callout.php:821
+#: modules/content-slider/content-slider.php:834
+#: modules/content-slider/content-slider.php:837
+#: modules/content-slider/content-slider.php:841
+#: modules/content-slider/content-slider.php:858
+#: modules/heading/heading.php:181 modules/icon/icon.php:82
+#: modules/icon-group/icon-group.php:209 modules/photo/photo.php:703
+#: modules/slideshow/slideshow.php:451
+msgid "Link"
+msgstr "رابط "
+
+#: modules/photo/photo.php:707
+msgid "Link Type"
+msgstr "نوع الرابط "
+
+#: modules/photo/photo.php:733 modules/slideshow/slideshow.php:464
+msgid "Link URL"
+msgstr "رابط URL "
+
+#: modules/photo/photo.php:726
+msgid "Link type applies to how the image should be linked on click. You can choose a specific URL, the individual photo or a separate page with the photo."
+msgstr "ينطبق نوع الارتباط إلى الكيفية التي ينبغي أن تكون مرتبطة بها الصورة عند النقر . يمكنك اختيار موقع محدد ، والصورة الفردية أو صفحة منفصلة مع الصورة."
+
+#: modules/photo/photo.php:709
+msgctxt "Link type."
+msgid "None"
+msgstr "لاشىء "
+
+#: modules/audio/audio.php:131 modules/content-slider/content-slider.php:424
+#: modules/post-carousel/post-carousel.php:286
+#: modules/post-slider/post-slider.php:540 modules/video/video.php:469
+msgid "Loop"
+msgstr "تدوير "
+
+#: classes/class-fl-builder-config.php:258 classes/class-fl-builder.php:1476
+msgid "Manage Templates"
+msgstr "إدارة القالب "
+
+#: modules/map/map.php:13
+msgid "Map"
+msgstr "خريطة "
+
+#: modules/content-slider/content-slider.php:520
+msgid "Max Content Width"
+msgstr "الحد الأقصى لعرض المحتوي "
+
+#: classes/class-fl-builder-config.php:259
+#: classes/class-fl-builder-fonts.php:218
+#: classes/class-fl-builder-model.php:1819
+#: classes/class-fl-builder-ui-settings-forms.php:637
+#: includes/column-settings.php:535 includes/ui-iframe.php:25
+msgid "Medium"
+msgstr "الحجم المتوسط "
+
+#: modules/contact-form/includes/frontend.php:77
+msgid "Message Sent!"
+msgstr "تم إرسال الرسالة "
+
+#: modules/contact-form/contact-form.php:180
+#: modules/contact-form/includes/frontend.php:80
+msgid "Message failed. Please try again."
+msgstr "لم يتم الإرسال . من فضلك أعد المحاولة . "
+
+#: modules/content-slider/content-slider.php:1104
+msgid "Mobile Photo"
+msgstr "صور الموبايل "
+
+#: classes/class-fl-builder-config.php:261
+#: classes/class-fl-builder-config.php:383 classes/class-fl-builder.php:1732
+#: extensions/fl-builder-user-templates/includes/admin-add-new-form.php:50
+msgid "Module"
+msgstr "وحدة "
+
+#: modules/content-slider/content-slider.php:1101
+msgctxt "Module settings form tab. Display on mobile devices."
+msgid "Mobile"
+msgstr "موبايل "
+
+#: modules/accordion/accordion.php:238
+#: modules/post-carousel/post-carousel.php:574
+#: modules/post-carousel/post-carousel.php:807
+#: modules/post-grid/post-grid.php:1109 modules/post-slider/post-slider.php:764
+#: modules/post-slider/post-slider.php:1049 modules/tabs/tabs.php:191
+msgid "More Link"
+msgstr "رابط إقرأ المزيد "
+
+#: modules/accordion/accordion.php:252
+#: modules/post-carousel/post-carousel.php:589
+#: modules/post-grid/post-grid.php:1123 modules/post-slider/post-slider.php:779
+#: modules/tabs/tabs.php:205
+msgid "More Link Text"
+msgstr "نص إقرأ المزيد "
+
+#: classes/class-fl-builder-config.php:263
+#: includes/ui-js-overlay-templates.php:19
+#: includes/ui-js-overlay-templates.php:137
+#: includes/ui-js-overlay-templates.php:393
+msgid "Move"
+msgstr "نقل "
+
+#: includes/column-settings.php:549 includes/module-settings.php:69
+#: includes/row-settings.php:947 modules/gallery/gallery.php:306
+#: modules/photo/photo.php:673
+msgid "Never"
+msgstr "أبداً "
+
+#: classes/class-fl-builder-config.php:264
+msgid "New Column"
+msgstr "عمود جديد "
+
+#: classes/class-fl-builder-config.php:265
+msgid "New Row"
+msgstr "صف جديد "
+
+#: includes/ui-field-link.php:15
+msgid "New Window"
+msgstr "نافذة جديدة "
+
+#: modules/content-slider/content-slider.php:1114
+msgid "No Photo"
+msgstr "بدون صورة "
+
+#: classes/class-fl-builder-config.php:268
+msgid "No results found."
+msgstr "لايوجد نتائج "
+
+#: includes/updater/includes/form.php:32
+msgid "Not Active!"
+msgstr "غير مفعل! "
+
+#: modules/countdown/countdown.php:286 modules/post-grid/post-grid.php:1409
+msgid "Numbers"
+msgstr "الأرقام "
+
+#: classes/class-fl-builder-config.php:271 includes/ui-js-alert-templates.php:4
+#: includes/ui-js-templates.php:23
+msgid "OK"
+msgstr "نعم"
+
+#: modules/gallery/gallery.php:307 modules/photo/photo.php:674
+msgid "On Hover"
+msgstr "عند المرور بالماوس "
+
+#: modules/callout/callout.php:612 modules/photo/photo.php:764
+#: modules/post-carousel/post-carousel.php:451
+#: modules/post-slider/post-slider.php:672
+msgid "Panorama"
+msgstr "بانوراما "
+
+#: modules/photo/photo.php:712
+msgid "Photo File"
+msgstr "ملف الصورة "
+
+#: modules/gallery/gallery.php:319
+msgid "Photo Link"
+msgstr "رابط الصورة "
+
+#: classes/class-fl-builder-config.php:272 modules/photo/photo.php:713
+msgid "Photo Page"
+msgstr "صور الصفحة"
+
+#: classes/class-fl-builder-config.php:273
+msgid "Photo Selected"
+msgstr "تحديد الصور "
+
+#: modules/gallery/gallery.php:293
+msgid "Photo Size"
+msgstr "حجم الصورة "
+
+#: includes/row-settings.php:325 modules/photo/photo.php:611
+msgid "Photo Source"
+msgstr "مصدر الصورة "
+
+#: modules/gallery/gallery.php:347
+msgid "Photo Spacing"
+msgstr "مباعدة الصورة "
+
+#: includes/row-settings.php:345 modules/photo/photo.php:640
+msgid "Photo URL"
+msgstr "عنوان URL للصورة"
+
+#: modules/gallery/gallery.php:298
+msgctxt "Photo size."
+msgid "Large"
+msgstr "كبير "
+
+#: modules/gallery/gallery.php:297
+msgctxt "Photo size."
+msgid "Medium"
+msgstr "متوسط "
+
+#: modules/gallery/gallery.php:296
+msgctxt "Photo size."
+msgid "Small"
+msgstr "صغير "
+
+#: classes/class-fl-builder-config.php:276
+msgid "Photos Selected"
+msgstr "Obrázky boli zvolené"
+
+#: modules/contact-form/includes/frontend.php:50
+msgid "Please enter a message."
+msgstr "من فضلك أدخل رسالتك "
+
+#: modules/contact-form/includes/frontend.php:37
+msgid "Please enter a valid email."
+msgstr "من فضلك أدخل البريد الإلكتروني "
+
+#: modules/contact-form/includes/frontend.php:23
+#: modules/subscribe-form/includes/frontend.php:18
+msgid "Please enter your name."
+msgstr "من فضلك أدخل إسمك "
+
+#: classes/class-fl-builder-config.php:217
+msgid "Please select either a background layout or content layout before submitting."
+msgstr "يرجى تحديد تخطيط الخلفية أو تخطيط المحتوى قبل التقديم . "
+
+#: includes/updater/classes/class-fl-updater.php:523
+msgid "Please subscribe to enable automatic updates for this plugin."
+msgstr "يرجى الاشتراك لتمكين التحديثات التلقائية لهذه الإضافة."
+
+#: modules/callout/callout.php:613 modules/photo/photo.php:765
+#: modules/post-carousel/post-carousel.php:452
+#: modules/post-slider/post-slider.php:673
+msgid "Portrait"
+msgstr "صورة "
+
+#: modules/post-carousel/post-carousel.php:500
+#: modules/post-carousel/post-carousel.php:689
+#: modules/post-grid/post-grid.php:945 modules/post-slider/post-slider.php:681
+#: modules/post-slider/post-slider.php:930
+msgid "Post Info"
+msgstr "معلومات المشاركة "
+
+#: modules/post-carousel/post-carousel.php:394
+#: modules/post-grid/post-grid.php:739 modules/post-grid/post-grid.php:747
+msgid "Post Spacing"
+msgstr "مباعدة المشاركة "
+
+#: classes/class-fl-builder-model.php:3591
+#: extensions/fl-theme-builder-core/classes/class-fl-page-data.php:87
+#: modules/post-carousel/post-carousel.php:15
+#: modules/post-carousel/post-carousel.php:368
+#: modules/post-grid/post-grid.php:13 modules/post-grid/post-grid.php:15
+#: modules/post-grid/post-grid.php:702 modules/post-grid/post-grid.php:1134
+#: modules/post-slider/post-slider.php:22
+msgid "Posts"
+msgstr "مشاركات"
+
+#: classes/class-fl-builder-config.php:284
+msgid "Publish Changes"
+msgstr "نشر التعديلات "
+
+#: includes/row-settings.php:664 modules/slideshow/slideshow.php:508
+msgid "Random Bars"
+msgstr "أشرطة عشوائية "
+
+#: includes/row-settings.php:666 modules/slideshow/slideshow.php:510
+msgid "Random Boxes"
+msgstr "صناديق عشوائية "
+
+#: includes/row-settings.php:687 modules/slideshow/slideshow.php:524
+msgid "Randomize Photos"
+msgstr "صور عشوائية "
+
+#: modules/accordion/accordion.php:253 modules/callout/callout.php:839
+#: modules/post-carousel/post-carousel.php:590
+#: modules/post-grid/post-grid.php:1124 modules/post-slider/post-slider.php:780
+#: modules/tabs/tabs.php:206
+msgid "Read More"
+msgstr "إقرأ المزيد "
+
+#: modules/cta/cta.php:161
+msgid "Ready to find out more?"
+msgstr "مستعد لمعرفة المزيد ؟ "
+
+#: classes/class-fl-builder-config.php:313
+msgid "Replace Existing Layout"
+msgstr "استبدال تخطيط القائمة"
+
+#: classes/class-fl-builder-model.php:4342
+msgid "Right Sidebar"
+msgstr "الشريط الجانبي يميناً "
+
+#: modules/callout/callout.php:685 modules/list/list.php:275
+msgid "Right of Heading"
+msgstr "يمين العنوان "
+
+#: modules/callout/callout.php:597 modules/callout/callout.php:687
+msgid "Right of Text and Heading"
+msgstr "يمين النص والعنوان "
+
+#: classes/class-fl-builder-config.php:291
+#: classes/class-fl-builder-config.php:384 classes/class-fl-builder.php:1738
+#: includes/row-settings.php:6 modules/box/box.php:361 modules/box/box.php:378
+#: modules/box/box.php:528
+msgid "Row"
+msgstr "الصف"
+
+#: classes/class-fl-builder-config.php:295
+#: extensions/fl-builder-user-templates/includes/ui-js-templates.php:452
+msgid "Save"
+msgstr "حفظ "
+
+#: classes/class-fl-builder-config.php:294
+msgid "Save Core Template"
+msgstr "حفظ القالب الأساسى "
+
+#: includes/ui-bar.php:7
+msgid "Save Draft"
+msgstr "حفظ المشروع "
+
+#: classes/class-fl-builder-config.php:300 classes/class-fl-builder.php:1318
+#: extensions/fl-builder-user-templates/includes/user-template-settings.php:4
+msgid "Save Template"
+msgstr "حفظ القالب "
+
+#: classes/class-fl-builder-config.php:303
+msgid "Select Photos"
+msgstr "تحديد الصور "
+
+#: modules/contact-form/contact-form.php:398
+#: modules/contact-form/contact-form.php:762
+msgid "Send"
+msgstr "إرسال "
+
+#: modules/contact-form/contact-form.php:434
+msgid "Send To Email"
+msgstr "إرسال الى البريد الإلكتروني "
+
+#: modules/countdown/countdown.php:467 modules/post-grid/post-grid.php:1020
+#: modules/separator/separator.php:14
+msgid "Separator"
+msgstr "الفاصل "
+
+#: modules/accordion/accordion.php:241
+#: modules/contact-form/contact-form.php:457
+#: modules/contact-form/contact-form.php:476
+#: modules/contact-form/contact-form.php:505
+#: modules/contact-form/contact-form.php:524
+#: modules/contact-form/contact-form.php:566
+#: modules/contact-form/contact-form.php:975 modules/menu/menu.php:722
+#: modules/menu/menu.php:875 modules/post-carousel/post-carousel.php:430
+#: modules/post-carousel/post-carousel.php:507
+#: modules/post-carousel/post-carousel.php:516
+#: modules/post-carousel/post-carousel.php:551
+#: modules/post-carousel/post-carousel.php:577
+#: modules/post-grid/post-grid.php:834 modules/post-grid/post-grid.php:952
+#: modules/post-grid/post-grid.php:975 modules/post-grid/post-grid.php:1005
+#: modules/post-grid/post-grid.php:1014 modules/post-grid/post-grid.php:1039
+#: modules/post-grid/post-grid.php:1078 modules/post-grid/post-grid.php:1112
+#: modules/post-grid/post-grid.php:1449 modules/post-slider/post-slider.php:634
+#: modules/post-slider/post-slider.php:688
+#: modules/post-slider/post-slider.php:697
+#: modules/post-slider/post-slider.php:727
+#: modules/post-slider/post-slider.php:741
+#: modules/post-slider/post-slider.php:767 modules/search/search.php:912
+#: modules/search/search.php:989 modules/search/search.php:1036
+#: modules/subscribe-form/subscribe-form.php:505
+#: modules/subscribe-form/subscribe-form.php:519
+#: modules/subscribe-form/subscribe-form.php:543
+#: modules/subscribe-form/subscribe-form.php:961 modules/tabs/tabs.php:194
+#: modules/video/video.php:501 modules/video/video.php:510
+#: modules/video/video.php:519 modules/video/video.php:528
+#: modules/video/video.php:537 modules/video/video.php:546
+msgid "Show"
+msgstr "عرض "
+
+#: modules/content-slider/content-slider.php:475
+#: modules/post-carousel/post-carousel.php:338
+#: modules/post-slider/post-slider.php:597
+#: modules/testimonials/testimonials.php:236
+msgid "Show Arrows"
+msgstr "عرض أزرار الإنتقال "
+
+#: modules/photo/photo.php:670
+msgid "Show Caption"
+msgstr "عرض التسمية التوضيحية "
+
+#: modules/gallery/gallery.php:303
+msgid "Show Captions"
+msgstr "ظهور التسمية التوضيحية "
+
+#: modules/content-slider/content-slider.php:489
+#: modules/post-carousel/post-carousel.php:329
+#: modules/post-slider/post-slider.php:588
+#: modules/testimonials/testimonials.php:268
+msgid "Show Dots"
+msgstr "مشاهدة النقاط "
+
+#: modules/content-slider/content-slider.php:466
+#: modules/post-carousel/post-carousel.php:352
+#: modules/post-slider/post-slider.php:611
+#: modules/testimonials/testimonials.php:98
+msgid "Show Play/Pause"
+msgstr "عرض تشغيل/إيقاف"
+
+#: classes/class-fl-builder-art.php:396 includes/ui-field-typography.php:219
+#: modules/callout/callout.php:779 modules/icon/icon.php:121
+#: modules/icon-group/icon-group.php:97 modules/login-form/login-form.php:398
+#: modules/menu/menu.php:1272 modules/post-carousel/post-carousel.php:441
+#: modules/post-slider/post-slider.php:662 modules/search/search.php:1003
+msgid "Size"
+msgstr "الحجم "
+
+#: modules/content-slider/content-slider.php:371
+msgid "Slide"
+msgstr "شريحة "
+
+#: modules/content-slider/content-slider.php:606
+msgid "Slide Label"
+msgstr "ملصق الشريحة "
+
+#: modules/content-slider/content-slider.php:596
+msgid "Slide Settings"
+msgstr "اعدادات الشريحة "
+
+#: includes/row-settings.php:661 modules/slideshow/slideshow.php:505
+msgid "Slide Vertical"
+msgstr "الشرائح الرأسية"
+
+#: modules/content-slider/content-slider.php:364
+msgid "Slides"
+msgstr "الشرائح "
+
+#: includes/row-settings.php:719
+msgid "Slow"
+msgstr "ببطىء "
+
+#: includes/column-settings.php:426 includes/module-settings.php:9
+#: includes/row-settings.php:849 includes/ui-field-typography.php:251
+#: modules/box/box.php:499 modules/icon-group/icon-group.php:109
+msgid "Spacing"
+msgstr "مباعدة "
+
+#: includes/row-settings.php:718
+msgctxt "Speed."
+msgid "Medium"
+msgstr "متوسطة "
+
+#: modules/box/box.php:164 modules/callout/callout.php:614
+#: modules/content-slider/content-slider.php:571 modules/photo/photo.php:766
+#: modules/post-carousel/post-carousel.php:453
+#: modules/post-carousel/post-carousel.php:864
+#: modules/post-slider/post-slider.php:674
+#: modules/post-slider/post-slider.php:1106 modules/search/search.php:1015
+msgid "Square"
+msgstr "مربع "
+
+#: modules/cta/cta.php:215 modules/login-form/login-form.php:255
+#: modules/search/search.php:338 modules/subscribe-form/subscribe-form.php:486
+msgid "Stacked"
+msgstr "مكدسة "
+
+#: modules/login-form/login-form.php:240
+#: modules/subscribe-form/subscribe-form.php:479
+msgid "Structure"
+msgstr "هيكل "
+
+#: includes/updater/classes/class-fl-updater.php:558
+#: includes/updater/includes/form.php:15
+msgid "Subscribe Now"
+msgstr "اشترك الآن "
+
+#: classes/class-fl-builder-config.php:314
+msgid "Template Saved!"
+msgstr "تم حفظ القالب! "
+
+#: extensions/fl-builder-user-templates/includes/ui-js-templates.php:400
+msgctxt "Template name."
+msgid "Blank"
+msgstr "فارغ "
+
+#: modules/content-slider/content-slider.php:678
+msgid "Text &amp; Photo"
+msgstr "نص و صورة "
+
+#: modules/content-slider/content-slider.php:679
+msgid "Text &amp; Video"
+msgstr "نص و فيديو "
+
+#: modules/content-slider/content-slider.php:545
+msgid "Text Background Color"
+msgstr "لون نص الخلفية "
+
+#: modules/button/button.php:489 modules/button-group/button-group.php:351
+#: modules/button-group/button-group.php:653
+#: modules/contact-form/contact-form.php:876
+#: modules/login-form/login-form.php:568
+#: modules/north-commerce/north-commerce.php:164 modules/search/search.php:779
+#: modules/subscribe-form/subscribe-form.php:862
+msgid "Text Hover Color"
+msgstr "لون النص عند مرور الماوس "
+
+#: includes/ui-field-typography.php:296
+msgid "Text Shadow"
+msgstr "ظل النص "
+
+#: modules/callout/callout.php:474
+msgid "The alignment that will apply to all elements within the callout."
+msgstr "المحاذاة التي سيتم تطبيقها على جميع العناصر داخل وسيلة الترويج  ."
+
+#: modules/gallery/gallery.php:310
+msgid "The caption pulls from whatever text you put in the caption area in the media manager for each image. The caption is also pulled directly from SmugMug if you have captions set in your gallery."
+msgstr "تظهر التسمية التوضيحية فى منطقة التوضيح لكل صورة ، يتم ظهورها إذا كان لديك تعليق على صور المعرض . "
+
+#: modules/content-slider/content-slider.php:546
+#: modules/content-slider/content-slider.php:749
+#: modules/post-carousel/post-carousel.php:607
+#: modules/post-grid/post-grid.php:1304 modules/post-slider/post-slider.php:847
+msgid "The color applies to the overlay behind text over the background selections."
+msgstr "يتم تطبيق اللون وراء النص على الخلفية المحددة . "
+
+#: modules/callout/callout.php:801
+msgid "The link applies to the entire module. If choosing a call to action type below, this link will also be used for the text or button."
+msgstr "ينطبق الارتباط على الوحدة كاملة . اذا كان اختيارك إستدعاء التحريك أدناه، سيتم استخدام هذا الرابط للنص أو الأزرار ."
+
+#: modules/content-slider/content-slider.php:845
+msgid "The link applies to the entire slide. If choosing a call to action type below, this link will also be used for the text or button."
+msgstr "يتم تطبيق الرابط الذى تم إدخالة . اذا تم اختيار إستدعاء الحركة يعمل الرابط على النصوص والأزرار . "
+
+#: modules/content-slider/content-slider.php:528
+msgid "The max width that the content area will be within your slides."
+msgstr "الحد الأقصى لعرض منطقة محتوي الشرائح . "
+
+#: modules/content-slider/content-slider.php:731
+msgid "The position will move the content layout selections left, right or center over the background of the slide."
+msgstr "هذا التموضع يسمح بتحريك المحتوي المحدد يساراً ، يميناً أو فى المنتصف على خلفية الشريحة . "
+
+#: classes/class-fl-builder-config.php:340
+msgid "The settings you are currently editing will not be saved if you navigate away from this page."
+msgstr "لن يتم حفظ الإعدادات التي تقوم بتحريرها حاليا إذا تم الإنتقال بعيدا عن هذه الصفحة ."
+
+#: modules/content-slider/content-slider.php:675
+msgid "This allows you to add content over or in addition to the background selection above. The location of the content layout can be selected in the style tab."
+msgstr "هذا يسمح لك بإضافة المحتوى أو إختيار خلفية محددة للإضافة عليها. يمكن تحديد موقع تخطيط المحتوى من تنسيق علامة التبويب ."
+
+#: modules/content-slider/content-slider.php:618
+msgid "This setting is for the entire background of your slide."
+msgstr "هذا الإعداد لإدخال صورة الشريحة . "
+
+#: modules/content-slider/content-slider.php:516
+msgid "This setting is the minimum height of the content slider. Content will expand the height automatically."
+msgstr "هذا الإعداد هو الحد الأدنى لإرتفاع محتوى عارض الشرائح ويتم تمديد الإرتفااع تلقائياً . "
+
+#: classes/class-fl-builder-config.php:316
+#: classes/class-fl-builder-ui-settings-forms.php:636
+#: modules/post-slider/post-slider.php:649
+msgid "Thumbnail"
+msgstr "صورة مصغرة "
+
+#: includes/row-settings.php:675 modules/content-slider/content-slider.php:454
+#: modules/post-carousel/post-carousel.php:314
+#: modules/post-slider/post-slider.php:568 modules/slideshow/slideshow.php:516
+#: modules/testimonials/testimonials.php:128
+msgid "Transition Speed"
+msgstr "سرعة الإنتقال "
+
+#: modules/content-slider/content-slider.php:448
+#: modules/post-slider/post-slider.php:563
+#: modules/testimonials/testimonials.php:122
+msgctxt "Transition type."
+msgid "Slide"
+msgstr "شريحة "
+
+#: includes/row-settings.php:329 modules/countdown/countdown.php:268
+#: modules/login-form/login-form.php:612 modules/photo/photo.php:615
+#: modules/photo/photo.php:710
+msgid "URL"
+msgstr "عنوان URL "
+
+#: includes/updater/includes/form.php:29
+msgid "Updates &amp; Support Subscription"
+msgstr "تحديثات و دعم الإشتراك "
+
+#: modules/photo/photo.php:25
+msgid "Upload a photo or display one from the media library."
+msgstr "رفع صورة أو عرض الصور من مكتبة الوسائط "
+
+#: modules/content-slider/content-slider.php:1112
+msgid "Use Main Photo"
+msgstr "استخدم صورة رئيسية "
+
+#: modules/button-group/button-group.php:262 modules/menu/menu.php:636
+#: modules/tabs/tabs.php:236
+msgid "Vertical"
+msgstr "رأسي "
+
+#: extensions/fl-builder-cloud/assistant/backend/src/Hooks/Actions/OnEnqueueScripts.php:151
+#: modules/button/button.php:358 modules/button-group/button-group.php:587
+#: modules/content-slider/content-slider.php:621 modules/video/video.php:26
+msgid "Video"
+msgstr "فيديو "
+
+#: modules/content-slider/content-slider.php:704
+msgid "Video Embed Code"
+msgstr "تضمين كود الفديو "
+
+#: classes/class-fl-builder-config.php:204
+msgid "Warning! Changing the template will replace your existing layout. Do you really want to do this?"
+msgstr "تحذير! تغيير القالب سيؤدى الى تغيير التخطيط الموجود لديك . هل تريد ذلك؟ "
+
+#: classes/class-fl-builder-config.php:188
+msgid "What would you like to do?"
+msgstr "ماذا تريد أن تفعل ؟ "
+
+#: modules/button/button.php:406 modules/callout/callout.php:957
+#: modules/contact-form/contact-form.php:827
+#: modules/login-form/login-form.php:689 modules/login-form/login-form.php:846
+#: modules/post-grid/post-grid.php:1511
+#: modules/pricing-table/pricing-table.php:1020 modules/search/search.php:487
+#: modules/search/search.php:715
+msgctxt "Width."
+msgid "Auto"
+msgstr "تلقائي "
+
+#: modules/content-slider/content-slider.php:1110
+msgid "You can choose a different photo that the slide will change to on mobile devices or no photo if desired."
+msgstr "يمكنك إختيار صورة مختلفة لهذه الشريحة تظهر على مقاس شاشة الموبايل او لا لعدم الرغبة . "
+
+#: modules/contact-form/contact-form.php:517
+msgid "Your email"
+msgstr "بريدك الإلكتروني "
+
+#: modules/contact-form/contact-form.php:541
+msgid "Your message"
+msgstr "رسالتك "
+
+#: modules/contact-form/contact-form.php:469
+msgid "Your name"
+msgstr "إسمك "
+
+#. translators: %s: branded builder name
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-admin-edit.php:170
+#: includes/admin-posts.php:14
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid "Launch %s"
+msgstr "إطلاق %s"
+
+#. translators: %s: form field label
+#: classes/class-fl-builder-config.php:238
+msgctxt "%s stands for form field label."
+msgid "Edit %s"
+msgstr "تحرير %s"
+
+#: includes/row-settings.php:592
+msgid "A photo that will be displayed if the video fails to load."
+msgstr "الصورة التي سيتم عرضها إذا فشل الفيديو فى التحميل ."
+
+#: classes/class-fl-builder-config.php:323
+msgid "Add Content"
+msgstr "إضافة محتوى "
+
+#: includes/ui-field-multiple-photos.php:30
+msgid "Add Photos"
+msgstr "إضافة صور "
+
+#: classes/class-fl-builder-admin-settings.php:291
+#: classes/class-fl-builder-model.php:3592
+#: classes/class-fl-builder-module.php:554
+#: extensions/fl-theme-builder-core/classes/class-fl-page-data.php:107
+#: includes/column-settings.php:423 includes/module-settings.php:6
+#: includes/row-settings.php:241 includes/row-settings.php:846
+#: modules/box/box.php:593 modules/box/box.php:1069 modules/list/list.php:322
+msgid "Advanced"
+msgstr "متقدم "
+
+#: includes/global-settings.php:163
+msgid "All rows will default to this width. You can override this and make a row full width in the settings for each row."
+msgstr "جميع الصفوف عرضها إفتراضى . يمكنك تجاوز هذا وجعل العرض لكامل الصف من إعدادات كل صف . "
+
+#: includes/column-settings.php:546 includes/module-settings.php:66
+#: includes/row-settings.php:944 modules/menu/menu.php:836
+msgid "Always"
+msgstr "دائماً "
+
+#: includes/column-settings.php:569 includes/column-settings.php:573
+#: includes/module-settings.php:89 includes/module-settings.php:93
+#: includes/row-settings.php:967 includes/row-settings.php:971
+msgid "Animation"
+msgstr "حيوية "
+
+#: includes/ui-field-animation.php:19
+msgctxt "Animation style."
+msgid "Fade In"
+msgstr "تتلاشى في "
+
+#: includes/ui-field-animation.php:15
+msgctxt "Animation style."
+msgid "None"
+msgstr "لاشىء "
+
+#: includes/ui-field-animation.php:32
+msgctxt "Animation style."
+msgid "Slide Down"
+msgstr "تحريك للأسفل "
+
+#: includes/ui-field-animation.php:29
+msgctxt "Animation style."
+msgid "Slide Left"
+msgstr "تحريك لليسار "
+
+#: includes/ui-field-animation.php:30
+msgctxt "Animation style."
+msgid "Slide Right"
+msgstr "تحريك لليمين "
+
+#: includes/ui-field-animation.php:31
+msgctxt "Animation style."
+msgid "Slide Up"
+msgstr "تحريك للأعلى "
+
+#: includes/ui-loop-settings-filter.php:153
+#: includes/ui-loop-settings-filter.php:229 includes/ui-loop-settings.php:73
+#: includes/ui-simple-loop.php:54 modules/woocommerce/woocommerce.php:138
+#: modules/woocommerce/woocommerce.php:254
+msgid "Ascending"
+msgstr "تصاعدى "
+
+#: includes/column-settings.php:302 includes/row-settings.php:448
+msgid "Attachment"
+msgstr "مرفقات "
+
+#: extensions/fl-theme-builder-core/classes/class-fl-page-data.php:95
+#: includes/ui-loop-settings-filter.php:238 includes/ui-loop-settings.php:82
+#: includes/ui-simple-loop.php:65 modules/post-carousel/post-carousel.php:504
+#: modules/post-grid/post-grid.php:949 modules/post-slider/post-slider.php:685
+msgid "Author"
+msgstr "الكاتب "
+
+#: includes/ui-loop-settings-filter.php:356 includes/ui-loop-settings.php:194
+msgid "Authors"
+msgstr "الكتاب "
+
+#: extensions/fl-builder-global-styles/includes/controls.php:212
+#: includes/column-settings.php:141 includes/module-settings.php:189
+#: includes/row-settings.php:223 modules/box/box.php:1081
+#: modules/button/button.php:546 modules/button-group/button-group.php:364
+#: modules/button-group/button-group.php:666
+#: modules/post-slider/post-slider.php:648
+msgid "Background"
+msgstr "الخلفية "
+
+#: includes/column-settings.php:379 includes/row-settings.php:788
+#: modules/accordion/accordion.php:368 modules/accordion/accordion.php:473
+#: modules/box/box.php:633 modules/box/box.php:1098
+#: modules/button/button.php:574 modules/button-group/button-group.php:395
+#: modules/button-group/button-group.php:694 modules/callout/callout.php:451
+#: modules/callout/callout.php:749 modules/contact-form/contact-form.php:717
+#: modules/contact-form/contact-form.php:899
+#: modules/content-slider/content-slider.php:657
+#: modules/content-slider/content-slider.php:748 modules/cta/cta.php:229
+#: modules/icon/icon.php:204 modules/icon-group/icon-group.php:161
+#: modules/list/list.php:685 modules/login-form/login-form.php:497
+#: modules/menu/menu.php:1286 modules/menu/menu.php:1470
+#: modules/north-commerce/north-commerce.php:152
+#: modules/post-carousel/post-carousel.php:605
+#: modules/post-slider/post-slider.php:846 modules/search/search.php:555
+#: modules/search/search.php:636 modules/subscribe-form/subscribe-form.php:724
+#: modules/subscribe-form/subscribe-form.php:885 modules/tabs/tabs.php:245
+msgid "Background Color"
+msgstr "لون الخلفية "
+
+#: includes/column-settings.php:204 includes/row-settings.php:321
+#: modules/content-slider/content-slider.php:645
+msgid "Background Photo"
+msgstr "صورة الخلفية "
+
+#: includes/row-settings.php:601
+msgid "Background Slideshow"
+msgstr "خلفية معرض صور "
+
+#: includes/row-settings.php:480
+msgid "Background Video"
+msgstr "خلفية فيديو "
+
+#: includes/column-settings.php:226 includes/row-settings.php:372
+msgctxt "Background repeat."
+msgid "Horizontal"
+msgstr "أفقي "
+
+#: includes/column-settings.php:224 includes/row-settings.php:370
+msgctxt "Background repeat."
+msgid "None"
+msgstr "لاشىء "
+
+#: includes/column-settings.php:225 includes/row-settings.php:371
+msgctxt "Background repeat."
+msgid "Tile"
+msgstr "قرميدة "
+
+#: includes/column-settings.php:227 includes/row-settings.php:373
+msgctxt "Background repeat."
+msgid "Vertical"
+msgstr "رأسي "
+
+#: includes/column-settings.php:321 includes/row-settings.php:467
+msgctxt "Background scale."
+msgid "None"
+msgstr "لاشىء "
+
+#: includes/column-settings.php:149 includes/row-settings.php:234
+msgctxt "Background type."
+msgid "Color"
+msgstr "لون "
+
+#: includes/column-settings.php:148 includes/row-settings.php:230
+#: modules/content-slider/content-slider.php:623
+msgctxt "Background type."
+msgid "None"
+msgstr "لاشىء "
+
+#: includes/row-settings.php:250
+msgctxt "Background type."
+msgid "Parallax"
+msgstr "إختلاف المنظر "
+
+#: includes/column-settings.php:151 includes/row-settings.php:236
+msgctxt "Background type."
+msgid "Photo"
+msgstr "صورة "
+
+#: includes/row-settings.php:246
+msgctxt "Background type."
+msgid "Slideshow"
+msgstr "معرض صور "
+
+#: includes/row-settings.php:243
+msgctxt "Background type."
+msgid "Video"
+msgstr "فيديو "
+
+#: extensions/fl-builder-global-styles/includes/controls.php:233
+#: includes/column-settings.php:407 includes/column-settings.php:411
+#: includes/row-settings.php:830 includes/row-settings.php:834
+#: modules/box/box.php:649 modules/box/box.php:1115
+#: modules/button/button.php:625 modules/button/button.php:629
+#: modules/button-group/button-group.php:445
+#: modules/button-group/button-group.php:449
+#: modules/button-group/button-group.php:743
+#: modules/button-group/button-group.php:747 modules/callout/callout.php:463
+#: modules/callout/callout.php:655 modules/contact-form/contact-form.php:740
+#: modules/contact-form/contact-form.php:941 modules/cta/cta.php:241
+#: modules/login-form/login-form.php:520 modules/map/map.php:71
+#: modules/menu/menu.php:1341 modules/north-commerce/north-commerce.php:199
+#: modules/photo/photo.php:807 modules/post-grid/post-grid.php:1160
+#: modules/search/search.php:578 modules/search/search.php:670
+#: modules/search/search.php:830 modules/subscribe-form/subscribe-form.php:747
+#: modules/subscribe-form/subscribe-form.php:927
+msgid "Border"
+msgstr "إطار "
+
+#: modules/separator/separator.php:151
+msgctxt "Border type."
+msgid "Dashed"
+msgstr "متقطع "
+
+#: modules/separator/separator.php:152
+msgctxt "Border type."
+msgid "Dotted"
+msgstr "منقط "
+
+#: modules/separator/separator.php:153
+msgctxt "Border type."
+msgid "Double"
+msgstr "مزدوج "
+
+#: modules/separator/separator.php:150
+msgctxt "Border type."
+msgid "Solid"
+msgstr "صلب "
+
+#: classes/class-fl-builder-art.php:360 includes/column-settings.php:85
+#: includes/row-settings.php:163 modules/post-slider/post-slider.php:800
+#: modules/slideshow/slideshow.php:584
+msgid "Bottom"
+msgstr "أسفل "
+
+#: includes/column-settings.php:617
+msgid "CSS Class"
+msgstr "تنسيق كلاس "
+
+#: includes/global-settings.php:30
+msgid "CSS Selector"
+msgstr "عناصر تنسيق "
+
+#: classes/class-fl-builder-config.php:200 includes/icon-selector.php:28
+#: includes/ui-bar.php:13 includes/ui-bar.php:47 includes/ui-field-link.php:48
+#: includes/ui-js-alert-templates.php:24
+msgid "Cancel"
+msgstr "إلغاء "
+
+#: extensions/fl-builder-user-templates/includes/node-template-settings.php:28
+msgid "Category"
+msgstr "تصنيف "
+
+#: classes/class-fl-builder-art.php:477 includes/column-settings.php:84
+#: includes/column-settings.php:248 includes/row-settings.php:162
+#: includes/row-settings.php:394 includes/ui-field-object-fit.php:61
+#: modules/box/box.php:804 modules/box/fields/ui-field-justify.php:110
+#: modules/content-slider/content-slider.php:734
+#: modules/social-buttons/social-buttons.php:97
+msgid "Center"
+msgstr "المنتصف "
+
+#: includes/column-settings.php:249 includes/row-settings.php:395
+#: includes/ui-field-gradient.php:52
+msgid "Center Bottom"
+msgstr "أسفل المنتصف "
+
+#: includes/column-settings.php:247 includes/row-settings.php:393
+#: includes/ui-field-gradient.php:50
+msgid "Center Top"
+msgstr "اعلى المنتصف "
+
+#: includes/admin-settings-modules.php:61
+msgid "Check or uncheck modules below to enable or disable them."
+msgstr "أضف أو أزل أدناه للتمكين أو التعطيل. "
+
+#: includes/global-settings.php:26
+msgid "Choosing no will hide the default theme heading for the \"Page\" post type. You will also be required to enter some basic CSS for this to work if you choose no."
+msgstr "إختيار لا لإخفاء عنوان الاستايل الإفتراضى \"لصفحة \" نوع المشاركة .  يجب عليك ادخال تنسيق مخصص إذا إخترت لا . "
+
+#: includes/admin-settings-tools.php:182
+msgid "Clicking the button below will uninstall the page builder plugin and delete all of the data associated with it. You can uninstall or deactivate the page builder from the plugins page instead if you do not wish to delete the data."
+msgstr "يمكنك الغاء تثبيت إضافة منشىء الصفحات وحذف كافة الملفات المرتبطة أويمكنك إلغاء التفعيل فقط من صفحة الإضافات إذا كنت لاترغب بحذف الملفات . "
+
+#: blocks/test-block/test-block.php:27 classes/class-fl-builder-art.php:528
+#: classes/class-fl-builder-config.php:427
+#: extensions/fl-builder-global-styles/includes/controls.php:15
+#: extensions/fl-builder-global-styles/includes/controls.php:72
+#: extensions/fl-builder-global-styles/includes/controls.php:169
+#: extensions/fl-builder-global-styles/includes/controls.php:196
+#: includes/column-settings.php:99 includes/column-settings.php:342
+#: includes/column-settings.php:384 includes/module-settings.php:182
+#: includes/row-settings.php:751 includes/row-settings.php:792
+#: includes/ui-field-border.php:174 includes/ui-field-global-color.php:42
+#: modules/box/box.php:592 modules/box/box.php:1068
+#: modules/callout/callout.php:726 modules/contact-form/contact-form.php:659
+#: modules/contact-form/contact-form.php:697
+#: modules/content-slider/content-slider.php:622
+#: modules/content-slider/content-slider.php:795
+#: modules/content-slider/content-slider.php:816
+#: modules/heading/heading.php:206 modules/icon/icon.php:150
+#: modules/icon-group/icon-group.php:138 modules/login-form/login-form.php:342
+#: modules/login-form/login-form.php:373 modules/login-form/login-form.php:439
+#: modules/login-form/login-form.php:477 modules/login-form/login-form.php:554
+#: modules/menu/menu.php:1306 modules/menu/menu.php:1491
+#: modules/post-carousel/post-carousel.php:652
+#: modules/post-carousel/post-carousel.php:694
+#: modules/post-carousel/post-carousel.php:753
+#: modules/post-carousel/post-carousel.php:812
+#: modules/post-slider/post-slider.php:893
+#: modules/post-slider/post-slider.php:935
+#: modules/post-slider/post-slider.php:994
+#: modules/post-slider/post-slider.php:1054 modules/rich-text/rich-text.php:58
+#: modules/search/search.php:612 modules/separator/separator.php:75
+#: modules/subscribe-form/subscribe-form.php:640
+#: modules/subscribe-form/subscribe-form.php:691
+msgid "Color"
+msgstr "لون "
+
+#: extensions/fl-builder-global-styles/includes/controls.php:250
+#: extensions/fl-builder-global-styles/includes/controls.php:253
+#: includes/row-settings.php:172
+msgid "Colors"
+msgstr "الألوان "
+
+#: includes/ui-js-overlay-templates.php:125
+#: includes/ui-js-overlay-templates.php:158
+#: includes/ui-js-overlay-templates.php:190
+msgid "Column Settings"
+msgstr "إعدادات العمود "
+
+#: includes/ui-loop-settings-filter.php:239 includes/ui-loop-settings.php:83
+#: includes/ui-simple-loop.php:70
+msgid "Comment Count"
+msgstr "عدد التعليقات "
+
+#: includes/row-settings.php:35
+msgid "Content Width"
+msgstr "عرض المحتوى "
+
+#: includes/ui-field-multiple-photos.php:28
+msgid "Create Gallery"
+msgstr "إنشاء معرض "
+
+#: modules/button/button.php:408 modules/button-group/button-group.php:271
+#: modules/search/search.php:489 modules/search/search.php:716
+#: modules/search/search.php:956 modules/social-buttons/social-buttons.php:71
+msgid "Custom"
+msgstr "مخصص "
+
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-post-type.php:47
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-post-type.php:48
+msgctxt "Custom post type label."
+msgid "Add New"
+msgstr "أضف جديد "
+
+#: includes/loop-settings-filter.php:36
+#: includes/ui-loop-settings-filter.php:240 includes/ui-loop-settings.php:84
+#: includes/ui-simple-loop.php:68 modules/countdown/countdown.php:216
+#: modules/countdown/countdown.php:220
+#: modules/post-carousel/post-carousel.php:513
+#: modules/post-grid/post-grid.php:972 modules/post-slider/post-slider.php:694
+#: modules/woocommerce/woocommerce.php:244
+msgid "Date"
+msgstr "التاريخ "
+
+#: includes/ui-loop-settings-filter.php:241 includes/ui-loop-settings.php:85
+msgid "Date Last Modified"
+msgstr "آخر تعديل "
+
+#: includes/global-settings.php:11
+msgid "Default Page Heading"
+msgstr "عنوان افتراضى للصفحة "
+
+#: includes/ui-field-animation.php:132
+#: modules/content-slider/content-slider.php:433
+#: modules/post-carousel/post-carousel.php:295
+#: modules/post-slider/post-slider.php:549
+#: modules/testimonials/testimonials.php:107
+msgid "Delay"
+msgstr "تأخير "
+
+#: classes/class-fl-builder-config.php:220
+msgid "Delete"
+msgstr "حذف "
+
+#: includes/ui-loop-settings-filter.php:154
+#: includes/ui-loop-settings-filter.php:228 includes/ui-loop-settings.php:72
+#: includes/ui-simple-loop.php:53 modules/woocommerce/woocommerce.php:139
+#: modules/woocommerce/woocommerce.php:255
+msgid "Descending"
+msgstr "تنازلى"
+
+#: extensions/fl-builder-user-templates/includes/admin-settings-templates.php:27
+msgid "Disable All Templates"
+msgstr "تعطيل جميع القوالب "
+
+#: includes/column-settings.php:544 includes/module-settings.php:64
+#: includes/module-settings.php:199 includes/row-settings.php:942
+#: modules/accordion/accordion.php:184 modules/box/box.php:199
+#: modules/list/list.php:208 modules/slideshow/slideshow.php:395
+#: modules/tabs/tabs.php:157
+msgid "Display"
+msgstr "عرض "
+
+#: classes/class-fl-builder-config.php:228
+msgid "Do you really want to delete this template?"
+msgstr "تريد فعلا حذف هذا القالب ؟ "
+
+#: classes/class-fl-builder-config.php:233 classes/class-fl-builder.php:1801
+#: includes/ui-js-templates.php:43
+msgid "Done"
+msgstr "انتهي "
+
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-admin-edit.php:101
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-admin-list.php:229
+#: includes/ui-field-photo.php:110
+msgid "Edit"
+msgstr "تحرير "
+
+#: includes/ui-field-multiple-photos.php:29
+msgid "Edit Gallery"
+msgstr "تحرير معرض "
+
+#: includes/ui-js-overlay-templates.php:56
+#: includes/ui-js-overlay-templates.php:174
+#: includes/ui-js-overlay-templates.php:442
+msgid "Edit Template"
+msgstr "تحرير القالب "
+
+#: classes/services/class-fl-builder-service-email-address.php:118
+#: modules/contact-form/contact-form.php:257
+msgid "Email"
+msgstr "البريد الإلكتروني "
+
+#: extensions/fl-builder-user-templates/includes/admin-settings-templates.php:24
+msgid "Enable All Templates"
+msgstr "تمكين كل القوالب "
+
+#: extensions/fl-builder-user-templates/includes/admin-settings-templates.php:25
+msgid "Enable Core Templates Only"
+msgstr "تمكين القوالب الأساسية فقط "
+
+#: extensions/fl-builder-user-templates/includes/admin-settings-templates.php:26
+msgid "Enable User Templates Only"
+msgstr "تمكين قوالب المستخدم فقط "
+
+#: includes/admin-settings-modules.php:48
+msgid "Enabled Modules"
+msgstr "السماح بالعروض "
+
+#: includes/global-settings.php:32
+msgid "Enter a CSS selector for the default page heading to hide it."
+msgstr "قم بادخال عناصر تنسيق للصفحة الإفتراضية لإخفاء العنوان . "
+
+#: includes/admin-settings-post-types.php:18
+msgid "Enter a comma separated list of the post types you would like the builder to work with."
+msgstr "أدخل قائمة مفصولة بفواصل من أنواع المشاركة التي ترغب بانشائها."
+
+#: includes/ui-field-link.php:46
+msgid "Enter a post title to search."
+msgstr "أضف عنوان المشاركة للبحث "
+
+#: includes/admin-settings-post-types.php:34
+msgid "Example: page, post, product"
+msgstr "مثال: صفحة , مشاركة , منتج "
+
+#: includes/row-settings.php:658 modules/content-slider/content-slider.php:449
+#: modules/post-carousel/post-carousel.php:413
+#: modules/post-grid/post-grid.php:1274 modules/post-slider/post-slider.php:562
+#: modules/slideshow/slideshow.php:502
+#: modules/testimonials/testimonials.php:123
+msgid "Fade"
+msgstr "تلاشي "
+
+#: includes/row-settings.php:591
+msgid "Fallback Photo"
+msgstr "صور مرجعية "
+
+#: includes/row-settings.php:634 modules/gallery/gallery.php:288
+#: modules/slideshow/slideshow.php:389
+msgid "Feed URL"
+msgstr "رابط تغذية "
+
+#. translators: %s: field name
+#. translators: %s: field name to add
+#: classes/class-fl-builder-config.php:190
+#: classes/class-fl-builder-ui-settings-forms.php:1069
+msgctxt "Field name to add."
+msgid "Add %s"
+msgstr "%s أضف"
+
+#: includes/column-settings.php:323 includes/row-settings.php:469
+msgid "Fill"
+msgstr "تعبئة "
+
+#: includes/ui-loop-settings-filter.php:301 includes/ui-loop-settings.php:140
+msgid "Filter"
+msgstr "فرز "
+
+#: includes/column-settings.php:322 includes/row-settings.php:468
+msgid "Fit"
+msgstr "صالح "
+
+#: includes/column-settings.php:307 includes/global-settings.php:183
+#: includes/global-settings.php:197 includes/row-settings.php:20
+#: includes/row-settings.php:38 includes/row-settings.php:453
+msgid "Fixed"
+msgstr "ثابت "
+
+#: includes/global-settings.php:184 includes/global-settings.php:198
+#: includes/row-settings.php:21 includes/row-settings.php:39
+#: modules/button/button.php:407 modules/callout/callout.php:958
+#: modules/contact-form/contact-form.php:828
+#: modules/login-form/login-form.php:690 modules/login-form/login-form.php:847
+#: modules/post-grid/post-grid.php:1512
+#: modules/pricing-table/pricing-table.php:1021 modules/search/search.php:488
+#: modules/search/search.php:955
+msgid "Full Width"
+msgstr "حجم كامل "
+
+#: includes/row-settings.php:41
+msgid "Full width content spans the width of the page from edge to edge. Fixed content is no wider than the Row Max Width set in the Global Settings."
+msgstr "عرض المحتوى الكامل يمتد عرض الصفحة من الحافة إلى الحافة . المحتوى ثابت كما هو العرض في إعدادات العامة ."
+
+#: includes/row-settings.php:28
+msgid "Full width rows span the width of the page from edge to edge. Fixed rows are no wider than the Row Max Width set in the Global Settings."
+msgstr "عرض كامل الصفوف تمتد عرض الصفحة من الحافة إلى الحافة . الصفوف الثابتة حجمها الكامل كما هو العرض في إعدادات العامة ."
+
+#: classes/class-fl-builder-art.php:916
+#: extensions/fl-builder-user-templates/includes/node-template-settings.php:6
+#: extensions/fl-builder-user-templates/includes/user-template-settings.php:7
+#: extensions/fl-theme-builder-core/classes/class-fl-page-data.php:79
+#: extensions/fl-theme-builder-core/classes/class-fl-theme-builder-rules-location.php:726
+#: includes/global-settings.php:7 includes/ui-field-border.php:3
+#: modules/accordion/accordion.php:521 modules/audio/audio.php:74
+#: modules/button/button.php:251 modules/button-group/button-group.php:480
+#: modules/callout/callout.php:394 modules/contact-form/contact-form.php:427
+#: modules/content-slider/content-slider.php:599
+#: modules/countdown/countdown.php:213 modules/cta/cta.php:153
+#: modules/gallery/gallery.php:244 modules/heading/heading.php:147
+#: modules/html/html.php:29 modules/icon/icon.php:66
+#: modules/icon-group/icon-group.php:197 modules/list/list.php:193
+#: modules/list/list.php:628 modules/login-form/login-form.php:237
+#: modules/map/map.php:28 modules/menu/menu.php:624
+#: modules/north-commerce/north-commerce.php:70 modules/numbers/numbers.php:158
+#: modules/photo/photo.php:604 modules/pricing-table/pricing-table.php:826
+#: modules/reusable-block/reusable-block.php:60
+#: modules/rich-text/rich-text.php:29 modules/separator/separator.php:67
+#: modules/sidebar/sidebar.php:28 modules/slideshow/slideshow.php:359
+#: modules/social-buttons/social-buttons.php:61
+#: modules/star-rating/star-rating.php:45
+#: modules/subscribe-form/subscribe-form.php:468 modules/tabs/tabs.php:438
+#: modules/testimonials/testimonials.php:307 modules/video/video.php:391
+#: modules/widget/widget.php:131 modules/woocommerce/woocommerce.php:49
+msgid "General"
+msgstr "عام "
+
+#: includes/global-settings.php:369
+msgctxt "General settings form field label. Intended meaning: \"Responsive layout enabled?\""
+msgid "Enabled"
+msgstr "تمكين "
+
+#: includes/global-settings.php:15
+msgctxt "General settings form field label. Intended meaning: \"Show page heading?\""
+msgid "Show"
+msgstr "عرض "
+
+#: classes/class-fl-builder-art.php:458 includes/row-settings.php:104
+#: modules/box/fields/ui-field-size.php:66
+#: modules/content-slider/content-slider.php:508 modules/map/map.php:44
+#: modules/post-slider/post-slider.php:520 modules/search/search.php:521
+#: modules/separator/separator.php:87 modules/slideshow/slideshow.php:399
+msgid "Height"
+msgstr "إرتفاع "
+
+#: includes/column-settings.php:609 includes/module-settings.php:129
+#: includes/row-settings.php:1007 includes/ui-loop-settings-filter.php:176
+#: includes/ui-loop-settings-filter.php:242 includes/ui-loop-settings.php:86
+#: includes/ui-simple-loop.php:64
+msgid "ID"
+msgstr "المعرف "
+
+#: modules/callout/callout.php:554 modules/post-carousel/post-carousel.php:427
+#: modules/post-grid/post-grid.php:831 modules/post-slider/post-slider.php:645
+msgid "Image"
+msgstr "صورة "
+
+#: includes/row-settings.php:659 modules/slideshow/slideshow.php:503
+msgid "Ken Burns"
+msgstr "Ken Burns"
+
+#: includes/admin-settings-upgrade.php:26
+msgid "Learn More"
+msgstr "معرفة المزيد "
+
+#: modules/accordion/accordion.php:413 modules/box/box.php:803
+#: modules/content-slider/content-slider.php:733 modules/menu/menu.php:708
+#: modules/menu/menu.php:809 modules/post-grid/post-grid.php:854
+#: modules/post-slider/post-slider.php:798
+#: modules/post-slider/post-slider.php:817 modules/search/search.php:414
+#: modules/social-buttons/social-buttons.php:98
+msgid "Left"
+msgstr "يسار "
+
+#: includes/column-settings.php:243 includes/row-settings.php:389
+#: includes/ui-field-gradient.php:46
+msgid "Left Bottom"
+msgstr "أسفل اليسار "
+
+#: includes/column-settings.php:242 includes/row-settings.php:388
+#: includes/ui-field-gradient.php:45
+msgid "Left Center"
+msgstr "يسار المنتصف "
+
+#: includes/column-settings.php:241 includes/row-settings.php:387
+#: includes/ui-field-gradient.php:44
+msgid "Left Top"
+msgstr "أعلى اليسار "
+
+#: includes/column-settings.php:430 includes/global-settings.php:41
+#: includes/global-settings.php:208 includes/global-settings.php:313
+#: includes/module-settings.php:13 includes/row-settings.php:853
+#: modules/content-slider/content-slider.php:765
+msgid "Margins"
+msgstr "تباعد خارجى "
+
+#: includes/global-settings.php:159 modules/box/fields/ui-field-size.php:73
+msgid "Max Width"
+msgstr "أكبر قيمة للعرض "
+
+#: classes/class-fl-builder.php:1410 includes/row-settings.php:328
+#: includes/row-settings.php:487 includes/row-settings.php:608
+#: modules/audio/audio.php:84 modules/gallery/gallery.php:268
+#: modules/photo/photo.php:614 modules/slideshow/slideshow.php:369
+#: modules/video/video.php:401
+msgid "Media Library"
+msgstr "مكتبة الوسائط "
+
+#: modules/menu/menu.php:838
+msgid "Medium &amp; Small Devices Only"
+msgstr "المتوسطة &amp; الأجهزة الصغيرة فقط "
+
+#: includes/global-settings.php:404
+msgid "Medium Device Breakpoint"
+msgstr "نقطة توقف الأجهزة المتوسطة "
+
+#: includes/ui-loop-settings-filter.php:243 includes/ui-loop-settings.php:87
+#: includes/ui-simple-loop.php:71 modules/woocommerce/woocommerce.php:130
+msgid "Menu Order"
+msgstr "ترتيب القائمة "
+
+#: includes/admin-settings-tools.php:9 includes/admin-settings-tools.php:11
+#: includes/admin-settings-tools.php:183 includes/admin-settings-tools.php:185
+#: includes/updater/includes/form.php:76
+msgid "NOTE:"
+msgstr "ملاحظة : "
+
+#: includes/admin-settings-post-types.php:19
+#: includes/admin-settings-post-types.php:39
+msgid "NOTE: Not all custom post types may be supported."
+msgstr "ملاحظة :  ليست جميع أنواع المشاركة مدعومة . "
+
+#: classes/class-fl-builder-font-awesome.php:278
+#: includes/column-settings.php:53 includes/global-settings.php:18
+#: includes/global-settings.php:149 includes/global-settings.php:372
+#: includes/global-settings.php:387 includes/global-settings.php:427
+#: includes/global-settings.php:437 includes/row-settings.php:556
+#: includes/row-settings.php:568 includes/row-settings.php:581
+#: includes/row-settings.php:690 includes/ui-loop-settings-filter.php:165
+#: includes/ui-loop-settings-filter.php:288 includes/ui-loop-settings.php:132
+#: modules/accordion/accordion.php:261 modules/accordion/accordion.php:274
+#: modules/accordion/accordion.php:286 modules/audio/audio.php:122
+#: modules/audio/audio.php:134 modules/audio/audio.php:159
+#: modules/audio/audio.php:173 modules/audio/audio.php:185
+#: modules/audio/audio.php:194 modules/bigcommerce/bigcommerce.php:56
+#: modules/bigcommerce/bigcommerce.php:89
+#: modules/bigcommerce/bigcommerce.php:98
+#: modules/bigcommerce/bigcommerce.php:107 modules/callout/callout.php:768
+#: modules/content-slider/content-slider.php:392
+#: modules/content-slider/content-slider.php:406
+#: modules/content-slider/content-slider.php:418
+#: modules/content-slider/content-slider.php:427
+#: modules/content-slider/content-slider.php:469
+#: modules/content-slider/content-slider.php:478
+#: modules/content-slider/content-slider.php:492
+#: modules/countdown/countdown.php:474 modules/icon/icon.php:223
+#: modules/icon-group/icon-group.php:180 modules/login-form/login-form.php:265
+#: modules/login-form/login-form.php:279 modules/login-form/login-form.php:298
+#: modules/login-form/login-form.php:779 modules/menu/menu.php:679
+#: modules/menu/menu.php:848 modules/menu/menu.php:896
+#: modules/menu/menu.php:1053 modules/menu/menu.php:1143
+#: modules/photo/photo.php:652 modules/post-carousel/post-carousel.php:280
+#: modules/post-carousel/post-carousel.php:289
+#: modules/post-carousel/post-carousel.php:332
+#: modules/post-carousel/post-carousel.php:341
+#: modules/post-carousel/post-carousel.php:355
+#: modules/post-carousel/post-carousel.php:404
+#: modules/post-carousel/post-carousel.php:469
+#: modules/post-grid/post-grid.php:710 modules/post-grid/post-grid.php:967
+#: modules/post-grid/post-grid.php:1324 modules/post-grid/post-grid.php:1429
+#: modules/post-slider/post-slider.php:534
+#: modules/post-slider/post-slider.php:543
+#: modules/post-slider/post-slider.php:591
+#: modules/post-slider/post-slider.php:600
+#: modules/post-slider/post-slider.php:614
+#: modules/post-slider/post-slider.php:857
+#: modules/pricing-table/pricing-table.php:468
+#: modules/pricing-table/pricing-table.php:652
+#: modules/pricing-table/pricing-table.php:846
+#: modules/slideshow/slideshow.php:423 modules/slideshow/slideshow.php:433
+#: modules/slideshow/slideshow.php:484 modules/slideshow/slideshow.php:527
+#: modules/slideshow/slideshow.php:549 modules/slideshow/slideshow.php:598
+#: modules/slideshow/slideshow.php:607 modules/slideshow/slideshow.php:616
+#: modules/slideshow/slideshow.php:625 modules/slideshow/slideshow.php:634
+#: modules/slideshow/slideshow.php:643 modules/slideshow/slideshow.php:652
+#: modules/slideshow/slideshow.php:666 modules/slideshow/slideshow.php:681
+#: modules/slideshow/slideshow.php:716 modules/slideshow/slideshow.php:728
+#: modules/slideshow/slideshow.php:740
+#: modules/social-buttons/social-buttons.php:108
+#: modules/social-buttons/social-buttons.php:117
+#: modules/social-buttons/social-buttons.php:126
+#: modules/testimonials/testimonials.php:92
+#: modules/testimonials/testimonials.php:101
+#: modules/testimonials/testimonials.php:239
+#: modules/testimonials/testimonials.php:271 modules/video/video.php:445
+#: modules/video/video.php:460 modules/video/video.php:472
+#: modules/video/video.php:484 modules/video/video.php:573
+#: modules/woocommerce/woocommerce.php:100
+msgid "No"
+msgstr "لا "
+
+#: includes/ui-loop-settings-filter.php:150
+#: includes/ui-loop-settings-filter.php:226 includes/ui-loop-settings.php:70
+#: includes/ui-simple-loop.php:51 modules/box/box.php:815
+msgid "Order"
+msgstr "ترتيب "
+
+#: includes/ui-loop-settings-filter.php:171
+#: includes/ui-loop-settings-filter.php:236 includes/ui-loop-settings.php:80
+#: includes/ui-simple-loop.php:61
+msgid "Order By"
+msgstr "الترتيب حسب "
+
+#: extensions/fl-builder-user-templates/includes/admin-settings-templates.php:15
+#: includes/admin-settings-blocks.php:15 includes/admin-settings-icons.php:30
+#: includes/admin-settings-modules.php:55
+#: includes/admin-settings-post-types.php:10
+#: includes/admin-settings-user-access.php:22
+msgid "Override network settings?"
+msgstr "تجاوز إعدادات الشبكة؟ "
+
+#: includes/column-settings.php:470 includes/global-settings.php:91
+#: includes/global-settings.php:257 includes/row-settings.php:888
+#: modules/accordion/accordion.php:379 modules/accordion/accordion.php:484
+#: modules/box/box.php:556 modules/box/box.php:951
+#: modules/button/button.php:456 modules/button-group/button-group.php:632
+#: modules/callout/callout.php:482 modules/contact-form/contact-form.php:647
+#: modules/contact-form/contact-form.php:685
+#: modules/contact-form/contact-form.php:849
+#: modules/content-slider/content-slider.php:770 modules/cta/cta.php:261
+#: modules/login-form/login-form.php:427 modules/login-form/login-form.php:465
+#: modules/login-form/login-form.php:541 modules/menu/menu.php:1329
+#: modules/search/search.php:594 modules/search/search.php:686
+#: modules/search/search.php:752 modules/subscribe-form/subscribe-form.php:628
+#: modules/subscribe-form/subscribe-form.php:678
+#: modules/subscribe-form/subscribe-form.php:835 modules/tabs/tabs.php:358
+#: modules/tabs/tabs.php:401
+msgid "Padding"
+msgstr "تباعد داخلى "
+
+#: classes/class-fl-builder-config.php:429
+#: extensions/fl-builder-cloud/assistant/backend/src/Hooks/Actions/OnEnqueueScripts.php:149
+#: includes/column-settings.php:209 includes/row-settings.php:357
+#: includes/row-settings.php:705 modules/callout/callout.php:565
+#: modules/callout/callout.php:581 modules/callout/callout.php:586
+#: modules/content-slider/content-slider.php:620
+#: modules/content-slider/content-slider.php:700
+#: modules/content-slider/content-slider.php:1125 modules/photo/photo.php:24
+#: modules/photo/photo.php:631
+msgid "Photo"
+msgstr "صورة "
+
+#: includes/row-settings.php:626 modules/gallery/gallery.php:283
+#: modules/slideshow/slideshow.php:384
+msgid "Photos"
+msgstr "صور "
+
+#: includes/admin-settings-js-config.php:15
+msgid "Please type \"uninstall\" in the box below to confirm that you really want to uninstall the page builder and all of its data."
+msgstr "الرجاء كتابة \"إلغاء \" في المربع أدناه لتأكيد أنك تريد حقا أن إلغاء باني الصفحة وجميع البيانات الخاصة به. "
+
+#: includes/admin-settings-modules.php:73
+msgctxt "Plugin setup page: Modules."
+msgid "All"
+msgstr "الكل"
+
+#: includes/column-settings.php:237 includes/row-settings.php:383
+#: modules/callout/callout.php:591 modules/callout/callout.php:679
+#: modules/content-slider/content-slider.php:729
+#: modules/post-slider/post-slider.php:794
+#: modules/post-slider/post-slider.php:813
+msgid "Position"
+msgstr "تموضع "
+
+#: includes/ui-loop-settings-filter.php:219 includes/ui-loop-settings.php:63
+#: includes/ui-simple-loop.php:32
+msgid "Post Type"
+msgstr "نوع المشاركة "
+
+#: includes/row-settings.php:611 modules/gallery/gallery.php:271
+#: modules/slideshow/slideshow.php:372
+msgid "Pull images from the WordPress media library or a gallery on your SmugMug site by inserting the RSS feed URL from SmugMug. The RSS feed URL can be accessed by using the get a link function in your SmugMug gallery."
+msgstr "تستطيع استخدام الصور من مكتبة الوسائط الخاصة بالووردبريس او جلب رابط خارجى او رابط تغذيات موقعك او من معرض الصور ."
+
+#: includes/ui-loop-settings-filter.php:246 includes/ui-loop-settings.php:90
+#: includes/ui-simple-loop.php:74
+msgid "Random"
+msgstr "عشوائى "
+
+#: classes/class-fl-builder-config.php:285 includes/ui-field-icon.php:26
+#: includes/ui-field-photo.php:112 includes/ui-js-overlay-templates.php:96
+#: includes/ui-js-overlay-templates.php:307
+#: includes/ui-js-overlay-templates.php:569
+#: modules/box/fields/ui-field-grid-tracklist.php:10
+msgid "Remove"
+msgstr "حذف "
+
+#: includes/column-settings.php:220 includes/row-settings.php:366
+msgid "Repeat"
+msgstr "تكرار "
+
+#: includes/ui-field-icon.php:24 includes/ui-field-photo.php:114
+msgid "Replace"
+msgstr "تبديل "
+
+#: includes/ui-field-video.php:44
+msgid "Replace Video"
+msgstr "تبديل فيديو "
+
+#: includes/global-settings.php:365
+msgid "Responsive Layout"
+msgstr "تخطيط متجاوب"
+
+#: modules/accordion/accordion.php:414 modules/box/box.php:805
+#: modules/content-slider/content-slider.php:735 modules/menu/menu.php:709
+#: modules/menu/menu.php:810 modules/post-grid/post-grid.php:856
+#: modules/post-slider/post-slider.php:799
+#: modules/post-slider/post-slider.php:818 modules/search/search.php:415
+#: modules/social-buttons/social-buttons.php:99
+msgid "Right"
+msgstr "يمين "
+
+#: includes/column-settings.php:246 includes/row-settings.php:392
+#: includes/ui-field-gradient.php:49
+msgid "Right Bottom"
+msgstr "أسفل اليمين "
+
+#: includes/column-settings.php:245 includes/row-settings.php:391
+#: includes/ui-field-gradient.php:48
+msgid "Right Center"
+msgstr "منتصف اليمين "
+
+#: includes/column-settings.php:244 includes/row-settings.php:390
+#: includes/ui-field-gradient.php:47
+msgid "Right Top"
+msgstr "أعلى اليمين "
+
+#: classes/class-fl-builder-config.php:292
+#: includes/ui-js-overlay-templates.php:7
+#: includes/ui-js-overlay-templates.php:40
+#: includes/ui-js-overlay-templates.php:72
+msgid "Row Settings"
+msgstr "إعدادات الصف "
+
+#: classes/class-fl-builder-ui-content-panel.php:43
+#: extensions/fl-builder-template-data-exporter/includes/template-data-exporter.php:44
+#: modules/box/fields/ui-field-grid-tracklist.php:4
+msgid "Rows"
+msgstr "الصفوف "
+
+#: extensions/fl-builder-white-label/includes/admin-settings-branding.php:37
+msgid "Save Branding"
+msgstr "حفظ العلامات التجارية "
+
+#: includes/admin-settings-modules.php:123
+msgid "Save Module Settings"
+msgstr "حفظ إعدادات الوحدات "
+
+#: includes/admin-settings-post-types.php:78
+msgid "Save Post Types"
+msgstr "حفظ نوع المشاركة "
+
+#: extensions/fl-builder-user-templates/includes/admin-settings-templates.php:32
+msgid "Save Template Settings"
+msgstr "حفظ إعدادات القوالب "
+
+#: includes/column-settings.php:317 includes/row-settings.php:463
+msgid "Scale"
+msgstr "مقياس "
+
+#: includes/column-settings.php:306 includes/row-settings.php:452
+#: modules/post-grid/post-grid.php:1410
+msgid "Scroll"
+msgstr "انتقل "
+
+#: includes/ui-field-link.php:4
+msgid "Select"
+msgstr "تحديد "
+
+#: includes/ui-field-icon.php:21
+msgid "Select Icon"
+msgstr "تحديد الرمز "
+
+#: classes/class-fl-builder-config.php:302 includes/ui-field-photo.php:93
+msgid "Select Photo"
+msgstr "تحديد صور "
+
+#: classes/class-fl-builder-config.php:304 includes/ui-field-video.php:30
+msgid "Select Video"
+msgstr "تحديد فيديو "
+
+#: includes/admin-settings-post-types.php:38
+msgid "Select the post types you would like the builder to work with."
+msgstr "حدد نوع المشاركة التى ترغب ببنائها "
+
+#: includes/row-settings.php:660 modules/slideshow/slideshow.php:504
+msgid "Slide Horizontal"
+msgstr "الشرائح الأفقية "
+
+#: includes/row-settings.php:657
+msgctxt "Slideshow transition type."
+msgid "None"
+msgstr "لاشىء "
+
+#: includes/global-settings.php:414
+msgid "Small Device Breakpoint"
+msgstr "نقطة توقف الأجهزة الصغيرة "
+
+#: modules/menu/menu.php:839
+msgid "Small Devices Only"
+msgstr "الأجهزة الصغيرة فقط "
+
+#: includes/row-settings.php:484 includes/row-settings.php:605
+#: includes/ui-loop-settings-filter.php:57 includes/ui-loop-settings.php:35
+#: modules/gallery/gallery.php:265 modules/slideshow/slideshow.php:366
+msgid "Source"
+msgstr "المصدر "
+
+#: includes/row-settings.php:642 includes/row-settings.php:714
+#: modules/slideshow/slideshow.php:490
+msgid "Speed"
+msgstr "سرعة "
+
+#: includes/ui-field-link.php:47 includes/ui-field-suggest.php:10
+msgid "Start typing..."
+msgstr "إبدأ الكتابة "
+
+#: includes/column-settings.php:7 includes/module-settings.php:176
+#: includes/row-settings.php:10 includes/ui-field-border.php:168
+#: includes/ui-field-typography.php:277 modules/accordion/accordion.php:297
+#: modules/audio/audio.php:147 modules/button/button.php:396
+#: modules/button-group/button-group.php:251
+#: modules/button-group/button-group.php:625 modules/callout/callout.php:443
+#: modules/contact-form/contact-form.php:640
+#: modules/content-slider/content-slider.php:501
+#: modules/content-slider/content-slider.php:722
+#: modules/countdown/countdown.php:276 modules/cta/cta.php:204
+#: modules/gallery/gallery.php:340 modules/heading/heading.php:195
+#: modules/icon/icon.php:114 modules/icon-group/icon-group.php:90
+#: modules/icon-group/icon-group.php:226 modules/list/list.php:358
+#: modules/list/list.php:663 modules/login-form/login-form.php:420
+#: modules/menu/menu.php:917 modules/north-commerce/north-commerce.php:103
+#: modules/north-commerce/north-commerce.php:109
+#: modules/numbers/numbers.php:312 modules/photo/photo.php:752
+#: modules/post-carousel/post-carousel.php:597
+#: modules/post-grid/post-grid.php:1131 modules/post-slider/post-slider.php:787
+#: modules/pricing-table/pricing-table.php:514
+#: modules/pricing-table/pricing-table.php:1176
+#: modules/rich-text/rich-text.php:50 modules/search/search.php:477
+#: modules/separator/separator.php:146 modules/star-rating/star-rating.php:97
+#: modules/subscribe-form/subscribe-form.php:621 modules/tabs/tabs.php:225
+#: modules/testimonials/testimonials.php:152
+msgid "Style"
+msgstr "أسلوب "
+
+#: extensions/fl-builder-user-templates/includes/admin-settings-templates.php:8
+msgid "Template Settings"
+msgstr "إعدادات القوالب "
+
+#: extensions/fl-builder-user-templates/includes/node-template-settings.php:13
+#: extensions/fl-builder-user-templates/includes/user-template-settings.php:15
+msgctxt "Template name."
+msgid "Name"
+msgstr "الإسم "
+
+#: classes/class-fl-builder-config.php:426
+#: extensions/fl-builder-global-styles/includes/controls.php:11
+#: includes/column-settings.php:94 includes/loop-settings-filter.php:35
+#: modules/button/button.php:258 modules/button/button.php:469
+#: modules/button-group/button-group.php:338
+#: modules/button-group/button-group.php:487
+#: modules/button-group/button-group.php:640 modules/callout/callout.php:425
+#: modules/callout/callout.php:526 modules/callout/callout.php:838
+#: modules/contact-form/contact-form.php:761
+#: modules/content-slider/content-slider.php:677
+#: modules/content-slider/content-slider.php:811
+#: modules/content-slider/content-slider.php:874 modules/cta/cta.php:185
+#: modules/cta/cta.php:307 modules/icon/icon.php:96 modules/icon/icon.php:230
+#: modules/post-grid/post-grid.php:1170
+#: modules/subscribe-form/subscribe-form.php:772
+#: modules/testimonials/testimonials.php:205
+msgid "Text"
+msgstr "نص "
+
+#: includes/row-settings.php:177 modules/accordion/accordion.php:356
+#: modules/accordion/accordion.php:461 modules/box/box.php:573
+#: modules/box/box.php:1048 modules/button/button.php:474
+#: modules/button-group/button-group.php:343
+#: modules/button-group/button-group.php:645 modules/callout/callout.php:531
+#: modules/contact-form/contact-form.php:862
+#: modules/content-slider/content-slider.php:533
+#: modules/content-slider/content-slider.php:1151
+#: modules/countdown/countdown.php:344 modules/cta/cta.php:312
+#: modules/icon/icon.php:248 modules/north-commerce/north-commerce.php:128
+#: modules/numbers/numbers.php:319 modules/search/search.php:765
+#: modules/subscribe-form/subscribe-form.php:848 modules/tabs/tabs.php:390
+#: modules/testimonials/testimonials.php:210
+msgid "Text Color"
+msgstr "لون النص "
+
+#: includes/admin-posts.php:5 modules/rich-text/rich-text.php:13
+msgid "Text Editor"
+msgstr "تحرير النصوص "
+
+#: includes/global-settings.php:410
+msgid "The browser width at which the layout will adjust for medium devices such as tablets."
+msgstr "عرض المتصفح للتخطيط سيكون مضبوط على الأجهزة المتوسطة مثل التابلت . "
+
+#: includes/global-settings.php:420
+msgid "The browser width at which the layout will adjust for small devices such as phones."
+msgstr "عرض المتصفح للتخطيط سيكون مضبوط على الأجهزة الصغيرة مثل الهواتف . "
+
+#: includes/admin-settings-tools.php:183
+msgid "The builder does not delete the post meta <code>_fl_builder_data</code>, <code>_fl_builder_draft</code> and <code>_fl_builder_enabled</code> in case you want to reinstall it later. If you do, the builder will rebuild all of its data using those meta values."
+msgstr "منشىء الصفحات لايحذف عناصر المشاركة  <code>_fl_builder_data</code>, <code>_fl_builder_draft</code> a <code>_fl_builder_enabled</code> فى حالة أردت إعادة تثبيت منشىء الصفحات لاحقا . سيتم إعادة البناء مع بيانات هذه العناصر ."
+
+#: includes/admin-settings-tools.php:9 includes/admin-settings-tools.php:185
+#: includes/updater/includes/form.php:76
+msgid "This applies to all sites on the network."
+msgstr "وهذا ينطبق على جميع المواقع على الشبكة. "
+
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-admin-list.php:176
+#: extensions/fl-builder-user-templates/includes/admin-add-new-form.php:13
+#: includes/ui-loop-settings-filter.php:247 includes/ui-loop-settings.php:91
+#: includes/ui-simple-loop.php:66 modules/content-slider/content-slider.php:776
+#: modules/pricing-table/pricing-table.php:525
+#: modules/pricing-table/pricing-table.php:829
+#: modules/pricing-table/pricing-table.php:833
+msgid "Title"
+msgstr "العنوان "
+
+#: classes/class-fl-builder-admin-settings.php:286
+#: classes/class-fl-builder.php:1299
+msgid "Tools"
+msgstr "أدوات "
+
+#: classes/class-fl-builder-art.php:359 includes/column-settings.php:83
+#: includes/row-settings.php:161 modules/pricing-table/pricing-table.php:868
+#: modules/slideshow/slideshow.php:585
+msgid "Top"
+msgstr "أعلى "
+
+#: includes/row-settings.php:654 modules/content-slider/content-slider.php:445
+#: modules/post-slider/post-slider.php:559 modules/slideshow/slideshow.php:498
+#: modules/testimonials/testimonials.php:119
+msgid "Transition"
+msgstr "انتقال "
+
+#: extensions/fl-builder-user-templates/includes/admin-add-new-form.php:36
+#: includes/column-settings.php:145 includes/loop-settings-filter.php:30
+#: includes/row-settings.php:227 modules/accordion/accordion.php:538
+#: modules/callout/callout.php:817
+#: modules/content-slider/content-slider.php:616
+#: modules/content-slider/content-slider.php:673
+#: modules/content-slider/content-slider.php:854
+#: modules/content-slider/content-slider.php:1108
+#: modules/slideshow/slideshow.php:447 modules/tabs/tabs.php:455
+msgid "Type"
+msgstr "نوع "
+
+#: includes/row-settings.php:647 includes/row-settings.php:680
+#: modules/slideshow/slideshow.php:691
+msgctxt "Value unit for form field of time in seconds. Such as: \"5 seconds\""
+msgid "seconds"
+msgstr "الثوانى "
+
+#: classes/class-fl-builder-art.php:457 includes/column-settings.php:14
+#: includes/row-settings.php:17 includes/ui-field-border.php:182
+#: modules/box/fields/ui-field-size.php:60 modules/button/button.php:403
+#: modules/button-group/button-group.php:267 modules/callout/callout.php:620
+#: modules/contact-form/contact-form.php:824
+#: modules/content-slider/content-slider.php:740 modules/photo/photo.php:772
+#: modules/search/search.php:484 modules/search/search.php:712
+#: modules/search/search.php:952 modules/separator/separator.php:105
+msgid "Width"
+msgstr "عرض "
+
+#: classes/class-fl-builder-font-awesome.php:278
+#: classes/class-fl-builder-font-awesome.php:297
+#: includes/column-settings.php:54 includes/global-settings.php:19
+#: includes/global-settings.php:148 includes/global-settings.php:373
+#: includes/global-settings.php:388 includes/global-settings.php:428
+#: includes/global-settings.php:438 includes/row-settings.php:557
+#: includes/row-settings.php:569 includes/row-settings.php:582
+#: includes/row-settings.php:691 includes/ui-loop-settings-filter.php:164
+#: includes/ui-loop-settings-filter.php:287 includes/ui-loop-settings.php:131
+#: modules/accordion/accordion.php:260 modules/accordion/accordion.php:273
+#: modules/accordion/accordion.php:287 modules/audio/audio.php:123
+#: modules/audio/audio.php:135 modules/audio/audio.php:160
+#: modules/audio/audio.php:174 modules/audio/audio.php:186
+#: modules/audio/audio.php:195 modules/bigcommerce/bigcommerce.php:57
+#: modules/bigcommerce/bigcommerce.php:90
+#: modules/bigcommerce/bigcommerce.php:99
+#: modules/bigcommerce/bigcommerce.php:108 modules/callout/callout.php:769
+#: modules/content-slider/content-slider.php:393
+#: modules/content-slider/content-slider.php:407
+#: modules/content-slider/content-slider.php:419
+#: modules/content-slider/content-slider.php:428
+#: modules/content-slider/content-slider.php:470
+#: modules/content-slider/content-slider.php:479
+#: modules/content-slider/content-slider.php:493
+#: modules/countdown/countdown.php:475 modules/icon/icon.php:224
+#: modules/icon-group/icon-group.php:181 modules/login-form/login-form.php:264
+#: modules/login-form/login-form.php:278 modules/login-form/login-form.php:297
+#: modules/login-form/login-form.php:778 modules/menu/menu.php:678
+#: modules/menu/menu.php:847 modules/menu/menu.php:895
+#: modules/menu/menu.php:1054 modules/menu/menu.php:1144
+#: modules/photo/photo.php:653 modules/post-carousel/post-carousel.php:281
+#: modules/post-carousel/post-carousel.php:290
+#: modules/post-carousel/post-carousel.php:333
+#: modules/post-carousel/post-carousel.php:342
+#: modules/post-carousel/post-carousel.php:356
+#: modules/post-carousel/post-carousel.php:405
+#: modules/post-carousel/post-carousel.php:468
+#: modules/post-grid/post-grid.php:709 modules/post-grid/post-grid.php:966
+#: modules/post-grid/post-grid.php:1323 modules/post-grid/post-grid.php:1428
+#: modules/post-slider/post-slider.php:535
+#: modules/post-slider/post-slider.php:544
+#: modules/post-slider/post-slider.php:592
+#: modules/post-slider/post-slider.php:601
+#: modules/post-slider/post-slider.php:615
+#: modules/post-slider/post-slider.php:858
+#: modules/pricing-table/pricing-table.php:469
+#: modules/pricing-table/pricing-table.php:651
+#: modules/pricing-table/pricing-table.php:845
+#: modules/slideshow/slideshow.php:424 modules/slideshow/slideshow.php:434
+#: modules/slideshow/slideshow.php:485 modules/slideshow/slideshow.php:528
+#: modules/slideshow/slideshow.php:550 modules/slideshow/slideshow.php:599
+#: modules/slideshow/slideshow.php:608 modules/slideshow/slideshow.php:617
+#: modules/slideshow/slideshow.php:626 modules/slideshow/slideshow.php:635
+#: modules/slideshow/slideshow.php:644 modules/slideshow/slideshow.php:653
+#: modules/slideshow/slideshow.php:667 modules/slideshow/slideshow.php:682
+#: modules/slideshow/slideshow.php:717 modules/slideshow/slideshow.php:729
+#: modules/slideshow/slideshow.php:741
+#: modules/social-buttons/social-buttons.php:107
+#: modules/social-buttons/social-buttons.php:116
+#: modules/social-buttons/social-buttons.php:125
+#: modules/testimonials/testimonials.php:93
+#: modules/testimonials/testimonials.php:102
+#: modules/testimonials/testimonials.php:240
+#: modules/testimonials/testimonials.php:272 modules/video/video.php:444
+#: modules/video/video.php:461 modules/video/video.php:473
+#: modules/video/video.php:485 modules/video/video.php:572
+#: modules/woocommerce/woocommerce.php:99
+msgid "Yes"
+msgstr "نعم "
+
+#. translators: %s: post/page title
+#: classes/class-fl-builder-model.php:5021
+msgctxt "%s stands for post/page title."
+msgid "Copy of %s"
+msgstr "نسخة من %s"
+
+#: classes/class-fl-builder-module.php:553
+msgid "Advanced Modules"
+msgstr "وحدات متقدمة "
+
+#: classes/class-fl-builder-module.php:551
+msgid "Basic Modules"
+msgstr "وحدات أساسية "
+
+#: extensions/fl-builder-white-label/classes/class-fl-builder-white-label.php:60
+msgid "Branding"
+msgstr "العلامات التجارية "
+
+#: classes/class-fl-builder-services.php:362
+#: classes/services/class-fl-builder-service-activecampaign.php:206
+#: classes/services/class-fl-builder-service-activecampaign.php:240
+#: classes/services/class-fl-builder-service-activecampaign.php:275
+#: classes/services/class-fl-builder-service-aweber.php:203
+#: classes/services/class-fl-builder-service-campaign-monitor.php:144
+#: classes/services/class-fl-builder-service-campaign-monitor.php:195
+#: classes/services/class-fl-builder-service-campayn.php:196
+#: classes/services/class-fl-builder-service-constant-contact-3.php:196
+#: classes/services/class-fl-builder-service-constant-contact.php:149
+#: classes/services/class-fl-builder-service-convertkit.php:149
+#: classes/services/class-fl-builder-service-drip.php:186
+#: classes/services/class-fl-builder-service-drip.php:245
+#: classes/services/class-fl-builder-service-enormail.php:155
+#: classes/services/class-fl-builder-service-getresponse.php:148
+#: classes/services/class-fl-builder-service-godaddy-email-marketing.php:166
+#: classes/services/class-fl-builder-service-icontact-pro.php:236
+#: classes/services/class-fl-builder-service-icontact.php:198
+#: classes/services/class-fl-builder-service-infusionsoft.php:196
+#: classes/services/class-fl-builder-service-madmimi.php:168
+#: classes/services/class-fl-builder-service-mailchimp.php:182
+#: classes/services/class-fl-builder-service-mailerlite.php:156
+#: classes/services/class-fl-builder-service-mailjet.php:233
+#: classes/services/class-fl-builder-service-mailpoet.php:111
+#: classes/services/class-fl-builder-service-mailrelay.php:183
+#: classes/services/class-fl-builder-service-mautic.php:209
+#: classes/services/class-fl-builder-service-ontraport.php:183
+#: classes/services/class-fl-builder-service-sendinblue.php:157
+#: extensions/fl-builder-user-templates/includes/admin-add-new-form.php:26
+#: extensions/fl-builder-user-templates/includes/admin-add-new-form.php:40
+#: extensions/fl-builder-user-templates/includes/admin-add-new-form.php:54
+#: includes/ui-service-settings.php:7
+#: modules/reusable-block/reusable-block.php:42
+#: modules/woocommerce/woocommerce.php:59
+msgid "Choose..."
+msgstr "إختيار "
+
+#: classes/class-fl-builder-config.php:393
+msgid "Content Pages"
+msgstr "صفحة المحتوى "
+
+#: classes/class-fl-builder-fonts.php:128
+#: classes/class-fl-builder-fonts.php:163
+#: classes/class-fl-builder-fonts.php:203 includes/row-settings.php:107
+#: includes/ui-field-border.php:78 includes/ui-field-typography.php:156
+#: includes/ui-field-typography.php:170 includes/ui-field-typography.php:183
+#: modules/button-group/button-group.php:270
+#: modules/button-group/button-group.php:718
+#: modules/post-carousel/post-carousel.php:530
+#: modules/post-grid/post-grid.php:989 modules/post-slider/post-slider.php:711
+msgid "Default"
+msgstr "إفتراضى "
+
+#: classes/class-fl-builder-admin-settings.php:281
+#: modules/icon-group/icon-group.php:73
+#: modules/post-carousel/post-carousel.php:461
+#: modules/post-grid/post-grid.php:1316
+#: modules/pricing-table/pricing-table.php:493
+msgid "Icons"
+msgstr "الأيقونات "
+
+#: classes/class-fl-builder-photo.php:91 classes/class-fl-builder-photo.php:95
+msgctxt "Image size."
+msgid "Full Size"
+msgstr "الحجم الكامل"
+
+#: classes/class-fl-builder-photo.php:96
+msgctxt "Image size."
+msgid "Large"
+msgstr "كبير "
+
+#: classes/class-fl-builder-photo.php:97
+msgctxt "Image size."
+msgid "Medium"
+msgstr "متوسط "
+
+#: classes/class-fl-builder-photo.php:98
+msgctxt "Image size."
+msgid "Thumbnail"
+msgstr "صورة مصغرة "
+
+#: classes/class-fl-builder-admin-settings.php:251
+msgid "License"
+msgstr "رخصة "
+
+#: classes/class-fl-builder-admin-settings.php:261
+#: classes/class-fl-builder-ui-content-panel.php:32
+#: extensions/fl-builder-template-data-exporter/includes/template-data-exporter.php:76
+msgid "Modules"
+msgstr "وحدات "
+
+#: classes/class-fl-builder-admin.php:264
+msgctxt "Plugin action link label."
+msgid "Upgrade"
+msgstr "تحديث"
+
+#: classes/class-fl-builder-admin-settings.php:271
+#: includes/admin-settings-post-types.php:3
+msgid "Post Types"
+msgstr "أنواع المشاركة "
+
+#: classes/class-fl-builder-admin-settings.php:229
+msgid "Settings updated!"
+msgstr "تم حفظ الإعدادات! "
+
+#: classes/class-fl-builder-ui-content-panel.php:53
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-admin-menu.php:41
+#: extensions/fl-builder-user-templates/classes/class-fl-builder-user-templates-admin-settings.php:33
+#: extensions/fl-builder-user-templates/includes/ui-js-templates.php:32
+msgid "Templates"
+msgstr "قوالب "
+
+#: includes/admin-settings-tools.php:179 includes/admin-settings-tools.php:189
+msgid "Uninstall"
+msgstr "إلغاء التنصيب "
+
+#: classes/class-fl-builder-admin-settings.php:256
+#: classes/class-fl-builder-ui-content-panel.php:276
+#: extensions/fl-builder-addons-installer/classes/class-fl-builder-addons-installer.php:25
+msgid "Upgrade"
+msgstr "ترقية "
+
+#: classes/class-fl-builder-config.php:348
+#: classes/class-fl-builder-model.php:3610
+#: classes/class-fl-builder-model.php:3743
+#: classes/class-fl-builder-model.php:4269
+#: extensions/fl-builder-user-templates/includes/admin-add-new-form.php:57
+#: includes/admin-settings-modules.php:79 modules/widget/widget.php:15
+#: modules/widget/widget.php:16
+msgid "WordPress Widgets"
+msgstr "قطع جانبية للووردبريس "

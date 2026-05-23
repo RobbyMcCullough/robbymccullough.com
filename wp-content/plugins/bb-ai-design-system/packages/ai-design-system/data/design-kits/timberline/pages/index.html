@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Timberline — Lake Tahoe Boutique Mountain Lodge</title>
+  <meta name="post-type" content="page">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,0,500;9..144,1,300;9..144,1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../design-system/styles.css">
+  <script src="../design-system/script.js"></script>
+  <style>
+    /* @section Hero */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 680px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .hero .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+    .hero .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(to bottom, rgba(10,16,8,0.3) 0%, rgba(10,16,8,0.5) 45%, rgba(10,16,8,0.85) 100%);
+    }
+    .hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding-bottom: var(--ds-space-xl);
+    }
+    .hero .hero-content .bb-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--ds-space-xl);
+      align-items: end;
+    }
+    .hero .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: var(--ds-space-md);
+    }
+    .hero .hero-place {
+      width: 100%;
+      text-align: right;
+      padding-bottom: var(--ds-space-sm);
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+    .hero .hero-place-text {
+      font-size: var(--ds-text-xs);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+    }
+    .hero .hero-title {
+      font-family: var(--ds-font-heading);
+      font-size: clamp(3rem, 6vw, var(--ds-text-5xl));
+      font-weight: var(--ds-weight-light);
+      color: var(--ds-color-white);
+      line-height: 1.1;
+      margin-bottom: var(--ds-space-md);
+    }
+    .hero .hero-title em {
+      font-style: italic;
+      color: rgba(255,255,255,0.82);
+    }
+    .hero .hero-subtitle {
+      font-size: var(--ds-text-lg);
+      color: rgba(255,255,255,0.76);
+      font-weight: var(--ds-weight-light);
+      max-width: 460px;
+      margin-bottom: var(--ds-space-lg);
+      line-height: 1.65;
+    }
+    .hero .hero-actions {
+      display: flex;
+      gap: var(--ds-space-sm);
+      flex-wrap: wrap;
+    }
+    .hero .hero-actions a {
+      display: inline-block;
+      border-radius: var(--ds-radius-sm);
+      padding: 0.85rem 2rem;
+      font-family: var(--ds-font-body);
+      font-size: var(--ds-text-sm);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      border: 1.5px solid var(--ds-color-secondary);
+      background: var(--ds-color-secondary);
+      color: var(--ds-color-white);
+      transition: background var(--ds-transition-fast), border-color var(--ds-transition-fast);
+    }
+    .hero .hero-actions a:hover {
+      background: #9a5822;
+      border-color: #9a5822;
+    }
+    .hero .hero-actions a.hero-cta-outline {
+      background: transparent;
+      color: var(--ds-color-white);
+      border-color: rgba(255,255,255,0.55);
+    }
+    .hero .hero-actions a.hero-cta-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.8);
+    }
+    .hero .hero-stats {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-md);
+      text-align: right;
+    }
+    .hero .hero-stat-value {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-3xl);
+      font-weight: var(--ds-weight-light);
+      color: var(--ds-color-white);
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+    .hero .hero-stat-label {
+      font-size: var(--ds-text-xs);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+    @media (max-width: 768px) {
+      .hero { padding-top: calc(72px + var(--ds-space-md)); }
+      .hero .hero-title { font-size: clamp(2.4rem, 8vw, 3rem); }
+      .hero .hero-content .bb-container { grid-template-columns: 1fr; }
+      .hero .hero-stats { display: none; }
+      .hero .hero-right { align-items: flex-start; }
+      .hero .hero-place { text-align: left; border-bottom: none; padding-bottom: 0; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding-top: calc(64px + var(--ds-space-md)); }
+    }
+
+    /* @section Rooms */
+    .rooms {
+      padding: var(--ds-space-section) 0;
+      background: var(--ds-color-surface);
+    }
+    .rooms .rooms-header {
+      margin-bottom: var(--ds-space-xl);
+    }
+    .rooms .rooms-intro {
+      color: var(--ds-color-text-muted);
+      max-width: 520px;
+      font-size: var(--ds-text-lg);
+      margin-top: var(--ds-space-sm);
+    }
+    .rooms .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--ds-space-md);
+    }
+    .rooms .room-card {
+      background: var(--ds-color-white);
+      border: 1px solid var(--ds-color-border);
+      border-radius: var(--ds-radius-md);
+      overflow: hidden;
+      transition: box-shadow var(--ds-transition-base), transform var(--ds-transition-base);
+    }
+    .rooms .room-card:hover {
+      box-shadow: var(--ds-shadow-lg);
+      transform: translateY(-4px);
+    }
+    .rooms .room-img-wrap {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+    }
+    .rooms .room-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .rooms .room-card:hover .room-img-wrap img { transform: scale(1.04); }
+    .rooms .room-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--ds-color-white);
+      color: var(--ds-color-primary);
+      font-size: var(--ds-text-xs);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 2px;
+    }
+    .rooms .room-body {
+      padding: var(--ds-space-md);
+    }
+    .rooms .room-name {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-2xl);
+      font-weight: var(--ds-weight-regular);
+      color: var(--ds-color-text);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .rooms .room-desc {
+      font-size: var(--ds-text-sm);
+      color: var(--ds-color-text-muted);
+      margin-bottom: var(--ds-space-md);
+      line-height: 1.65;
+    }
+    .rooms .room-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: var(--ds-space-sm);
+      border-top: 1px solid var(--ds-color-border);
+    }
+    .rooms .room-price {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.2rem;
+    }
+    .rooms .room-price-amount {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-xl);
+      font-weight: var(--ds-weight-regular);
+      color: var(--ds-color-text);
+    }
+    .rooms .room-price-unit {
+      font-family: var(--ds-font-body);
+      font-size: var(--ds-text-xs);
+      color: var(--ds-color-text-muted);
+      font-weight: var(--ds-weight-regular);
+    }
+    .rooms .room-link {
+      font-size: var(--ds-text-xs);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ds-color-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap var(--ds-transition-fast);
+    }
+    .rooms .room-link:hover { gap: 0.65rem; }
+    .rooms .room-link svg { width: 13px; height: 13px; flex-shrink: 0; }
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .rooms .rooms-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .rooms .rooms-grid { grid-template-columns: 1fr; }
+    }
+
+    /* @section Shuttle */
+    .shuttle {
+      padding: var(--ds-space-section) 0;
+      background: var(--ds-color-surface-alt);
+    }
+    .shuttle .bb-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--ds-space-xl);
+      align-items: start;
+    }
+    .shuttle .shuttle-title {
+      font-family: var(--ds-font-heading);
+      font-size: clamp(2rem, 3.5vw, var(--ds-text-4xl));
+      font-weight: var(--ds-weight-light);
+      color: var(--ds-color-text);
+      line-height: 1.15;
+      margin-bottom: var(--ds-space-md);
+    }
+    .shuttle .shuttle-desc {
+      font-size: var(--ds-text-base);
+      color: var(--ds-color-text-muted);
+      margin-bottom: var(--ds-space-lg);
+      line-height: 1.7;
+    }
+    .shuttle .schedule-label {
+      font-size: var(--ds-text-xs);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ds-color-text-light);
+      margin-bottom: var(--ds-space-sm);
+    }
+    .shuttle .shuttle-times {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .shuttle .shuttle-time-pill {
+      background: var(--ds-color-primary);
+      color: var(--ds-color-white);
+      font-size: var(--ds-text-sm);
+      font-weight: var(--ds-weight-medium);
+      padding: 0.4rem 1rem;
+      border-radius: var(--ds-radius-sm);
+    }
+    .shuttle .mountain-card {
+      background: var(--ds-color-white);
+      border: 1px solid var(--ds-color-border);
+      border-radius: var(--ds-radius-md);
+      padding: var(--ds-space-md);
+      margin-bottom: var(--ds-space-sm);
+      display: grid;
+      grid-template-columns: 52px 1fr auto;
+      gap: var(--ds-space-sm);
+      align-items: center;
+      transition: box-shadow var(--ds-transition-fast);
+    }
+    .shuttle .mountain-card:last-child { margin-bottom: 0; }
+    .shuttle .mountain-card:hover { box-shadow: var(--ds-shadow-md); }
+    .shuttle .mountain-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--ds-color-surface-alt);
+      border-radius: var(--ds-radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ds-color-primary);
+    }
+    .shuttle .mountain-name {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-xl);
+      font-weight: var(--ds-weight-regular);
+      color: var(--ds-color-text);
+      margin-bottom: 0.15rem;
+      line-height: 1.2;
+    }
+    .shuttle .mountain-detail {
+      font-size: var(--ds-text-xs);
+      color: var(--ds-color-text-muted);
+    }
+    .shuttle .mountain-time-value {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-2xl);
+      font-weight: var(--ds-weight-light);
+      color: var(--ds-color-secondary);
+      line-height: 1;
+      text-align: right;
+    }
+    .shuttle .mountain-time-unit {
+      font-size: var(--ds-text-xs);
+      color: var(--ds-color-text-light);
+      text-align: right;
+      letter-spacing: 0.06em;
+    }
+    @media (max-width: 768px) {
+      .shuttle .bb-container { grid-template-columns: 1fr; }
+    }
+
+    /* @section Amenities */
+    .amenities {
+      padding: var(--ds-space-section) 0;
+      background: var(--ds-color-white);
+    }
+    .amenities .amenities-header {
+      text-align: center;
+      margin-bottom: var(--ds-space-xl);
+    }
+    .amenities .amenities-intro {
+      color: var(--ds-color-text-muted);
+      max-width: 560px;
+      margin-inline: auto;
+      font-size: var(--ds-text-lg);
+      margin-top: var(--ds-space-sm);
+    }
+    .amenities .amenities-photo-wrap {
+      margin-bottom: var(--ds-space-xl);
+      border-radius: var(--ds-radius-lg);
+      overflow: hidden;
+      height: 460px;
+      position: relative;
+    }
+    .amenities .amenities-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .amenities .amenities-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(27,47,39,0.6) 0%, transparent 55%);
+    }
+    .amenities .amenities-photo-callout {
+      position: absolute;
+      bottom: var(--ds-space-lg);
+      left: var(--ds-space-lg);
+      color: var(--ds-color-white);
+    }
+    .amenities .photo-callout-title {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-3xl);
+      font-weight: var(--ds-weight-light);
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+    .amenities .photo-callout-sub {
+      font-size: var(--ds-text-sm);
+      opacity: 0.75;
+    }
+    .amenities .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--ds-space-md);
+    }
+    .amenities .amenity-card {
+      padding: var(--ds-space-md);
+      border: 1px solid var(--ds-color-border);
+      border-radius: var(--ds-radius-md);
+      background: var(--ds-color-surface);
+      transition: border-color var(--ds-transition-fast), box-shadow var(--ds-transition-fast);
+    }
+    .amenities .amenity-card:hover {
+      border-color: var(--ds-color-primary-light);
+      box-shadow: var(--ds-shadow-sm);
+    }
+    .amenities .amenity-icon {
+      width: 38px;
+      height: 38px;
+      color: var(--ds-color-primary);
+      margin-bottom: var(--ds-space-sm);
+    }
+    .amenities .amenity-name {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-xl);
+      font-weight: var(--ds-weight-regular);
+      color: var(--ds-color-text);
+      margin-bottom: 0.4rem;
+    }
+    .amenities .amenity-desc {
+      font-size: var(--ds-text-sm);
+      color: var(--ds-color-text-muted);
+      line-height: 1.65;
+    }
+    @media (max-width: 768px) {
+      .amenities .amenities-grid { grid-template-columns: 1fr 1fr; }
+      .amenities .amenities-photo-wrap { height: 320px; }
+    }
+    @media (max-width: 480px) {
+      .amenities .amenities-grid { grid-template-columns: 1fr; }
+    }
+
+    /* @section Book Now */
+    .book-now {
+      padding: var(--ds-space-section) 0;
+      background: var(--ds-color-primary-dark);
+      color: var(--ds-color-white);
+      position: relative;
+      overflow: hidden;
+    }
+    .book-now::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -100px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(61,99,84,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .book-now .book-now-inner {
+      text-align: center;
+      max-width: 640px;
+      margin-inline: auto;
+      position: relative;
+    }
+    .book-now .book-now-eyebrow {
+      display: inline-block;
+      font-size: var(--ds-text-xs);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: var(--ds-space-sm);
+    }
+    .book-now .book-now-title {
+      font-family: var(--ds-font-heading);
+      font-size: clamp(2.8rem, 5vw, var(--ds-text-5xl));
+      font-weight: var(--ds-weight-light);
+      color: var(--ds-color-white);
+      line-height: 1.1;
+      margin-bottom: var(--ds-space-md);
+    }
+    .book-now .book-now-title em {
+      font-style: italic;
+      color: rgba(255,255,255,0.72);
+    }
+    .book-now .book-now-desc {
+      font-size: var(--ds-text-lg);
+      color: rgba(255,255,255,0.62);
+      margin-bottom: var(--ds-space-xl);
+      line-height: 1.65;
+    }
+    .book-now .book-form {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--ds-radius-lg);
+      padding: var(--ds-space-md) var(--ds-space-lg);
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: var(--ds-space-sm);
+      align-items: end;
+    }
+    .book-now .book-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      text-align: left;
+    }
+    .book-now .book-field label {
+      font-size: var(--ds-text-xs);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+    .book-now .book-field input {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: var(--ds-radius-sm);
+      padding: 0.7rem 1rem;
+      color: var(--ds-color-white);
+      font-size: var(--ds-text-base);
+      outline: none;
+      transition: border-color var(--ds-transition-fast), background var(--ds-transition-fast);
+      width: 100%;
+    }
+    .book-now .book-field input:focus {
+      border-color: rgba(255,255,255,0.38);
+      background: rgba(255,255,255,0.11);
+    }
+    .book-now .book-field input::placeholder { color: rgba(255,255,255,0.28); }
+    .book-now .book-submit {
+      background: var(--ds-color-secondary);
+      color: var(--ds-color-white);
+      border: none;
+      border-radius: var(--ds-radius-sm);
+      padding: 0.85rem 1.6rem;
+      font-family: var(--ds-font-body);
+      font-size: var(--ds-text-sm);
+      font-weight: var(--ds-weight-medium);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background var(--ds-transition-fast);
+      white-space: nowrap;
+    }
+    .book-now .book-submit:hover { background: #9a5822; }
+    .book-now .book-note {
+      margin-top: var(--ds-space-md);
+      font-size: var(--ds-text-xs);
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 768px) {
+      .book-now .book-form { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<section id="hero" class="hero" data-label="Hero">
+  <div class="hero-bg">
+    <img data-field="hero_image" src="https://images.unsplash.com/photo-1608801320394-0dcbb482c849?q=80&w=2000&auto=format&fit=crop" alt="A snow-covered A-frame timber lodge perched above Lake Tahoe at dusk, balcony overlooking the calm pale water, distant mountains across the lake and a lone pine in soft pink-blue evening light">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="bb-container">
+      <div class="hero-left">
+        <h1 class="hero-title" data-field="hero_title" data-field-type="editor">A Place to Land<br>After the <em>Last Run</em></h1>
+        <p class="hero-subtitle" data-field="hero_subtitle">A boutique mountain lodge built for skiers and snowboarders who want more than just a bed to crash in. Stay, ride, and never want to leave.</p>
+        <div class="hero-actions" data-repeater="hero_ctas">
+          <a class="hero-cta-solid" href="#book-now" data-repeater-item data-field="label" data-field-href="url">Reserve Your Stay</a>
+          <a class="hero-cta-outline" href="#rooms" data-repeater-item data-field="label" data-field-href="url">Explore The Lodge</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-place">
+          <span class="hero-place-text" data-field="hero_location">South Lake Tahoe · Nevada Stateline</span>
+        </div>
+        <div class="hero-stats" data-repeater="hero_stats">
+          <div class="hero-stat" data-repeater-item>
+            <div class="hero-stat-value" data-field="value">3</div>
+            <div class="hero-stat-label" data-field="label">Mountains Served</div>
+          </div>
+          <div class="hero-stat" data-repeater-item>
+            <div class="hero-stat-value" data-field="value">24</div>
+            <div class="hero-stat-label" data-field="label">Lodge Rooms</div>
+          </div>
+          <div class="hero-stat" data-repeater-item>
+            <div class="hero-stat-value" data-field="value">6,225 ft</div>
+            <div class="hero-stat-label" data-field="label">Base Elevation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms" class="rooms" data-label="Rooms">
+  <div class="bb-container">
+    <div class="rooms-header bb-reveal">
+      <span class="bb-eyebrow" data-field="rooms_eyebrow">Where You Rest</span>
+      <h2 class="bb-section-heading" data-field="rooms_title">Rooms Built for the Mountain Life</h2>
+      <div class="bb-divider"></div>
+      <p class="rooms-intro" data-field="rooms_intro">Every room at The Timberline is designed with one thing in mind: getting you off the mountain and into warmth as fast as possible.</p>
+    </div>
+    <div class="rooms-grid" data-repeater="rooms">
+      <div class="room-card bb-reveal bb-reveal-delay-1" data-repeater-item>
+        <div class="room-img-wrap">
+          <img data-field="image" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=560&fit=crop&q=80" alt="Spacious alpine suite with floor-to-ceiling windows overlooking snowy mountain views, king bed with warm wool bedding, stone fireplace">
+          <span class="room-tag" data-field="tag">Suite</span>
+        </div>
+        <div class="room-body">
+          <h3 class="room-name" data-field="name">The Summit Suite</h3>
+          <p class="room-desc" data-field="description">Our crown jewel. King bed, soaking tub, private deck with mountain views, and a fireplace you'll never want to leave. Two-night minimum on weekends.</p>
+          <div class="room-footer">
+            <div class="room-price">
+              <span class="room-price-amount" data-field="price">$389</span>
+              <span class="room-price-unit" data-field="price_unit">/ night</span>
+            </div>
+            <a class="room-link" href="#book-now" data-field-href="cta_url">
+              <span data-field="cta">View Room</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="room-card bb-reveal bb-reveal-delay-1" data-repeater-item>
+        <div class="room-img-wrap">
+          <img data-field="image" src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&h=560&fit=crop&q=80" alt="Cozy mountain cabin bedroom with warm wood paneled walls, queen bed with plaid bedding, soft bedside lighting and snowy treeline view">
+          <span class="room-tag" data-field="tag">Standard</span>
+        </div>
+        <div class="room-body">
+          <h3 class="room-name" data-field="name">The Ridgeback Room</h3>
+          <p class="room-desc" data-field="description">A real mountain room. Queen bed, heated floors, dedicated gear storage, and a tree-line view that changes everything about waking up on a powder day.</p>
+          <div class="room-footer">
+            <div class="room-price">
+              <span class="room-price-amount" data-field="price">$229</span>
+              <span class="room-price-unit" data-field="price_unit">/ night</span>
+            </div>
+            <a class="room-link" href="#book-now" data-field-href="cta_url">
+              <span data-field="cta">View Room</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="room-card bb-reveal bb-reveal-delay-1" data-repeater-item>
+        <div class="room-img-wrap">
+          <img data-field="image" src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=800&h=560&fit=crop&q=80" alt="Modern mountain bunk room with built-in wooden bunks, individual reading lights and privacy curtains, lockers for ski gear">
+          <span class="room-tag" data-field="tag">Group</span>
+        </div>
+        <div class="room-body">
+          <h3 class="room-name" data-field="name">The Powder Bunk</h3>
+          <p class="room-desc" data-field="description">Built for crews. Four custom bunks with privacy curtains, individual USB charging, and enough gear storage to outfit a whole squad. Cabin vibe, not hostel.</p>
+          <div class="room-footer">
+            <div class="room-price">
+              <span class="room-price-amount" data-field="price">$149</span>
+              <span class="room-price-unit" data-field="price_unit">/ bunk/night</span>
+            </div>
+            <a class="room-link" href="#book-now" data-field-href="cta_url">
+              <span data-field="cta">View Room</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shuttle" class="shuttle" data-label="Shuttle">
+  <div class="bb-container">
+    <div class="shuttle-content bb-reveal">
+      <span class="bb-eyebrow" data-field="shuttle_eyebrow">The Ride</span>
+      <h2 class="shuttle-title" data-field="shuttle_title" data-field-type="editor">Skip the Parking.<br>We've Got You.</h2>
+      <div class="bb-divider"></div>
+      <p class="shuttle-desc" data-field="shuttle_desc">The Timberline shuttle runs daily to all three major South Shore mountains. No lift line stress, no icy lot, no sketchy rideshare. Just roll out, grab a coffee, and we'll have you at the base before first chair.</p>
+      <div>
+        <div class="schedule-label" data-field="schedule_label">Daily Departures</div>
+        <div class="shuttle-times" data-repeater="shuttle_times">
+          <span class="shuttle-time-pill" data-repeater-item data-field="time">7:00 AM</span>
+          <span class="shuttle-time-pill" data-repeater-item data-field="time">8:30 AM</span>
+          <span class="shuttle-time-pill" data-repeater-item data-field="time">9:00 AM</span>
+          <span class="shuttle-time-pill" data-repeater-item data-field="time">4:00 PM Return</span>
+        </div>
+      </div>
+    </div>
+    <div class="shuttle-mountains bb-reveal bb-reveal-delay-2" data-repeater="shuttle_mountains">
+      <div class="mountain-card" data-repeater-item>
+        <div class="mountain-icon">
+          <svg data-field="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z" /></svg>
+        </div>
+        <div class="mountain-meta">
+          <div class="mountain-name" data-field="name">Heavenly Mountain</div>
+          <div class="mountain-detail" data-field="detail">97 trails · 3,500 acres · Best Lake Views</div>
+        </div>
+        <div class="mountain-time">
+          <div class="mountain-time-value" data-field="minutes">5</div>
+          <div class="mountain-time-unit">min away</div>
+        </div>
+      </div>
+      <div class="mountain-card" data-repeater-item>
+        <div class="mountain-icon">
+          <svg data-field="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z" /></svg>
+        </div>
+        <div class="mountain-meta">
+          <div class="mountain-name" data-field="name">Sierra-at-Tahoe</div>
+          <div class="mountain-detail" data-field="detail">46 trails · 2,000 acres · Family Favorite</div>
+        </div>
+        <div class="mountain-time">
+          <div class="mountain-time-value" data-field="minutes">20</div>
+          <div class="mountain-time-unit">min away</div>
+        </div>
+      </div>
+      <div class="mountain-card" data-repeater-item>
+        <div class="mountain-icon">
+          <svg data-field="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z" /></svg>
+        </div>
+        <div class="mountain-meta">
+          <div class="mountain-name" data-field="name">Kirkwood Mountain</div>
+          <div class="mountain-detail" data-field="detail">65 trails · 2,300 acres · Expert Terrain</div>
+        </div>
+        <div class="mountain-time">
+          <div class="mountain-time-value" data-field="minutes">35</div>
+          <div class="mountain-time-unit">min away</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="amenities" class="amenities" data-label="Amenities">
+  <div class="bb-container">
+    <div class="amenities-header bb-reveal">
+      <span class="bb-eyebrow" data-field="amenities_eyebrow">The Lodge</span>
+      <h2 class="bb-section-heading" data-field="amenities_title">Après Never Looked This Good</h2>
+      <div class="bb-divider bb-divider--center"></div>
+      <p class="amenities-intro" data-field="amenities_intro">When the lifts close, The Timberline comes alive. We've built a place that makes you want to stay, even when the mountain is calling.</p>
+    </div>
+    <div class="amenities-photo-wrap bb-reveal">
+      <img data-field="amenities_photo" src="https://images.unsplash.com/photo-1554740309-706e481e9b54?q=80&w=1470&auto=format&fit=crop" alt="Warm and inviting lodge lounge with a roaring stone fireplace, leather armchairs, exposed wood beam ceiling, amber lighting on a snowy evening">
+      <div class="amenities-photo-overlay"></div>
+      <div class="amenities-photo-callout">
+        <div class="photo-callout-title" data-field="photo_callout_title">The Fire Pit Lounge</div>
+        <div class="photo-callout-sub" data-field="photo_callout_sub">Open nightly · No reservation needed</div>
+      </div>
+    </div>
+    <div class="amenities-grid" data-repeater="amenities_list">
+      <div class="amenity-card bb-reveal bb-reveal-delay-1" data-repeater-item>
+        <svg class="amenity-icon" data-field="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 3H5l4 9.5A3.5 3.5 0 0 0 12.5 16a3.5 3.5 0 0 0 3.5-3.5V3" />
+          <line x1="12" y1="16" x2="12" y2="22" />
+          <line x1="9" y1="22" x2="15" y2="22" />
+        </svg>
+        <div class="amenity-name" data-field="name">Après Ski Bar</div>
+        <p class="amenity-desc" data-field="description">Craft cocktails, local beers, and a whiskey list that makes après the best part of the day. Open from 3 PM until late.</p>
+      </div>
+      <div class="amenity-card bb-reveal bb-reveal-delay-1" data-repeater-item>
+        <svg class="amenity-icon" data-field="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 6v6l4 2" />
+        </svg>
+        <div class="amenity-name" data-field="name">Outdoor Hot Tub</div>
+        <p class="amenity-desc" data-field="description">Soaking at 104° while snow falls around you is one of life's great experiences. Open until midnight, seven days a week.</p>
+      </div>
+      <div class="amenity-card bb-reveal bb-reveal-delay-1" data-repeater-item>
+        <svg class="amenity-icon" data-field="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+        </svg>
+        <div class="amenity-name" data-field="name">Gear Storage Room</div>
+        <p class="amenity-desc" data-field="description">Heated individual lockers, boot dryers, and a wax station. Your gear is ready when you are, and dry when you get back.</p>
+      </div>
+      <div class="amenity-card bb-reveal bb-reveal-delay-1" data-repeater-item>
+        <svg class="amenity-icon" data-field="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+          <line x1="6" y1="1" x2="6" y2="4" />
+          <line x1="10" y1="1" x2="10" y2="4" />
+          <line x1="14" y1="1" x2="14" y2="4" />
+        </svg>
+        <div class="amenity-name" data-field="name">Mountain Breakfast</div>
+        <p class="amenity-desc" data-field="description">A proper sit-down breakfast served 6:30–9:30 AM. Because you shouldn't charge a mountain on an empty stomach.</p>
+      </div>
+      <div class="amenity-card bb-reveal bb-reveal-delay-1" data-repeater-item>
+        <svg class="amenity-icon" data-field="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="12" r="6" />
+          <circle cx="12" cy="12" r="2" />
+        </svg>
+        <div class="amenity-name" data-field="name">Game Room</div>
+        <p class="amenity-desc" data-field="description">Pool table, shuffleboard, pinball, and good music. For when the night is young and the mountain is still in your legs.</p>
+      </div>
+      <div class="amenity-card bb-reveal bb-reveal-delay-1" data-repeater-item>
+        <svg class="amenity-icon" data-field="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+        </svg>
+        <div class="amenity-name" data-field="name">Concierge &amp; Rentals</div>
+        <p class="amenity-desc" data-field="description">Lift tickets, rental gear coordination, and local intel on what's running, what's worth the hike, and where to eat after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book-now" class="book-now" data-label="Book Now">
+  <div class="bb-container">
+    <div class="book-now-inner">
+      <span class="book-now-eyebrow" data-field="book_eyebrow">Reserve Your Stay</span>
+      <h2 class="book-now-title bb-reveal" data-field="book_title" data-field-type="editor">The Mountain<br>Is <em>Waiting</em></h2>
+      <p class="book-now-desc bb-reveal" data-field="book_desc">South Lake Tahoe. Five minutes from Heavenly. The casino lights in the distance, the pines outside your window, and a warm bed at The Timberline waiting for you at the end of it all.</p>
+      <form id="book-form" class="book-form bb-reveal">
+        <div class="book-field">
+          <label for="book-checkin">Check In</label>
+          <input id="book-checkin" name="checkin" type="date">
+        </div>
+        <div class="book-field">
+          <label for="book-checkout">Check Out</label>
+          <input id="book-checkout" name="checkout" type="date">
+        </div>
+        <button type="submit" class="book-submit" data-field="book_cta">Check Availability</button>
+      </form>
+      <p class="book-note" data-field="book_note">Best rate guaranteed when booking direct · Free cancellation up to 48 hours before arrival</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

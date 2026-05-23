@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Market — Site Footer</title>
+  <meta name="post-type" content="page">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../design-system/styles.css">
+  <style>
+    /* @section Site Footer */
+    .site-footer {
+      background: var(--ds-color-asphalt);
+      border-top: 1px solid var(--ds-color-border);
+      position: relative;
+    }
+
+    /* Diagonal stripe accent at top — matches landing section dividers */
+    .site-footer::before {
+      content: '';
+      display: block;
+      height: 6px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--ds-color-neon-pink) 0px,
+        var(--ds-color-neon-pink) 6px,
+        transparent 6px,
+        transparent 14px
+      );
+      opacity: 0.35;
+    }
+
+    /* Main footer body */
+    .site-footer__body {
+      padding: var(--ds-space-2xl) 0 var(--ds-space-xl);
+    }
+
+    .site-footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--ds-space-2xl);
+    }
+
+    /* Brand column */
+    .site-footer__brand {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-lg);
+    }
+
+    .site-footer__wordmark {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35em;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .site-footer__wordmark-main {
+      font-family: var(--ds-font-heading);
+      font-weight: var(--ds-weight-bold);
+      font-size: var(--ds-text-2xl);
+      letter-spacing: var(--ds-letter-tight);
+      text-transform: uppercase;
+      color: var(--ds-color-bone);
+      line-height: 1;
+      transition: color var(--ds-transition-fast);
+    }
+
+    .site-footer__wordmark:hover .site-footer__wordmark-main {
+      color: var(--ds-color-rice);
+    }
+
+    .site-footer__wordmark-accent {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      letter-spacing: var(--ds-letter-widest);
+      text-transform: uppercase;
+      color: var(--ds-color-neon-pink);
+      text-shadow: var(--ds-shadow-neon-pink);
+      line-height: 1;
+    }
+
+    .site-footer__tagline {
+      font-size: var(--ds-text-sm);
+      color: var(--ds-color-muted);
+      line-height: var(--ds-line-relaxed);
+      max-width: 280px;
+    }
+
+    /* Markets list — mono badge style matches stall numbers on landing */
+    .site-footer__markets {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-sm);
+    }
+
+    .site-footer__market-item {
+      display: flex;
+      align-items: center;
+      gap: var(--ds-space-sm);
+    }
+
+    .site-footer__market-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .site-footer__market-dot--pink { background: var(--ds-color-neon-pink); box-shadow: 0 0 6px rgba(255, 45, 122, 0.7); }
+    .site-footer__market-dot--mango { background: var(--ds-color-mango); box-shadow: 0 0 6px rgba(255, 184, 0, 0.7); }
+    .site-footer__market-dot--jade { background: var(--ds-color-jade); box-shadow: 0 0 6px rgba(29, 184, 122, 0.6); }
+
+    .site-footer__market-name {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      letter-spacing: var(--ds-letter-wide);
+      text-transform: uppercase;
+      color: var(--ds-color-muted);
+    }
+
+    /* Social links */
+    .site-footer__social {
+      display: flex;
+      gap: var(--ds-space-md);
+      margin-top: var(--ds-space-xs);
+    }
+
+    .site-footer__social-link {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--ds-color-border);
+      border-radius: var(--ds-radius-sm);
+      color: var(--ds-color-muted);
+      transition: border-color var(--ds-transition-fast), color var(--ds-transition-fast);
+    }
+
+    .site-footer__social-link:hover {
+      border-color: var(--ds-color-neon-pink);
+      color: var(--ds-color-neon-pink);
+    }
+
+    /* Link columns */
+    .site-footer__link-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-md);
+    }
+
+    .site-footer__link-group-label {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      letter-spacing: var(--ds-letter-widest);
+      text-transform: uppercase;
+      color: var(--ds-color-muted);
+      padding-bottom: var(--ds-space-sm);
+      border-bottom: 1px solid var(--ds-color-border);
+    }
+
+    .site-footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-sm);
+    }
+
+    .site-footer__link {
+      font-size: var(--ds-text-sm);
+      color: var(--ds-color-ink);
+      transition: color var(--ds-transition-fast);
+      display: block;
+    }
+
+    .site-footer__link:hover {
+      color: var(--ds-color-bone);
+    }
+
+    /* Newsletter strip */
+    .site-footer__newsletter {
+      border-top: 1px solid var(--ds-color-border);
+      padding: var(--ds-space-xl) 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--ds-space-2xl);
+    }
+
+    .site-footer__newsletter-copy {
+      flex: 1;
+    }
+
+    .site-footer__newsletter-heading {
+      font-family: var(--ds-font-heading);
+      font-size: var(--ds-text-xl);
+      font-weight: var(--ds-weight-bold);
+      text-transform: uppercase;
+      letter-spacing: var(--ds-letter-tight);
+      color: var(--ds-color-bone);
+      margin-bottom: 0.3em;
+      line-height: var(--ds-line-snug);
+    }
+
+    .site-footer__newsletter-heading span {
+      color: var(--ds-color-mango);
+      text-shadow: var(--ds-shadow-neon-mango);
+    }
+
+    .site-footer__newsletter-sub {
+      font-size: var(--ds-text-sm);
+      color: var(--ds-color-muted);
+    }
+
+    .site-footer__newsletter-form {
+      display: flex;
+      gap: var(--ds-space-sm);
+      flex-shrink: 0;
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .site-footer__newsletter-input {
+      flex: 1;
+      background: var(--ds-color-steel);
+      border: 1px solid var(--ds-color-border);
+      border-radius: var(--ds-radius-sm);
+      padding: 0.75em 1.1em;
+      color: var(--ds-color-bone);
+      font-size: var(--ds-text-sm);
+      font-family: var(--ds-font-body);
+      outline: none;
+      transition: border-color var(--ds-transition-fast);
+    }
+
+    .site-footer__newsletter-input::placeholder {
+      color: var(--ds-color-muted);
+    }
+
+    .site-footer__newsletter-input:focus {
+      border-color: var(--ds-color-neon-pink);
+    }
+
+    /* Bottom bar */
+    .site-footer__bottom {
+      border-top: 1px solid var(--ds-color-border);
+      padding: var(--ds-space-lg) 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--ds-space-lg);
+    }
+
+    .site-footer__copyright {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      letter-spacing: var(--ds-letter-wide);
+      color: var(--ds-color-muted);
+    }
+
+    .site-footer__legal-links {
+      display: flex;
+      align-items: center;
+      gap: var(--ds-space-lg);
+    }
+
+    .site-footer__legal-link {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      letter-spacing: var(--ds-letter-wide);
+      color: var(--ds-color-muted);
+      transition: color var(--ds-transition-fast);
+    }
+
+    .site-footer__legal-link:hover {
+      color: var(--ds-color-ink);
+    }
+
+    /* Stall number decorative element — echoes the landing's No. 04 tab labels */
+    .site-footer__stall-id {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      letter-spacing: var(--ds-letter-wide);
+      color: var(--ds-color-steel-light);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 960px) {
+      .site-footer__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--ds-space-xl);
+      }
+
+      .site-footer__brand {
+        grid-column: span 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--ds-space-xl);
+        align-items: flex-start;
+      }
+
+      .site-footer__tagline {
+        max-width: none;
+        flex: 1;
+        min-width: 200px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .site-footer__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .site-footer__brand {
+        grid-column: span 1;
+        flex-direction: column;
+      }
+
+      .site-footer__newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--ds-space-lg);
+      }
+
+      .site-footer__newsletter-form {
+        max-width: none;
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .site-footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--ds-space-md);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <footer id="site-footer" class="site-footer" data-label="Site Footer">
+
+    <div class="bb-container">
+
+      <!-- Main grid: brand + link columns -->
+      <div class="site-footer__body">
+        <div class="site-footer__grid">
+
+          <!-- Brand column -->
+          <div class="site-footer__brand">
+            <a class="site-footer__wordmark" href="#" data-field-href="logo_url">
+              <span class="site-footer__wordmark-main" data-field="logo_text">Night Market</span>
+              <span class="site-footer__wordmark-accent" data-field="logo_tagline">Food Tours</span>
+            </a>
+            <p class="site-footer__tagline" data-field="tagline">Guided food tours through the steam and clatter of East Asia's greatest night markets. Shilin. Raohe. Jalan Alor.</p>
+
+            <!-- Active markets indicator -->
+            <div class="site-footer__markets">
+              <div class="site-footer__market-item">
+                <span class="site-footer__market-dot site-footer__market-dot--pink"></span>
+                <span class="site-footer__market-name" data-field="market_1">Shilin · Taipei</span>
+              </div>
+              <div class="site-footer__market-item">
+                <span class="site-footer__market-dot site-footer__market-dot--mango"></span>
+                <span class="site-footer__market-name" data-field="market_2">Raohe · Taipei</span>
+              </div>
+              <div class="site-footer__market-item">
+                <span class="site-footer__market-dot site-footer__market-dot--jade"></span>
+                <span class="site-footer__market-name" data-field="market_3">Jalan Alor · KL</span>
+              </div>
+            </div>
+
+            <!-- Social -->
+            <div class="site-footer__social" data-repeater="social_links">
+              <a class="site-footer__social-link" href="#" data-repeater-item data-field-href="url" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-field="icon">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </a>
+              <a class="site-footer__social-link" href="#" data-repeater-item data-field-href="url" aria-label="TikTok">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-field="icon">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a class="site-footer__social-link" href="#" data-repeater-item data-field-href="url" aria-label="Substack">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-field="icon">
+                  <rect x="3" y="5" width="18" height="2.5" rx="1" fill="currentColor"/>
+                  <rect x="3" y="10" width="18" height="2.5" rx="1" fill="currentColor"/>
+                  <path d="M3 15.5l9 4 9-4V22H3v-6.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Link column: Tours -->
+          <div class="site-footer__link-group" data-repeater="link_groups">
+            <span class="site-footer__link-group-label" data-field="group_label">Tours</span>
+            <ul class="site-footer__links" data-repeater="links">
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Shilin Classic</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Raohe Deep Cut</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Jalan Alor After Dark</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Private Bookings</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Tour Schedule</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Link column: The Market -->
+          <div class="site-footer__link-group" data-repeater="link_groups">
+            <span class="site-footer__link-group-label" data-field="group_label">The Market</span>
+            <ul class="site-footer__links" data-repeater="links">
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">The Recipe Zine</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Vendor Stories</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Market Guide</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Gift Cards</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Link column: Company -->
+          <div class="site-footer__link-group" data-repeater="link_groups">
+            <span class="site-footer__link-group-label" data-field="group_label">Company</span>
+            <ul class="site-footer__links" data-repeater="links">
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">About Us</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Our Guides</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Press</a>
+              </li>
+              <li data-repeater-item>
+                <a class="site-footer__link" href="#" data-field="label" data-field-href="url">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Newsletter strip -->
+      <div class="site-footer__newsletter">
+        <div class="site-footer__newsletter-copy">
+          <h3 class="site-footer__newsletter-heading" data-field="newsletter_heading">Tour alerts. <span>Every Thursday.</span></h3>
+          <p class="site-footer__newsletter-sub" data-field="newsletter_sub">Next week's schedule, last-minute spots, zine drops. One email. No noise.</p>
+        </div>
+        <form class="site-footer__newsletter-form" action="/notify" method="post">
+          <input class="site-footer__newsletter-input" type="email" name="email" placeholder="your@email.com" required>
+          <button class="bb-btn bb-btn--secondary" type="submit" data-field="newsletter_cta">Get Alerts</button>
+        </form>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="site-footer__bottom">
+        <span class="site-footer__copyright" data-field="copyright">© 2026 Night Market Food Tours. All rights reserved.</span>
+        <div class="site-footer__legal-links" data-repeater="legal_links">
+          <a class="site-footer__legal-link" href="#" data-repeater-item data-field="label" data-field-href="url">Privacy Policy</a>
+          <a class="site-footer__legal-link" href="#" data-repeater-item data-field="label" data-field-href="url">Terms</a>
+          <a class="site-footer__legal-link" href="#" data-repeater-item data-field="label" data-field-href="url">Booking Terms</a>
+        </div>
+        <span class="site-footer__stall-id">No. 00 — Est. 2018</span>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

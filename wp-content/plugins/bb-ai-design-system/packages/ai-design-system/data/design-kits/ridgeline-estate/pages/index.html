@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ridgeline Estate Winery — Napa Valley</title>
+  <meta name="post-type" content="page">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../design-system/styles.css">
+  <script src="../design-system/script.js"></script>
+  <style>
+/* @page */
+.page-rule {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  margin-bottom: var(--ds-space-lg);
+}
+.page-rule::before {
+  content: '';
+  width: 48px;
+  height: 1px;
+  background: var(--ds-color-gold);
+  flex-shrink: 0;
+}
+.page-rule-text {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+
+/* @section Hero */
+.hero {
+  position: relative;
+  min-height: 700px;
+  height: 90svh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,14,26,0.92) 0%, rgba(11,14,26,0.45) 45%, rgba(11,14,26,0.12) 100%);
+}
+.hero-ghost-year {
+  position: absolute;
+  right: -0.05em;
+  top: 4rem;
+  font-family: var(--ds-font-heading);
+  font-size: clamp(8rem, 18vw, 18rem);
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(201,168,76,0.07);
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.04em;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-space-xl);
+  align-items: end;
+  width: 100%;
+}
+.hero-pre {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  margin-bottom: var(--ds-space-md);
+}
+.hero-pre-line { width: 48px; height: 1px; background: var(--ds-color-gold); }
+.hero-pre-text {
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+.hero h1 {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(3.5rem, 6vw, var(--ds-text-6xl));
+  font-weight: 300;
+  line-height: 1.0;
+  color: var(--ds-color-white);
+  letter-spacing: -0.01em;
+}
+.hero h1 em { font-style: italic; color: var(--ds-color-gold-light); }
+.hero-right { padding-bottom: var(--ds-space-xs); }
+.hero-tagline {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ds-color-white-80);
+  line-height: 1.5;
+  margin-bottom: var(--ds-space-lg);
+  border-left: 2px solid var(--ds-color-gold);
+  padding-left: var(--ds-space-md);
+}
+.hero-actions { display: flex; gap: var(--ds-space-md); flex-wrap: wrap; }
+.hero-scroll {
+  position: absolute;
+  right: 2.5rem;
+  bottom: 4rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--ds-color-white-50);
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+}
+.hero-scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--ds-color-gold));
+  animation: scrollLine 2.5s ease-in-out infinite;
+}
+@keyframes scrollLine { 0%,100%{opacity:.3} 50%{opacity:.9} }
+@media (max-width: 768px) {
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-scroll { display: none; }
+  .hero-ghost-year { display: none; }
+}
+
+/* @section Our Story */
+.our-story {
+  background: var(--ds-color-navy);
+  overflow: hidden;
+}
+.story-split {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  min-height: 700px;
+}
+.story-photo {
+  position: relative;
+  overflow: hidden;
+}
+.story-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.story-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 65%, var(--ds-color-navy));
+}
+.story-roman {
+  position: absolute;
+  top: var(--ds-space-lg);
+  right: var(--ds-space-lg);
+  font-family: var(--ds-font-heading);
+  font-size: 9rem;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(201,168,76,0.18);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+.story-year-badge {
+  position: absolute;
+  bottom: var(--ds-space-xl);
+  left: var(--ds-space-xl);
+  background: var(--ds-color-gold);
+  color: var(--ds-color-navy);
+  padding: var(--ds-space-md) var(--ds-space-lg);
+  z-index: 2;
+}
+.story-year-num {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 600;
+  line-height: 1;
+  display: block;
+}
+.story-year-sub {
+  font-family: var(--ds-font-body);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.story-panel {
+  background: var(--ds-color-navy-mid);
+  padding: var(--ds-space-section) var(--ds-space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.story-panel h2 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.1;
+  margin-bottom: var(--ds-space-lg);
+}
+.story-panel h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.story-body { color: var(--ds-color-white-80); line-height: 1.85; font-size: var(--ds-text-lg); margin-bottom: var(--ds-space-lg); }
+.story-body p + p { margin-top: var(--ds-space-md); }
+.story-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--ds-color-white-10);
+  margin-top: var(--ds-space-xl);
+}
+.stat-item {
+  padding: var(--ds-space-lg) var(--ds-space-md) var(--ds-space-md);
+  border-right: 1px solid var(--ds-color-white-10);
+}
+.stat-item:last-child { border-right: none; }
+.stat-number {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-5xl);
+  font-weight: 300;
+  color: var(--ds-color-gold);
+  line-height: 1;
+  display: block;
+}
+.stat-label {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-text-xs);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ds-color-white-50);
+  margin-top: 0.4rem;
+  display: block;
+}
+@media (max-width: 768px) {
+  .story-split { grid-template-columns: 1fr; }
+  .story-photo { height: 360px; }
+  .story-panel { padding: var(--ds-space-xl) var(--ds-space-md); }
+}
+
+/* @section Tasting Room */
+.tasting-room {
+  position: relative;
+  overflow: hidden;
+}
+.tasting-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.tasting-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+.tasting-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(11,14,26,0.82);
+}
+.tasting-inner {
+  position: relative;
+  z-index: 1;
+  padding: var(--ds-space-section) 0;
+}
+.tasting-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-xl);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  padding-bottom: var(--ds-space-lg);
+  margin-bottom: var(--ds-space-xl);
+}
+.tasting-header-left h2 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-5xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.0;
+}
+.tasting-header-left h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.tasting-header-right {
+  text-align: right;
+  max-width: 380px;
+}
+.tasting-header-right p {
+  color: var(--ds-color-white-50);
+  font-size: var(--ds-text-base);
+  line-height: 1.75;
+}
+.tasting-section-num {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: rgba(201,168,76,0.3);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.tasting-panels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+.tasting-panel {
+  position: relative;
+  height: 560px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.tasting-panel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.tasting-panel:hover .tasting-panel-img { transform: scale(1.05); }
+.tasting-panel-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,14,26,0.96) 0%, rgba(11,14,26,0.35) 55%, transparent 100%);
+}
+.tasting-panel-tag {
+  position: absolute;
+  top: var(--ds-space-md);
+  right: 0;
+  background: var(--ds-color-gold);
+  color: var(--ds-color-navy);
+  font-family: var(--ds-font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+}
+.tasting-panel-foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--ds-space-lg);
+}
+.tasting-panel-foot h3 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  line-height: 1.15;
+  margin-bottom: var(--ds-space-sm);
+}
+.tasting-panel-foot p {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-80);
+  line-height: 1.65;
+  margin-bottom: var(--ds-space-md);
+}
+.tasting-panel-foot a {
+  font-size: var(--ds-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color var(--ds-transition-base);
+}
+.tasting-panel:hover .tasting-panel-foot a { color: var(--ds-color-gold-light); }
+@media (max-width: 768px) {
+  .tasting-panels { grid-template-columns: 1fr; }
+  .tasting-panel { height: 400px; }
+  .tasting-header { flex-direction: column; align-items: flex-start; gap: var(--ds-space-md); }
+  .tasting-header-right { text-align: left; max-width: none; }
+}
+
+/* @section Wine Collection */
+.wine-collection {
+  position: relative;
+  overflow: hidden;
+  background: var(--ds-color-navy);
+}
+.wine-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.wine-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+}
+.wine-inner {
+  position: relative;
+  z-index: 1;
+  padding: var(--ds-space-section) 0;
+}
+.wine-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-space-xl);
+  align-items: end;
+  border-bottom: 1px solid var(--ds-color-white-10);
+  padding-bottom: var(--ds-space-xl);
+  margin-bottom: var(--ds-space-xl);
+}
+.wine-top-heading {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(3.5rem, 7vw, var(--ds-text-6xl));
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+.wine-top-heading em { font-style: italic; color: var(--ds-color-gold-light); }
+.wine-top-right {}
+.wine-top-pre {
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  margin-bottom: var(--ds-space-sm);
+  display: block;
+}
+.wine-top-desc {
+  color: var(--ds-color-white-80);
+  font-size: var(--ds-text-lg);
+  line-height: 1.75;
+  margin-bottom: var(--ds-space-lg);
+}
+.wine-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--ds-space-xl);
+}
+.wine-row {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  padding: var(--ds-space-lg) 0;
+  border-bottom: 1px solid var(--ds-color-white-10);
+  transition: border-color var(--ds-transition-base);
+  cursor: default;
+}
+.wine-row:hover {
+  border-bottom-color: rgba(201,168,76,0.45);
+}
+.wine-row-num {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-3xl);
+  font-weight: 300;
+  color: rgba(201,168,76,0.2);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 2.5rem;
+  text-align: right;
+  transition: color var(--ds-transition-base);
+}
+.wine-row:hover .wine-row-num { color: rgba(201,168,76,0.5); }
+.wine-row-text {}
+.wine-row-varietal {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.wine-row-name {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 0.3rem;
+}
+.wine-row-notes {
+  font-size: var(--ds-text-sm);
+  color: var(--ds-color-white-50);
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .wine-top { grid-template-columns: 1fr; }
+  .wine-list { grid-template-columns: 1fr; }
+}
+
+/* @section Vineyard Quote */
+.vineyard-quote {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+.vq-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.vq-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+.vq-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(11,14,26,0.72);
+}
+.vq-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  padding: var(--ds-space-section) var(--ds-space-lg);
+}
+.vq-mark {
+  font-family: var(--ds-font-heading);
+  font-size: 9rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ds-color-gold);
+  opacity: 0.45;
+  line-height: 0.55;
+  display: block;
+  margin-bottom: var(--ds-space-lg);
+}
+.vq-text {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(1.75rem, 3.5vw, var(--ds-text-4xl));
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ds-color-white);
+  line-height: 1.45;
+  margin-bottom: var(--ds-space-lg);
+}
+.vq-attr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ds-space-md);
+}
+.vq-attr-line { width: 36px; height: 1px; background: var(--ds-color-gold); }
+.vq-attr span {
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+}
+
+/* @section Events */
+.events {
+  position: relative;
+  overflow: hidden;
+}
+.events-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.events-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+.events-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(11,14,26,0.96) 0%, rgba(11,14,26,0.82) 55%, rgba(11,14,26,0.48) 100%);
+}
+.events-inner {
+  position: relative;
+  z-index: 1;
+  padding: var(--ds-space-section) 0;
+}
+.events-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-space-xl);
+  align-items: center;
+}
+.events-left h2 {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(2.5rem, 5vw, var(--ds-text-5xl));
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.05;
+  margin-bottom: var(--ds-space-md);
+}
+.events-left h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.events-lead {
+  font-size: var(--ds-text-lg);
+  color: var(--ds-color-white-80);
+  line-height: 1.75;
+  margin-bottom: var(--ds-space-xl);
+  max-width: 460px;
+}
+.events-menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--ds-space-xl);
+}
+.events-menu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--ds-space-lg);
+  padding: var(--ds-space-md) 0;
+  border-bottom: 1px solid var(--ds-color-white-10);
+  transition: border-color var(--ds-transition-base);
+}
+.events-menu-row:first-child { border-top: 1px solid var(--ds-color-white-10); }
+.events-menu-row:hover { border-bottom-color: rgba(201,168,76,0.35); }
+.events-menu-title {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-2xl);
+  font-weight: 400;
+  color: var(--ds-color-white);
+}
+.events-menu-note {
+  font-size: var(--ds-text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ds-color-white-50);
+  white-space: nowrap;
+}
+.events-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--ds-space-sm);
+}
+.events-stat-card {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.18);
+  padding: var(--ds-space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: background var(--ds-transition-base), border-color var(--ds-transition-base);
+}
+.events-stat-card:hover {
+  background: rgba(201,168,76,0.12);
+  border-color: rgba(201,168,76,0.35);
+}
+.events-stat-card.featured {
+  grid-column: 1 / 3;
+  background: var(--ds-color-gold);
+  border-color: transparent;
+}
+.events-stat-num {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: var(--ds-color-gold);
+  line-height: 1;
+}
+.events-stat-card.featured .events-stat-num { color: var(--ds-color-navy); }
+.events-stat-label {
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ds-color-white-50);
+}
+.events-stat-card.featured .events-stat-label { color: var(--ds-color-navy); opacity: 0.7; }
+@media (max-width: 768px) {
+  .events-layout { grid-template-columns: 1fr; }
+  .events-right { display: none; }
+}
+
+/* @section Visit Us */
+.visit-us {
+  background: var(--ds-color-navy-mid);
+  overflow: hidden;
+}
+.visit-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 640px;
+}
+.visit-photo-col { position: relative; overflow: hidden; }
+.visit-photo-col img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.visit-photo-col::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 55%, var(--ds-color-navy-mid));
+}
+.visit-info-col {
+  background: var(--ds-color-navy-mid);
+  padding: var(--ds-space-section) var(--ds-space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.visit-info-col h2 {
+  font-family: var(--ds-font-heading);
+  font-size: var(--ds-text-4xl);
+  font-weight: 300;
+  color: var(--ds-color-white);
+  line-height: 1.1;
+  margin-bottom: var(--ds-space-xl);
+}
+.visit-info-col h2 em { font-style: italic; color: var(--ds-color-gold-light); }
+.visit-rows {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--ds-space-xl);
+}
+.visit-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  padding: var(--ds-space-md) 0;
+  border-top: 1px solid var(--ds-color-white-10);
+  gap: 0;
+}
+.visit-row:last-child { border-bottom: 1px solid var(--ds-color-white-10); }
+.visit-row-key {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ds-color-gold);
+  padding-top: 3px;
+}
+.visit-row-val {
+  color: var(--ds-color-white-80);
+  line-height: 1.7;
+  font-size: var(--ds-text-sm);
+}
+@media (max-width: 768px) {
+  .visit-split { grid-template-columns: 1fr; }
+  .visit-photo-col { height: 300px; }
+  .visit-info-col { padding: var(--ds-space-xl) var(--ds-space-md); }
+}
+
+  </style>
+</head>
+<body>
+<section data-label="Hero" id="hero" class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1759221610612-3a3398d5e94d?w=2000&h=1400&fit=crop" alt="Sun streaming through rows of grapevines at golden-hour sunrise in a Napa Valley vineyard">
+  </div>
+  <div class="hero-ghost-year" aria-hidden="true">1978</div>
+  <div class="bb-container">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-pre bb-reveal">
+          <div class="hero-pre-line"></div>
+          <span class="hero-pre-text" data-field="hero_eyebrow">Est. 1978 · Napa Valley, California</span>
+        </div>
+        <h1 class="bb-reveal bb-reveal-delay-1" data-field="hero_title" data-field-type="editor">Where the <em>Vineyard</em><br>Becomes Your Table</h1>
+      </div>
+      <div class="hero-right bb-reveal bb-reveal-delay-2">
+        <p class="hero-tagline" data-field="hero_tagline">Estate-grown wines, unhurried tastings, and evenings that linger. Come as a guest. Leave as family.</p>
+        <div data-repeater="hero_ctas" class="hero-actions">
+          <a data-repeater-item class="bb-btn bb-btn-primary" data-field-href="url" href="#tasting-room" data-field="label">Reserve a Tasting</a>
+        <a data-repeater-item class="bb-btn bb-btn-outline" data-field-href="url" href="#our-story" data-field="label">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+<section data-label="Our Story" id="our-story" class="our-story">
+  <div class="story-split">
+    <div class="story-photo bb-reveal">
+      <img data-field="story_image" src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?w=900&amp;h=1100&amp;fit=crop&amp;crop=center" alt="Stone winery building framed by old-growth grapevines in warm Napa afternoon light">
+      <div class="story-photo-overlay"></div>
+      <div class="story-roman" aria-hidden="true">I</div>
+      <div class="story-year-badge">
+        <span class="story-year-num" data-field="story_year">1978</span>
+        <span class="story-year-sub" data-field="story_badge_label">Est.</span>
+      </div>
+    </div>
+    <div class="story-panel bb-reveal bb-reveal-delay-1">
+      <h2 data-field="story_heading" data-field-type="editor">Three Generations<br>of <em>Honest Wine</em></h2>
+      <div class="story-body" data-field="story_body" data-field-type="editor"><p>Harold and June Callahan planted the first vines on this hillside in the fall of 1978 — a 40-acre estate carved from Napa Valley’s eastern ridge, where the afternoon fog rolls in slow and the days end long.</p>
+        <p>Today their grandchildren tend the same rows. We make Cabernet the way we always have: picked by hand, aged in French oak, bottled when it’s ready. The valley changes around us. The wine stays honest.</p></div>
+      <a class="bb-btn bb-btn-outline" data-field-href="story_cta_url" href="#" data-field="story_cta">Meet the Family</a>
+      <div data-repeater="story_stats" class="story-stats">
+        <div data-repeater-item class="stat-item">
+          <span class="stat-number" data-field="number">46</span>
+          <span class="stat-label" data-field="label">Acres Planted</span>
+        </div>
+      <div data-repeater-item class="stat-item">
+          <span class="stat-number" data-field="number">8</span>
+          <span class="stat-label" data-field="label">Estate Varietals</span>
+        </div>
+      <div data-repeater-item class="stat-item">
+          <span class="stat-number" data-field="number">3</span>
+          <span class="stat-label" data-field="label">Generations</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="Tasting Room" id="tasting-room" class="tasting-room">
+  <div class="tasting-bg">
+    <img data-field="tasting_bg_image" src="https://images.unsplash.com/photo-1692274073394-6ebd6a68d535?w=1800&amp;h=1000&amp;fit=crop" alt="Stone wine cave with rows of oak barrels receding into warm amber darkness">
+  </div>
+  <div class="tasting-inner">
+    <div class="bb-container">
+      <div class="tasting-header bb-reveal">
+        <div class="tasting-header-left">
+          <span class="tasting-section-num" aria-hidden="true">II.</span>
+          <h2 data-field="tasting_heading" data-field-type="editor">Every Pour<br><em>Tells a Story</em></h2>
+        </div>
+        <div class="tasting-header-right">
+          <p data-field="tasting_description">Step inside the barrel cave or settle onto the terrace. Our hosts guide you through every wine — where it grew, when it was picked, why it matters.</p>
+        </div>
+      </div>
+      <div data-repeater="tasting_experiences" class="tasting-panels">
+        <div data-repeater-item class="tasting-panel bb-reveal">
+          <img class="tasting-panel-img" data-field="image" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=700&amp;h=1000&amp;fit=crop" alt="Three wine glasses on a candlelit oak table inside a historic barrel tasting room">
+          <div class="tasting-panel-veil"></div>
+          <div class="tasting-panel-tag" data-field="price">$45 / person</div>
+          <div class="tasting-panel-foot">
+            <h3 data-field="title">Estate Flight</h3>
+            <p data-field="description">Five pours of our current releases, guided by a knowledgeable host in our historic barrel cave. The signature Ridgeline experience.</p>
+            <a data-field-href="url" href="#" data-field="cta">Reserve a Spot →</a>
+          </div>
+        </div>
+      <div data-repeater-item class="tasting-panel bb-reveal">
+          <img class="tasting-panel-img" data-field="image" src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=700&amp;h=1000&amp;fit=crop" alt="Wine flight and charcuterie board on a sun-bleached terrace overlooking vineyard rows at dusk">
+          <div class="tasting-panel-veil"></div>
+          <div class="tasting-panel-tag" data-field="price">$70 / person</div>
+          <div class="tasting-panel-foot">
+            <h3 data-field="title">Terrace &amp; Bites</h3>
+            <p data-field="description">A seated experience on our sun-drenched terrace. Pair your flight with a seasonal charcuterie board as the vines catch the afternoon light.</p>
+            <a data-field-href="url" href="#" data-field="cta">Reserve a Spot →</a>
+          </div>
+        </div>
+      <div data-repeater-item class="tasting-panel bb-reveal">
+          <img class="tasting-panel-img" data-field="image" src="https://images.unsplash.com/photo-1765192681431-c91428e3cb27?w=700&amp;h=1000&amp;fit=crop" alt="Vineyard rows leading toward rolling green hills on a winery estate at golden hour">
+          <div class="tasting-panel-veil"></div>
+          <div class="tasting-panel-tag" data-field="price">$120 / person</div>
+          <div class="tasting-panel-foot">
+            <h3 data-field="title">Vineyard Walk &amp; Cave Tasting</h3>
+            <p data-field="description">Walk the estate rows with our winemaker, then descend into the cave for a curated library tasting unavailable anywhere else.</p>
+            <a data-field-href="url" href="#" data-field="cta">Reserve a Spot →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="Wine Collection" id="wine-collection" class="wine-collection">
+  <div class="wine-bg">
+    <img data-field="wines_bg_image" src="https://images.unsplash.com/photo-1528823872057-9c018a7a7553?w=1600&amp;h=900&amp;fit=crop" alt="Dimly lit wine cellar corridor with rows of aging barrels on either side">
+  </div>
+  <div class="wine-inner">
+    <div class="bb-container">
+      <div class="wine-top bb-reveal">
+        <h2 class="wine-top-heading" data-field="wines_heading" data-field-type="editor">The <em>Estate</em><br>Cellar</h2>
+        <div class="wine-top-right">
+          <span class="wine-top-pre" data-field="wines_eyebrow">The Cellar</span>
+          <p class="wine-top-desc" data-field="wines_description">Eight varietals. Each one grown on this hillside, made in this cellar, and built to age gracefully. Picked by hand. Bottled when ready.</p>
+          <a class="bb-btn bb-btn-outline" data-field-href="wines_cta_url" href="#" data-field="wines_cta">Shop All Wines</a>
+        </div>
+      </div>
+      <div data-repeater="wines" class="wine-list">
+        <div data-repeater-item class="wine-row bb-reveal">
+          <span class="wine-row-num" data-field="number">01</span>
+          <div class="wine-row-text">
+            <span class="wine-row-varietal" data-field="varietal">Cabernet Sauvignon</span>
+            <span class="wine-row-name" data-field="name">Estate Reserve</span>
+            <span class="wine-row-notes" data-field="notes">Dark cherry, cedar, and graphite. A Napa hillside Cab done right.</span>
+          </div>
+        </div>
+      <div data-repeater-item class="wine-row bb-reveal">
+          <span class="wine-row-num" data-field="number">02</span>
+          <div class="wine-row-text">
+            <span class="wine-row-varietal" data-field="varietal">Merlot</span>
+            <span class="wine-row-name" data-field="name">Ridgeline Merlot</span>
+            <span class="wine-row-notes" data-field="notes">Plum, mocha, and velvety tannins. The approachable side of the estate.</span>
+          </div>
+        </div>
+      <div data-repeater-item class="wine-row bb-reveal">
+          <span class="wine-row-num" data-field="number">03</span>
+          <div class="wine-row-text">
+            <span class="wine-row-varietal" data-field="varietal">Chardonnay</span>
+            <span class="wine-row-name" data-field="name">Barrel-Fermented</span>
+            <span class="wine-row-notes" data-field="notes">Green apple, toasted oak, and bright acidity. Picked early to keep it lively.</span>
+          </div>
+        </div>
+      <div data-repeater-item class="wine-row bb-reveal">
+          <span class="wine-row-num" data-field="number">04</span>
+          <div class="wine-row-text">
+            <span class="wine-row-varietal" data-field="varietal">Sauvignon Blanc</span>
+            <span class="wine-row-name" data-field="name">Spring Blanc</span>
+            <span class="wine-row-notes" data-field="notes">Grapefruit, fresh herbs, and stone. The perfect terrace pour.</span>
+          </div>
+        </div>
+      <div data-repeater-item class="wine-row bb-reveal">
+          <span class="wine-row-num" data-field="number">05</span>
+          <div class="wine-row-text">
+            <span class="wine-row-varietal" data-field="varietal">Petite Sirah</span>
+            <span class="wine-row-name" data-field="name">Darkstone Block</span>
+            <span class="wine-row-notes" data-field="notes">Inky, structured, with blueberry and black pepper. Built for the cellar.</span>
+          </div>
+        </div>
+      <div data-repeater-item class="wine-row bb-reveal">
+          <span class="wine-row-num" data-field="number">06</span>
+          <div class="wine-row-text">
+            <span class="wine-row-varietal" data-field="varietal">Rosé</span>
+            <span class="wine-row-name" data-field="name">Hillside Rosé</span>
+            <span class="wine-row-notes" data-field="notes">Dry, crisp, with watermelon and white peach. Our summer staple.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="Vineyard Quote" id="vineyard-quote" class="vineyard-quote">
+  <div class="vq-bg">
+    <img data-field="quote_bg_image" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1800&amp;h=900&amp;fit=crop" alt="Sweeping Napa Valley vineyard landscape at golden hour with mist settling between the hills">
+  </div>
+  <div class="vq-inner bb-reveal">
+    <span class="vq-mark" aria-hidden="true">“</span>
+    <p class="vq-text" data-field="quote_text">The land here has a kind of patience. It doesn’t rush the vine. It doesn’t rush you. That’s Napa at its best — and it’s what we’ve tried to bottle every harvest since ‘78.</p>
+    <div class="vq-attr">
+      <div class="vq-attr-line"></div>
+      <span data-field="quote_attr">— James Callahan, Third-Generation Winemaker</span>
+      <div class="vq-attr-line"></div>
+    </div>
+  </div>
+</section>
+<section data-label="Events" id="events" class="events">
+  <div class="events-bg">
+    <img data-field="events_bg_image" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1800&amp;h=1000&amp;fit=crop" alt="Elegant outdoor wedding reception at a Napa Valley estate with string lights canopy and vineyard backdrop">
+  </div>
+  <div class="events-inner">
+    <div class="bb-container">
+      <div class="events-layout">
+        <div class="events-left bb-reveal">
+          <div class="page-rule"><span class="page-rule-text" data-field="events_eyebrow">Host Your Moment</span></div>
+          <h2 data-field="events_heading" data-field-type="editor">The Estate is<br><em>Yours to Celebrate</em></h2>
+          <p class="events-lead" data-field="events_description">From intimate weddings under the oaks to live music on summer evenings — Ridgeline is a place where things feel the way they’re supposed to.</p>
+          <div data-repeater="events_types" class="events-menu">
+            <div data-repeater-item class="events-menu-row">
+              <span class="events-menu-title" data-field="title">Weddings &amp; Celebrations</span>
+              <span class="events-menu-note" data-field="description">Up to 150 guests</span>
+            </div>
+          <div data-repeater-item class="events-menu-row">
+              <span class="events-menu-title" data-field="title">Live Music Evenings</span>
+              <span class="events-menu-note" data-field="description">Summer – Fall</span>
+            </div>
+          <div data-repeater-item class="events-menu-row">
+              <span class="events-menu-title" data-field="title">Private Dinners &amp; Retreats</span>
+              <span class="events-menu-note" data-field="description">Custom</span>
+            </div>
+          </div>
+          <a class="bb-btn bb-btn-primary" data-field-href="events_cta_url" href="#" data-field="events_cta">Inquire About Your Event</a>
+        </div>
+        <div data-repeater="events_stats" class="events-right bb-reveal bb-reveal-delay-1">
+          <div data-repeater-item class="events-stat-card featured">
+            <span class="events-stat-num" data-field="number">46</span>
+            <span class="events-stat-label" data-field="label">Acres of Estate — all yours for the day</span>
+          </div>
+        <div data-repeater-item class="events-stat-card featured">
+            <span class="events-stat-num" data-field="number">150</span>
+            <span class="events-stat-label" data-field="label">Max Guests</span>
+          </div>
+        <div data-repeater-item class="events-stat-card featured">
+            <span class="events-stat-num" data-field="number">3</span>
+            <span class="events-stat-label" data-field="label">Distinct Venues</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-label="Visit Us" id="visit-us" class="visit-us">
+  <div class="visit-split">
+    <div class="visit-photo-col bb-reveal">
+      <img data-field="visit_photo" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=900&amp;h=900&amp;fit=crop" alt="Aerial photograph of Napa Valley wine country with golden hills and patchwork vineyard rows at harvest">
+    </div>
+    <div class="visit-info-col bb-reveal bb-reveal-delay-1">
+      <div class="page-rule"><span class="page-rule-text" data-field="visit_eyebrow">Find Us</span></div>
+      <h2 data-field="visit_heading" data-field-type="editor">Come<br><em>Stay Awhile</em></h2>
+      <div data-repeater="visit_details" class="visit-rows">
+        <div data-repeater-item class="visit-row">
+          <span class="visit-row-key" data-field="label">Address</span>
+          <p class="visit-row-val" data-field="value" data-field-type="editor">4892 Ridgeline Road<br>St. Helena, CA 94574</p>
+        </div>
+      <div data-repeater-item class="visit-row">
+          <span class="visit-row-key" data-field="label">Hours</span>
+          <p class="visit-row-val" data-field="value" data-field-type="editor">Thu – Sun: 10am – 5pm<br>Last seating at 4pm<br>Walk-ins welcome</p>
+        </div>
+      <div data-repeater-item class="visit-row">
+          <span class="visit-row-key" data-field="label">Contact</span>
+          <p class="visit-row-val" data-field="value" data-field-type="editor">hello@ridgeline.estate<br>(707) 555-0182</p>
+        </div>
+      </div>
+      <a class="bb-btn bb-btn-primary" data-field-href="visit_cta_url" href="#" data-field="visit_cta">Book a Tasting</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>

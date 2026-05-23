@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="post-type" content="page">
+  <title>Survey — Beaver Builder AI Forms</title>
+  <link rel="stylesheet" href="../design-system/styles.css">
+  <script src="../design-system/script.js"></script>
+  <style>
+    /* @page */
+    main { position: relative; z-index: 1; }
+
+    /* @section Survey */
+    .survey {
+      padding: 80px 0 110px;
+      position: relative;
+      overflow: hidden;
+    }
+    .survey::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: -80px;
+      width: 240px;
+      height: 200px;
+      background: var(--ds-color-teal);
+      opacity: 0.05;
+      border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+      transform: rotate(-18deg);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .survey::after {
+      content: '';
+      position: absolute;
+      bottom: 80px;
+      right: -60px;
+      width: 220px;
+      height: 180px;
+      background: var(--ds-color-amber);
+      opacity: 0.06;
+      border-radius: 45% 55% 50% 50% / 60% 40% 60% 40%;
+      transform: rotate(18deg);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .survey__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .survey__header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .survey__eyebrow { margin-bottom: 22px; display: inline-block; }
+    .survey__title {
+      font-size: var(--ds-text-4xl);
+      color: var(--ds-color-teal);
+      margin-bottom: 16px;
+      transform: rotate(-0.4deg);
+      line-height: var(--ds-line-tight);
+    }
+    .survey__subtitle {
+      font-size: var(--ds-text-lg);
+      color: var(--ds-color-text-light);
+      line-height: var(--ds-line-loose);
+      max-width: 520px;
+      margin: 0 auto 18px;
+    }
+    .survey__meta {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      color: var(--ds-color-text-light);
+      text-transform: uppercase;
+      letter-spacing: var(--ds-letter-widest);
+    }
+
+    /* Form card */
+    .survey__card-wrap {
+      position: relative;
+      transform: rotate(0.2deg);
+    }
+    .survey__card-tape {
+      position: absolute;
+      top: -12px;
+      left: 40%;
+      width: 96px;
+      height: 24px;
+      background: var(--ds-color-amber-light);
+      opacity: 0.6;
+      transform: rotate(-2deg);
+      z-index: 2;
+      pointer-events: none;
+      clip-path: polygon(
+        0% 4%, 10% 0%, 30% 5%, 55% 0%, 75% 4%, 92% 0%, 100% 3%,
+        100% 96%, 88% 100%, 65% 95%, 40% 100%, 15% 96%, 0% 100%
+      );
+    }
+    .survey__card {
+      background: var(--ds-color-white);
+      padding: 48px 44px 36px;
+      position: relative;
+      box-shadow: var(--ds-shadow-card-lg);
+      clip-path: polygon(
+        0% 0.8%, 6% 0%, 14% 0.6%, 28% 0%, 42% 0.8%, 58% 0%, 72% 0.6%, 86% 0%, 94% 0.8%, 100% 0%,
+        100% 99.2%, 94% 100%, 82% 99.4%, 68% 100%, 54% 99.2%, 40% 100%, 26% 99.4%, 12% 100%, 0% 99.2%
+      );
+    }
+
+    /* Sections inside the form */
+    .survey__section { padding: 0; }
+    .survey__section + .survey__section {
+      margin-top: 36px;
+      padding-top: 32px;
+      border-top: 1px dashed var(--ds-color-cream-mid);
+    }
+    .survey__section-header { margin-bottom: 24px; }
+    .survey__section-kicker {
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      color: var(--ds-color-amber-dark);
+      text-transform: uppercase;
+      letter-spacing: var(--ds-letter-widest);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .survey__section-title {
+      font-family: var(--ds-font-display);
+      font-size: 1.5rem;
+      color: var(--ds-color-teal);
+      line-height: var(--ds-line-tight);
+    }
+    .survey__section-description {
+      color: var(--ds-color-text-light);
+      font-size: 0.95rem;
+      line-height: var(--ds-line-base);
+      margin-top: 6px;
+    }
+
+    /* Question */
+    .survey__question { margin-bottom: 26px; }
+    .survey__question:last-child { margin-bottom: 0; }
+    .survey__prompt {
+      font-family: var(--ds-font-body);
+      font-size: 1.05rem;
+      font-weight: var(--ds-weight-semibold);
+      color: var(--ds-color-text);
+      line-height: var(--ds-line-snug);
+      margin-bottom: 4px;
+    }
+    .survey__prompt-note {
+      font-family: var(--ds-font-mono);
+      font-size: 0.72rem;
+      color: var(--ds-color-text-light);
+      text-transform: uppercase;
+      letter-spacing: var(--ds-letter-wider);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    /* Likert — 5 dots with anchors */
+    .survey__likert {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .survey__likert-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+    .survey__likert-label {
+      position: relative;
+      cursor: pointer;
+      text-align: center;
+    }
+    .survey__likert-label input {
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+      cursor: pointer;
+    }
+    .survey__likert-pill {
+      display: block;
+      background: var(--ds-color-white);
+      border: 2px solid var(--ds-color-cream-mid);
+      padding: 10px 6px;
+      font-family: var(--ds-font-display);
+      font-size: 1.15rem;
+      font-weight: var(--ds-weight-bold);
+      color: var(--ds-color-teal);
+      transition: background var(--ds-transition-base), border-color var(--ds-transition-base), transform var(--ds-transition-base);
+      clip-path: polygon(
+        0% 0.4%, 10% 0%, 30% 0.5%, 55% 0%, 80% 0.4%, 95% 0%, 100% 0.3%,
+        100% 99.6%, 90% 100%, 65% 99.5%, 40% 100%, 15% 99.6%, 0% 100%
+      );
+    }
+    .survey__likert-label input:checked ~ .survey__likert-pill {
+      background: var(--ds-color-amber);
+      border-color: var(--ds-color-amber-dark);
+      transform: translateY(-2px);
+    }
+    .survey__likert-label input:focus-visible ~ .survey__likert-pill { border-color: var(--ds-color-teal); }
+    .survey__likert-anchors {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--ds-font-mono);
+      font-size: var(--ds-text-xs);
+      color: var(--ds-color-text-light);
+      text-transform: uppercase;
+      letter-spacing: var(--ds-letter-wider);
+    }
+
+    /* NPS — 0-10 */
+    .survey__nps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .survey__nps-row {
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      gap: 4px;
+    }
+    .survey__nps-label {
+      position: relative;
+      cursor: pointer;
+      text-align: center;
+    }
+    .survey__nps-label input {
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+      cursor: pointer;
+    }
+    .survey__nps-chip {
+      display: block;
+      background: var(--ds-color-white);
+      border: 2px solid var(--ds-color-cream-mid);
+      padding: 10px 0;
+      font-family: var(--ds-font-display);
+      font-size: 1rem;
+      font-weight: var(--ds-weight-bold);
+      color: var(--ds-color-teal);
+      transition: background var(--ds-transition-base), border-color var(--ds-transition-base);
+    }
+    .survey__nps-label input:checked ~ .survey__nps-chip {
+      background: var(--ds-color-teal);
+      border-color: var(--ds-color-teal);
+      color: var(--ds-color-white);
+    }
+    .survey__nps-label input:focus-visible ~ .survey__nps-chip { border-color: var(--ds-color-amber); }
+
+    /* Radio stack */
+    .survey__radios { display: flex; flex-direction: column; gap: 8px; }
+    .survey__radio {
+      position: relative;
+      cursor: pointer;
+      background: var(--ds-color-white);
+      border: 2px solid var(--ds-color-cream-mid);
+      padding: 14px 16px 14px 44px;
+      transition: border-color var(--ds-transition-base), background var(--ds-transition-base);
+      clip-path: polygon(
+        0% 2%, 6% 0%, 18% 1%, 36% 0%, 54% 1%, 72% 0%, 88% 1%, 100% 0%,
+        100% 98%, 88% 100%, 72% 99%, 54% 100%, 36% 99%, 18% 100%, 6% 99%, 0% 100%
+      );
+    }
+    .survey__radio input {
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+      cursor: pointer;
+    }
+    .survey__radio-mark {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      width: 18px;
+      height: 18px;
+      border-radius: var(--ds-radius-round);
+      border: 2px solid var(--ds-color-cream-mid);
+      background: var(--ds-color-white);
+      transition: border-color var(--ds-transition-base), background var(--ds-transition-base);
+    }
+    .survey__radio-title {
+      font-family: var(--ds-font-body);
+      font-weight: var(--ds-weight-semibold);
+      color: var(--ds-color-text);
+      display: block;
+    }
+    .survey__radio-text {
+      display: block;
+      color: var(--ds-color-text-light);
+      font-size: 0.88rem;
+      line-height: var(--ds-line-snug);
+      margin-top: 2px;
+    }
+    .survey__radio input:checked ~ .survey__radio-mark {
+      border-color: var(--ds-color-teal);
+      background: var(--ds-color-teal);
+      box-shadow: inset 0 0 0 3px var(--ds-color-white);
+    }
+    .survey__radio:has(input:checked) {
+      border-color: var(--ds-color-teal);
+      background: var(--ds-color-cream);
+    }
+
+    /* Checkbox grid */
+    .survey__checks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .survey__check {
+      position: relative;
+      cursor: pointer;
+      background: var(--ds-color-white);
+      border: 2px solid var(--ds-color-cream-mid);
+      padding: 12px 14px 12px 40px;
+      transition: border-color var(--ds-transition-base), background var(--ds-transition-base);
+    }
+    .survey__check input {
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+      cursor: pointer;
+    }
+    .survey__check-mark {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--ds-color-cream-mid);
+      background: var(--ds-color-white);
+      transition: border-color var(--ds-transition-base), background var(--ds-transition-base);
+    }
+    .survey__check-mark::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 4px;
+      width: 5px;
+      height: 9px;
+      border: solid var(--ds-color-white);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: opacity var(--ds-transition-base);
+    }
+    .survey__check-text {
+      font-family: var(--ds-font-body);
+      font-size: 0.95rem;
+      color: var(--ds-color-text);
+    }
+    .survey__check input:checked ~ .survey__check-mark {
+      background: var(--ds-color-teal);
+      border-color: var(--ds-color-teal);
+    }
+    .survey__check input:checked ~ .survey__check-mark::after { opacity: 1; }
+    .survey__check:has(input:checked) { border-color: var(--ds-color-teal); background: var(--ds-color-cream); }
+
+    /* Open text */
+    .survey__textarea {
+      width: 100%;
+      border: 2px solid var(--ds-color-cream-mid);
+      background: var(--ds-color-white);
+      color: var(--ds-color-text);
+      font-family: var(--ds-font-body);
+      font-size: var(--ds-text-base);
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color var(--ds-transition-base);
+      resize: vertical;
+      min-height: 110px;
+      line-height: var(--ds-line-base);
+      clip-path: polygon(
+        0% 2%, 8% 0%, 22% 1.5%, 40% 0%, 60% 1%, 80% 0%, 100% 0.8%,
+        100% 98%, 85% 100%, 65% 98.5%, 45% 100%, 25% 99%, 8% 100%, 0% 99%
+      );
+    }
+    .survey__textarea:focus { border-color: var(--ds-color-teal); }
+
+    /* Footer */
+    .survey__footer {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px dashed var(--ds-color-cream-mid);
+    }
+    .survey__consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+    .survey__consent-box {
+      flex-shrink: 0;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--ds-color-cream-mid);
+      background: var(--ds-color-white);
+      cursor: pointer;
+      margin-top: 2px;
+      position: relative;
+    }
+    .survey__consent-box:checked { background: var(--ds-color-teal); border-color: var(--ds-color-teal); }
+    .survey__consent-box:checked::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 4px;
+      width: 5px;
+      height: 9px;
+      border: solid var(--ds-color-white);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    .survey__consent-text {
+      font-family: var(--ds-font-mono);
+      font-size: 0.78rem;
+      color: var(--ds-color-text-light);
+      line-height: 1.5;
+    }
+
+    .survey__error {
+      border: none;
+      border-left: 4px solid var(--ds-color-sienna);
+      background: var(--ds-color-white);
+      color: var(--ds-color-sienna);
+      font-family: var(--ds-font-mono);
+      font-size: 0.85rem;
+      padding: 12px 16px;
+      box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.04);
+      transform: rotate(0.3deg);
+      margin-bottom: 16px;
+      clip-path: polygon(
+        0% 0%, 100% 0.3%, 100% 99.7%, 92% 100%, 78% 99.6%, 60% 100%, 40% 99.7%, 22% 100%, 8% 99.6%, 0% 100%
+      );
+    }
+
+    .survey__submit-row {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* Success */
+    .survey__success { text-align: center; padding: 32px 12px 20px; }
+    .survey__success-mark {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      background: var(--ds-color-amber);
+      border-radius: var(--ds-radius-round);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(-2deg);
+    }
+    .survey__success-mark svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--ds-color-teal);
+      fill: none;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .survey__success-heading {
+      font-size: var(--ds-text-2xl);
+      color: var(--ds-color-teal);
+      margin-bottom: 10px;
+      transform: rotate(-0.3deg);
+    }
+    .survey__success-body {
+      color: var(--ds-color-text-light);
+      font-size: 1rem;
+      line-height: var(--ds-line-base);
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 680px) {
+      .survey { padding: 50px 0 80px; }
+      .survey__card { padding: 34px 22px 28px; }
+      .survey__title { font-size: 2rem; }
+      .survey__checks { grid-template-columns: 1fr; }
+      .survey__nps-row { gap: 2px; }
+      .survey__nps-chip { font-size: 0.85rem; padding: 8px 0; }
+      .survey__likert-pill { font-size: 1rem; padding: 8px 4px; }
+    }
+  </style>
+  <script>
+    /* @section Survey */
+    onReady(() => {
+      const section = document.querySelector('.survey');
+      if (!section) return;
+      const form = section.querySelector('#survey-form');
+      const cardWrap = section.querySelector('.survey__card-wrap');
+      const successWrap = section.querySelector('.survey__success-wrap');
+      if (!form) return;
+
+      form.addEventListener('fl:form:success', () => {
+        cardWrap.hidden = true;
+        successWrap.hidden = false;
+        successWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <section id="survey" class="survey" data-label="Survey">
+    <div class="bb-container">
+      <div class="survey__inner">
+        <header class="survey__header bb-reveal">
+          <span class="survey__eyebrow bb-badge" data-field="eyebrow">Form 04 — Survey</span>
+          <h1 class="survey__title" data-field="title">Tell us how it's going.</h1>
+          <p class="survey__subtitle" data-field="subtitle">A longer form with a light touch. Skip what doesn't apply — only the two ratings are required.</p>
+          <span class="survey__meta" data-field="meta">3 sections · about 4 minutes</span>
+        </header>
+
+        <div class="survey__card-wrap bb-reveal bb-reveal--delay-1">
+          <div class="survey__card-tape" aria-hidden="true"></div>
+          <div class="survey__card">
+            <form id="survey-form" class="survey__form" novalidate>
+
+              <!-- Section 1: Product -->
+              <section class="survey__section">
+                <header class="survey__section-header">
+                  <span class="survey__section-kicker">Section 01</span>
+                  <h2 class="survey__section-title" data-field="section_1_title">The product</h2>
+                  <p class="survey__section-description" data-field="section_1_description">How you'd rate what we've built so far.</p>
+                </header>
+
+                <div class="survey__question">
+                  <p class="survey__prompt">How satisfied are you with Beaver Builder AI?</p>
+                  <span class="survey__prompt-note">1 = not at all · 5 = extremely</span>
+                  <div class="survey__likert">
+                    <div class="survey__likert-row">
+                      <label class="survey__likert-label"><input type="radio" name="satisfaction" value="1" required><span class="survey__likert-pill">1</span></label>
+                      <label class="survey__likert-label"><input type="radio" name="satisfaction" value="2"><span class="survey__likert-pill">2</span></label>
+                      <label class="survey__likert-label"><input type="radio" name="satisfaction" value="3"><span class="survey__likert-pill">3</span></label>
+                      <label class="survey__likert-label"><input type="radio" name="satisfaction" value="4"><span class="survey__likert-pill">4</span></label>
+                      <label class="survey__likert-label"><input type="radio" name="satisfaction" value="5"><span class="survey__likert-pill">5</span></label>
+                    </div>
+                    <div class="survey__likert-anchors">
+                      <span>Not at all</span>
+                      <span>Extremely</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="survey__question">
+                  <p class="survey__prompt">What's the best thing about it today?</p>
+                  <span class="survey__prompt-note">Optional — one or two sentences is plenty</span>
+                  <textarea class="survey__textarea" name="best" rows="3"></textarea>
+                </div>
+
+                <div class="survey__question">
+                  <p class="survey__prompt">What's the most frustrating part?</p>
+                  <span class="survey__prompt-note">Optional — be as specific as you'd like</span>
+                  <textarea class="survey__textarea" name="worst" rows="3"></textarea>
+                </div>
+              </section>
+
+              <!-- Section 2: You -->
+              <section class="survey__section">
+                <header class="survey__section-header">
+                  <span class="survey__section-kicker">Section 02</span>
+                  <h2 class="survey__section-title" data-field="section_2_title">Your work</h2>
+                  <p class="survey__section-description" data-field="section_2_description">A little context about what you're building with.</p>
+                </header>
+
+                <div class="survey__question">
+                  <p class="survey__prompt">Which of these describe you?</p>
+                  <span class="survey__prompt-note">Pick any that apply</span>
+                  <div class="survey__checks">
+                    <label class="survey__check">
+                      <input type="checkbox" name="role[]" value="designer">
+                      <span class="survey__check-mark" aria-hidden="true"></span>
+                      <span class="survey__check-text">Designer</span>
+                    </label>
+                    <label class="survey__check">
+                      <input type="checkbox" name="role[]" value="developer">
+                      <span class="survey__check-mark" aria-hidden="true"></span>
+                      <span class="survey__check-text">Developer</span>
+                    </label>
+                    <label class="survey__check">
+                      <input type="checkbox" name="role[]" value="agency-owner">
+                      <span class="survey__check-mark" aria-hidden="true"></span>
+                      <span class="survey__check-text">Agency owner</span>
+                    </label>
+                    <label class="survey__check">
+                      <input type="checkbox" name="role[]" value="freelancer">
+                      <span class="survey__check-mark" aria-hidden="true"></span>
+                      <span class="survey__check-text">Freelancer</span>
+                    </label>
+                    <label class="survey__check">
+                      <input type="checkbox" name="role[]" value="in-house">
+                      <span class="survey__check-mark" aria-hidden="true"></span>
+                      <span class="survey__check-text">In-house team</span>
+                    </label>
+                    <label class="survey__check">
+                      <input type="checkbox" name="role[]" value="hobbyist">
+                      <span class="survey__check-mark" aria-hidden="true"></span>
+                      <span class="survey__check-text">Hobbyist / curious</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="survey__question">
+                  <p class="survey__prompt">How often do you reach for Beaver Builder AI?</p>
+                  <div class="survey__radios">
+                    <label class="survey__radio">
+                      <input type="radio" name="frequency" value="daily">
+                      <span class="survey__radio-mark" aria-hidden="true"></span>
+                      <span class="survey__radio-title">Daily</span>
+                      <span class="survey__radio-text">It's in my normal workflow already.</span>
+                    </label>
+                    <label class="survey__radio">
+                      <input type="radio" name="frequency" value="weekly">
+                      <span class="survey__radio-mark" aria-hidden="true"></span>
+                      <span class="survey__radio-title">A few times a week</span>
+                      <span class="survey__radio-text">When I hit the right kind of task.</span>
+                    </label>
+                    <label class="survey__radio">
+                      <input type="radio" name="frequency" value="monthly">
+                      <span class="survey__radio-mark" aria-hidden="true"></span>
+                      <span class="survey__radio-title">Occasionally</span>
+                      <span class="survey__radio-text">When I remember to, or when a project calls for it.</span>
+                    </label>
+                    <label class="survey__radio">
+                      <input type="radio" name="frequency" value="rarely">
+                      <span class="survey__radio-mark" aria-hidden="true"></span>
+                      <span class="survey__radio-title">Hardly at all</span>
+                      <span class="survey__radio-text">I've tried it but haven't built it into my flow.</span>
+                    </label>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 3: Overall -->
+              <section class="survey__section">
+                <header class="survey__section-header">
+                  <span class="survey__section-kicker">Section 03</span>
+                  <h2 class="survey__section-title" data-field="section_3_title">Overall</h2>
+                  <p class="survey__section-description" data-field="section_3_description">One number, one open door.</p>
+                </header>
+
+                <div class="survey__question">
+                  <p class="survey__prompt">How likely are you to recommend Beaver Builder AI to a colleague?</p>
+                  <span class="survey__prompt-note">0 = never · 10 = already have</span>
+                  <div class="survey__nps">
+                    <div class="survey__nps-row">
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="0" required><span class="survey__nps-chip">0</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="1"><span class="survey__nps-chip">1</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="2"><span class="survey__nps-chip">2</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="3"><span class="survey__nps-chip">3</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="4"><span class="survey__nps-chip">4</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="5"><span class="survey__nps-chip">5</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="6"><span class="survey__nps-chip">6</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="7"><span class="survey__nps-chip">7</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="8"><span class="survey__nps-chip">8</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="9"><span class="survey__nps-chip">9</span></label>
+                      <label class="survey__nps-label"><input type="radio" name="recommend" value="10"><span class="survey__nps-chip">10</span></label>
+                    </div>
+                    <div class="survey__likert-anchors">
+                      <span>Never</span>
+                      <span>Already have</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="survey__question">
+                  <p class="survey__prompt">Anything else on your mind?</p>
+                  <span class="survey__prompt-note">Optional — we read every reply</span>
+                  <textarea class="survey__textarea" name="anything" rows="4"></textarea>
+                </div>
+              </section>
+
+              <div class="survey__footer">
+                <label class="survey__consent">
+                  <input class="survey__consent-box" type="checkbox" name="consent" required>
+                  <span class="survey__consent-text" data-field="consent_text">You can use my responses to improve Beaver Builder AI. Reach out if you'd like me to expand on anything.</span>
+                </label>
+
+                <p class="survey__error" role="alert" hidden data-field="error_message">Couldn't send your responses. Try again in a moment.</p>
+
+                <div class="survey__submit-row">
+                  <button class="bb-btn bb-btn--amber" type="submit" data-field="submit_label">Send responses</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="survey__success-wrap" hidden>
+          <div class="survey__card-wrap">
+            <div class="survey__card-tape" aria-hidden="true"></div>
+            <div class="survey__card">
+              <div class="survey__success">
+                <div class="survey__success-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>
+                </div>
+                <h2 class="survey__success-heading" data-field="success_heading">Thanks — genuinely.</h2>
+                <p class="survey__success-body" data-field="success_body">Your answers are in. We read every one and often write back when a response asks a question.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
