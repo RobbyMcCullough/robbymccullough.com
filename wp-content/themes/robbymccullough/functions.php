@@ -27,6 +27,9 @@ function rm_setup() {
 
     // Tells the block editor and oEmbed the max content width
     $GLOBALS['content_width'] = 720;
+
+    add_theme_support( 'editor-styles' );
+    add_editor_style( 'editor-style.css' );
 }
 
 // ---------------------------------------------------------------------------
